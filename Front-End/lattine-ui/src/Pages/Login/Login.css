@@ -6,19 +6,77 @@
   a{
     text-decoration: none;
   }
-
+  
   .primeiroBloco{
       width: 422px;
       background-color: #2EA0D9;
-      height: 1024px;
+      box-shadow: 6px 20px 20px 0px #00000040;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
   }
 
   .bemVindo{
       color: #ffff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-weight: lighter;
+      margin-top: 120px;
+      font-size: 64px;
+      font-weight: normal;
   }
   .semConta{
       color: #ffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: lighter;
+      font-size: 32px;
+      font-style: normal;
+      margin-top: 5px;
+      
 
   }
+
+  .teste-div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .cadastro{
+      width: 171px;
+      height: 53px;
+      background-color: #ffff;
+      border-radius: 15px;
+      border: none;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: lighter;
+      font-size: 28px;
+      font-style: normal;
+      margin-top: 36px;    
+      margin-bottom: 75px; 
+  }
+  
+  .imgLogin{
+      border: none;
+      margin-bottom: 67px;
+      width: 298px;
+      height: 301px;
+  }
+  .segundoBloco{
+      width:843px ;
+      height: 518px;
+      box-shadow: 0px 4px 4px 0px #00000040;
+      background: #DCE4F066;
+      border-radius: 35px;
+      display: flex;
+      align-items: center;
+  }
+  .inputInicial{
+    height: 70px;
+    width: 699px;
+    font-size: 25px;
+    border: 1px solid #AA9F9F;
+  }
+  
