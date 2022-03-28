@@ -15,6 +15,7 @@ export default class Login extends Component {
     render() {
         return (
             <div className="blocoTodo">
+                
 
                 <div className="primeiroBloco">
 
@@ -22,7 +23,7 @@ export default class Login extends Component {
                         <h1 className="bemVindo">Bem-Vindo</h1>
                         <p className="semConta">Não possui uma conta?</p>
 
-                        <button className="cadastro">Cadastre-se</button>
+                        <button className="cadastre">Cadastre-se</button>
                     </div>
 
                     <img className="imgLogin" src={imgEsquerda} />
@@ -30,21 +31,22 @@ export default class Login extends Component {
 
                 <div className="segundoBloco">
 
-                    <img className="imgUsuario" src={imgUsuario}/>
+                    <div>
 
-                    <input className="inputInicial"/> 
+                        <img className="imgUsuario" src={imgUsuario} />
 
-                    <img className="imgCadeado" src={imgCadeado} />
+                        <input className="primeiroInput" />
+                    </div>
 
-                    <input className="inputInicial"/>
+                    <div>
+                        <img className="imgCadeado" src={imgCadeado} />
+
+                        <input className="segundoInput" />
+                    </div>
 
                     <button className="entrar"> Entrar </button>
 
-
-
                 </div>
-
-
 
             </div>
         )

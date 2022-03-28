@@ -4,12 +4,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 import App from './Pages/Home/App';
-import Login from './Pages/Login/Login'
+import Login from './Pages/Login/Login';
+import Cadastro from './Pages/Cadastro/Cadastro'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Login />
+    <Cadastro />
   </React.StrictMode>,
   document.getElementById('root')
 );
