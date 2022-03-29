@@ -25,44 +25,46 @@ export default class Cadastro extends Component {
                     <img className="imgCadastro" src={imgCadastro} />
                 </div>
 
-                <div className="blocoSegundo">
+                <div className="testeCadastro">
+                    <div className="blocoSegundo">
 
-                    <div>
 
-                        <img className="imgUsuario" src={imgUsuario} />
+                        <div>
 
-                        <input className="Input" />
+                            <img className="imgUsuario" src={imgUsuario} />
+
+                            <input className="Input" />
+                        </div>
+
+                        <div>
+                            <img className="imgUsuario" src={imgUsuario} />
+
+                            <input className="Input" />
+                        </div>
+
+                        <div>
+                            <img className="imgUsuario" src={imgCarta} />
+
+                            <input className="Input" />
+                        </div>
+
+                        <div>
+                            <img className="imgUsuario" src={imgCadeado} />
+
+                            <input className="Input" />
+                        </div>
+
+                        <div>
+                            <img className="imgUsuario" src={imgCadeado} />
+
+                            <input className="Input" />
+                        </div>
+
+                        <button className="Cadastrar"> Cadastrar </button>
+
                     </div>
-
-                    <div>
-                        <img className="imgUsuario" src={imgUsuario} />
-
-                        <input className="Input" />
-                    </div>
-
-                    <div>
-                        <img className="imgUsuario" src={imgCarta} />
-
-                        <input className="Input" />
-                    </div>
-
-                    <div>
-                        <img className="imgUsuario" src={imgCadeado} />
-
-                        <input className="Input" />
-                    </div>
-
-                    <div>
-                        <img className="imgUsuario" src={imgCadeado} />
-
-                        <input className="Input" />
-                    </div>
-
-                    <button className="Cadastrar"> Cadastrar </button>
 
                 </div>
-
-
 
 
             </div>
