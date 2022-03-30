@@ -3,15 +3,38 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 
-import App from './Pages/Home/App';
+import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
-import Cadastro from './Pages/Cadastro/Cadastro'
+import Cadastro from './Pages/Cadastro/Cadastro';
+import NotFound from './Pages/NotFound/NotFound';
 import reportWebVitals from './reportWebVitals';
 
+import {
+  Route,
+  BrowserRouter as Router,
+  Redirect,
+  Routes,
+} from 'react-router-dom';
+
+
+const routing = (
+
+    <Router>
+      <div>
+        <Routes>
+          
+          <Route exact path="/" element={<Login />} /> 
+          <Route path="/Cadastro" element={<Cadastro />} />
+          <Route path="*" element={<NotFound/>} />
+          
+        </Routes>
+      </div>
+    </Router>
+  
+)
+
 ReactDOM.render(
-  <React.StrictMode>
-    <Login/>
-  </React.StrictMode>,
+  routing,
   document.getElementById('root')
 );
 

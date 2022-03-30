@@ -1,0 +1,8 @@
+.error{
+    color: white;
+    background-color: #2EA0D9;
+    width: 100vw;
+    height: 800px;
+    display: flex;
+    align-items: center;
+}

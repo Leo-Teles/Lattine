@@ -11,6 +11,17 @@ import imgCadeado from '../Assets/cadeado.png'
 
 export default class Login extends Component {
 
+    constructor(props) {
+        super(props)
+        this.state = {
+            email: '',
+            senha: '',
+            isLoading: false,
+            MensagemErro: '',
+        }
+    }
+    
+
 
     render() {
         return (
@@ -23,30 +34,32 @@ export default class Login extends Component {
                         <h1 className="bemVindo">Bem-Vindo</h1>
                         <p className="semConta">Não possui uma conta?</p>
 
-                        <button className="cadastre">Cadastre-se</button>
+                        <button type='submit' className="cadastre">Cadastre-se</button>
                     </div>
 
                     <img className="imgLogin" src={imgEsquerda} />
                 </div>
                 <div className="testeLogin">
-                    <div className="segundoBloco">
+                    
 
-                        <div>
+                        <form className="segundoBloco">
 
-                            <img className="imgUsuario" src={imgUsuario} />
+                            <div>
+                                <img className="imgUsuario" src={imgUsuario} />
 
-                            <input className="primeiroInput" />
-                        </div>
+                                <input name="email" type="text" placeholder="Usuário" className="primeiroInput" />
+                            </div>
 
-                        <div>
-                            <img className="imgCadeado" src={imgCadeado} />
+                            <div>
+                                <img className="imgCadeado" src={imgCadeado} />
 
-                            <input className="segundoInput" />
-                        </div>
+                                <input name="senha" type="password" placeholder="Senha" className="segundoInput" />
+                            </div>
 
-                        <button className="entrar"> Entrar </button>
+                            <button type='submit' className="entrar"> Entrar </button>
 
-                    </div>
+                        </form>
+                    
                 </div>
 
             </div>

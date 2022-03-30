@@ -87,7 +87,6 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin-left: 180px;
     width: 630px;
     height: 430px;
   }
@@ -135,7 +134,7 @@
   }
   .testeLogin{
     display: flex;
-    width: 1019px;
+    width: 1188px;
     align-items: center;
     justify-content: space-evenly;
   }
