@@ -1,14 +1,16 @@
 import './NotFound.css'
 
+import imgNotFound from '../Assets/NotFound.png';
+
 
 
 function NotFound() {
     return (
-      <div>
+      <div  className="error" >
 
-         <img src={NotFound}/>
+         <img src={imgNotFound} alt="img do notfound"/>
         
-          <h1 className="error">404 - Página não encontrada</h1>
+          <h1 className="fraseNaoEncontrada" > Página não encontrada </h1>
       
       </div>
     );

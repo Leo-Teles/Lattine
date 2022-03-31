@@ -1,8 +1,17 @@
 .error{
     color: white;
-    background-color: #2EA0D9;
+    background-color: #0079D1;
     width: 100vw;
     height: 800px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.fraseNaoEncontrada{
+    color:white;
+    margin-top: 60px;
+    font-weight: 500;
+    font-size: 60px;
+    font-family: cursive;
 }

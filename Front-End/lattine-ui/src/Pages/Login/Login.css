@@ -17,19 +17,20 @@
   .primeiroBloco{
       width: 500px;
       height: 100%;
-      background-color: #2EA0D9;
+      background-color: #0079D1;
       box-shadow: 6px 20px 20px 0px #00000040;
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: space-evenly;
 
 
   }
 
   .bemVindo{
-      color: #ffff;
+      color: white;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-weight: lighter;
       margin-top: 55px;
@@ -38,7 +39,7 @@
       font-weight: bold;
   }
   .semConta{
-      color: #ffff;
+      color: white;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-weight: lighter;
       font-size: 32px;
@@ -66,10 +67,10 @@
       font-weight: lighter;
       font-size: 28px;
       font-style: normal;
-      margin-top: 36px;    
+      margin-top: 29px;    
       margin-bottom: 48px; 
       font-weight: bold;
-      color:#2EA0D9;
+      color:#0079D1;
       box-shadow: 1px 2px 3px 1px #00000040;
   }
   
@@ -124,7 +125,7 @@
     width: 170px;
     border-radius: 15px;
     border: none;
-    background-color:#2EA0D9 ;
+    background-color:#0079D1 ;
     color:white;  
     font-size: 35px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
