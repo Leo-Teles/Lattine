@@ -7752,24 +7752,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\48395996888.INFOSCS\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\giuli\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\48395996888.INFOSCS\\Desktop\\Lattine-Group\\Back-End\\Projeto_Lattine-Group\\Projeto_Lattine-Group\\Projeto_Lattine-Group.csproj",
+      "projectUniqueName": "C:\\Users\\giuli\\Desktop\\Lattine-Group\\Back-End\\Projeto_Lattine-Group\\Projeto_Lattine-Group\\Projeto_Lattine-Group.csproj",
       "projectName": "Projeto_Lattine-Group",
-      "projectPath": "C:\\Users\\48395996888.INFOSCS\\Desktop\\Lattine-Group\\Back-End\\Projeto_Lattine-Group\\Projeto_Lattine-Group\\Projeto_Lattine-Group.csproj",
-      "packagesPath": "C:\\Users\\48395996888.INFOSCS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\48395996888.INFOSCS\\Desktop\\Lattine-Group\\Back-End\\Projeto_Lattine-Group\\Projeto_Lattine-Group\\obj\\",
+      "projectPath": "C:\\Users\\giuli\\Desktop\\Lattine-Group\\Back-End\\Projeto_Lattine-Group\\Projeto_Lattine-Group\\Projeto_Lattine-Group.csproj",
+      "packagesPath": "C:\\Users\\giuli\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\giuli\\Desktop\\Lattine-Group\\Back-End\\Projeto_Lattine-Group\\Projeto_Lattine-Group\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\48395996888.INFOSCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\giuli\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7840,12 +7835,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.13, 5.0.13]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -7854,7 +7843,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -7,6 +7,7 @@ namespace Projeto_Lattine_Group.Domains
 {
     public partial class GrupoInfraestrutura
     {
+        public short IdGrupoInfraestrutura { get; set; }
         public short? IdGrupoRecursos { get; set; }
         public short? IdInfraestrutura { get; set; }
 

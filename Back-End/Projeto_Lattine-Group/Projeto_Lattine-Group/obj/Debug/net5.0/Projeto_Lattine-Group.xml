@@ -1,0 +1,844 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Projeto_Lattine-Group</name>
+    </assembly>
+    <members>
+        <member name="M:Projeto_Lattine_Group.Controllers.ContatosLattinesController.Get">
+            <summary>
+            Lista todos os ContatosLattines
+            </summary>
+            <returns>Uma lista de ContatosLattines com um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.ContatosLattinesController.GetById(System.Int32)">
+            <summary>
+            Busca um ContatosLattine através de seu ID
+            </summary>
+            <param name="id">ID do ContatosLattine buscado</param>
+            <returns>O ContatosLattine buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.ContatosLattinesController.Post(Projeto_Lattine_Group.Domains.ContatosLattine)">
+            <summary>
+            Cadastra um novo ContatosLattine
+            </summary>
+            <param name="novoContatosLattine">Objeto novoContatosLattine com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.ContatosLattinesController.Delete(System.Int32)">
+            <summary>
+            Deleta um ContatosLattine existente
+            </summary>
+            <param name="id">ID do ContatosLattine deletado</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.ContatosLattinesController.Put(System.Int32,Projeto_Lattine_Group.Domains.ContatosLattine)">
+            <summary>
+            Atualiza um ContatosLattine existente passando o id pela URL da requisição
+            </summary>
+            <param name="id">id do ContatosLattine que será atualizado</param>
+            <param name="ContatosLattineAtualizado">Objeto ContatosLattineAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.EnderecoIPsController.Get">
+            <summary>
+            Lista todos os EnderecoIPs
+            </summary>
+            <returns>Uma lista de EnderecoIPs com um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.EnderecoIPsController.GetById(System.Int32)">
+            <summary>
+            Busca um EnderecoIP através de seu ID
+            </summary>
+            <param name="id">ID do EnderecoIP buscado</param>
+            <returns>O EnderecoIP buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.EnderecoIPsController.Post(Projeto_Lattine_Group.Domains.EnderecoIp)">
+            <summary>
+            Cadastra um novo EnderecoIP
+            </summary>
+            <param name="novoEnderecoIP">Objeto novoEnderecoIP com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.EnderecoIPsController.Delete(System.Int32)">
+            <summary>
+            Deleta um EnderecoIP existente
+            </summary>
+            <param name="id">ID do EnderecoIP deletado</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.EnderecoIPsController.Put(System.Int32,Projeto_Lattine_Group.Domains.EnderecoIp)">
+            <summary>
+            Atualiza um EnderecoIP existente passando o id pela URL da requisição
+            </summary>
+            <param name="id">id do EnderecoIP que será atualizado</param>
+            <param name="EnderecoIPAtualizado">Objeto EnderecoIPAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.GrupoInfraestruturasController.Get">
+            <summary>
+            Lista todos os GrupoInfraestruturas
+            </summary>
+            <returns>Uma lista de GrupoInfraestruturas com um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.GrupoInfraestruturasController.GetById(System.Int32)">
+            <summary>
+            Busca um GrupoInfraestrutura através de seu ID
+            </summary>
+            <param name="id">ID do GrupoInfraestrutura buscado</param>
+            <returns>O GrupoInfraestrutura buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.GrupoInfraestruturasController.Post(Projeto_Lattine_Group.Domains.GrupoInfraestrutura)">
+            <summary>
+            Cadastra um novo GrupoInfraestrutura
+            </summary>
+            <param name="novoGrupoInfraestrutura">Objeto novoGrupoInfraestrutura com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.GrupoInfraestruturasController.Delete(System.Int32)">
+            <summary>
+            Deleta um GrupoInfraestrutura existente
+            </summary>
+            <param name="id">ID do GrupoInfraestrutura deletado</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.GrupoInfraestruturasController.Put(System.Int32,Projeto_Lattine_Group.Domains.GrupoInfraestrutura)">
+            <summary>
+            Atualiza um GrupoInfraestrutura existente passando o id pela URL da requisição
+            </summary>
+            <param name="id">id do GrupoInfraestrutura que será atualizado</param>
+            <param name="GrupoInfraestruturaAtualizado">Objeto GrupoInfraestruturaAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.GrupoRecursosController.Get">
+            <summary>
+            Lista todos os GrupoRecursos
+            </summary>
+            <returns>Uma lista de GrupoRecursos com um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.GrupoRecursosController.GetById(System.Int32)">
+            <summary>
+            Busca um GrupoRecurso através de seu ID
+            </summary>
+            <param name="id">ID do GrupoRecurso buscado</param>
+            <returns>O GrupoRecurso buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.GrupoRecursosController.Post(Projeto_Lattine_Group.Domains.GrupoRecurso)">
+            <summary>
+            Cadastra um novo GrupoRecurso
+            </summary>
+            <param name="novoGrupoRecurso">Objeto novoGrupoRecurso com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.GrupoRecursosController.Delete(System.Int32)">
+            <summary>
+            Deleta um GrupoRecurso existente
+            </summary>
+            <param name="id">ID do GrupoRecurso deletado</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.GrupoRecursosController.Put(System.Int32,Projeto_Lattine_Group.Domains.GrupoRecurso)">
+            <summary>
+            Atualiza um GrupoRecurso existente passando o id pela URL da requisição
+            </summary>
+            <param name="id">id do GrupoRecurso que será atualizado</param>
+            <param name="GrupoRecursoAtualizado">Objeto GrupoRecursoAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.InfraestruturasController.Get">
+            <summary>
+            Lista todos os Infraestruturas
+            </summary>
+            <returns>Uma lista de Infraestruturas com um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.InfraestruturasController.GetById(System.Int32)">
+            <summary>
+            Busca um Infraestrutura através de seu ID
+            </summary>
+            <param name="id">ID do Infraestrutura buscado</param>
+            <returns>O Infraestrutura buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.InfraestruturasController.Post(Projeto_Lattine_Group.Domains.Infraestrutura)">
+            <summary>
+            Cadastra um novo Infraestrutura
+            </summary>
+            <param name="novoInfraestrutura">Objeto novoInfraestrutura com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.InfraestruturasController.Delete(System.Int32)">
+            <summary>
+            Deleta um Infraestrutura existente
+            </summary>
+            <param name="id">ID do Infraestrutura deletado</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.InfraestruturasController.Put(System.Int32,Projeto_Lattine_Group.Domains.Infraestrutura)">
+            <summary>
+            Atualiza um Infraestrutura existente passando o id pela URL da requisição
+            </summary>
+            <param name="id">id do Infraestrutura que será atualizado</param>
+            <param name="InfraestruturaAtualizado">Objeto InfraestruturaAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.MaquinaVirtualsController.Get">
+            <summary>
+            Lista todos os MaquinaVirtuals
+            </summary>
+            <returns>Uma lista de MaquinaVirtuals com um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.MaquinaVirtualsController.GetById(System.Int32)">
+            <summary>
+            Busca um MaquinaVirtual através de seu ID
+            </summary>
+            <param name="id">ID do MaquinaVirtual buscado</param>
+            <returns>O MaquinaVirtual buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.MaquinaVirtualsController.Post(Projeto_Lattine_Group.Domains.MaquinaVirtual)">
+            <summary>
+            Cadastra um novo MaquinaVirtual
+            </summary>
+            <param name="novoMaquinaVirtual">Objeto novoMaquinaVirtual com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.MaquinaVirtualsController.Delete(System.Int32)">
+            <summary>
+            Deleta um MaquinaVirtual existente
+            </summary>
+            <param name="id">ID do MaquinaVirtual deletado</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.MaquinaVirtualsController.Put(System.Int32,Projeto_Lattine_Group.Domains.MaquinaVirtual)">
+            <summary>
+            Atualiza um MaquinaVirtual existente passando o id pela URL da requisição
+            </summary>
+            <param name="id">id do MaquinaVirtual que será atualizado</param>
+            <param name="MaquinaVirtualAtualizado">Objeto MaquinaVirtualAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.RedeVirtualsController.Get">
+            <summary>
+            Lista todos os RedeVirtuals
+            </summary>
+            <returns>Uma lista de RedeVirtuals com um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.RedeVirtualsController.GetById(System.Int32)">
+            <summary>
+            Busca um RedeVirtual através de seu ID
+            </summary>
+            <param name="id">ID do RedeVirtual buscado</param>
+            <returns>O RedeVirtual buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.RedeVirtualsController.Post(Projeto_Lattine_Group.Domains.RedeVirtual)">
+            <summary>
+            Cadastra um novo RedeVirtual
+            </summary>
+            <param name="novoRedeVirtual">Objeto novoRedeVirtual com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.RedeVirtualsController.Delete(System.Int32)">
+            <summary>
+            Deleta um RedeVirtual existente
+            </summary>
+            <param name="id">ID do RedeVirtual deletado</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.RedeVirtualsController.Put(System.Int32,Projeto_Lattine_Group.Domains.RedeVirtual)">
+            <summary>
+            Atualiza um RedeVirtual existente passando o id pela URL da requisição
+            </summary>
+            <param name="id">id do RedeVirtual que será atualizado</param>
+            <param name="RedeVirtualAtualizado">Objeto RedeVirtualAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.ServicoAplicacionalsController.Get">
+            <summary>
+            Lista todos os ServicoAplicacionals
+            </summary>
+            <returns>Uma lista de ServicoAplicacionals com um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.ServicoAplicacionalsController.GetById(System.Int32)">
+            <summary>
+            Busca um ServicoAplicacional através de seu ID
+            </summary>
+            <param name="id">ID do ServicoAplicacional buscado</param>
+            <returns>O ServicoAplicacional buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.ServicoAplicacionalsController.Post(Projeto_Lattine_Group.Domains.ServicoAplicacional)">
+            <summary>
+            Cadastra um novo ServicoAplicacional
+            </summary>
+            <param name="novoServicoAplicacional">Objeto novoServicoAplicacional com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.ServicoAplicacionalsController.Delete(System.Int32)">
+            <summary>
+            Deleta um ServicoAplicacional existente
+            </summary>
+            <param name="id">ID do ServicoAplicacional deletado</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.ServicoAplicacionalsController.Put(System.Int32,Projeto_Lattine_Group.Domains.ServicoAplicacional)">
+            <summary>
+            Atualiza um ServicoAplicacional existente passando o id pela URL da requisição
+            </summary>
+            <param name="id">id do ServicoAplicacional que será atualizado</param>
+            <param name="ServicoAplicacionalAtualizado">Objeto ServicoAplicacionalAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.SubRedesController.Get">
+            <summary>
+            Lista todos os SubRedes
+            </summary>
+            <returns>Uma lista de SubRedes com um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.SubRedesController.GetById(System.Int32)">
+            <summary>
+            Busca um SubRede através de seu ID
+            </summary>
+            <param name="id">ID do SubRede buscado</param>
+            <returns>O SubRede buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.SubRedesController.Post(Projeto_Lattine_Group.Domains.SubRede)">
+            <summary>
+            Cadastra um novo SubRede
+            </summary>
+            <param name="novoSubRede">Objeto novoSubRede com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.SubRedesController.Delete(System.Int32)">
+            <summary>
+            Deleta um SubRede existente
+            </summary>
+            <param name="id">ID do SubRede deletado</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.SubRedesController.Put(System.Int32,Projeto_Lattine_Group.Domains.SubRede)">
+            <summary>
+            Atualiza um SubRede existente passando o id pela URL da requisição
+            </summary>
+            <param name="id">id do SubRede que será atualizado</param>
+            <param name="SubRedeAtualizado">Objeto SubRedeAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.TelefonesController.Get">
+            <summary>
+            Lista todos os Telefones
+            </summary>
+            <returns>Uma lista de Telefones com um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.TelefonesController.GetById(System.Int32)">
+            <summary>
+            Busca um Telefone através de seu ID
+            </summary>
+            <param name="id">ID do Telefone buscado</param>
+            <returns>O Telefone buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.TelefonesController.Post(Projeto_Lattine_Group.Domains.Telefone)">
+            <summary>
+            Cadastra um novo Telefone
+            </summary>
+            <param name="novoTelefone">Objeto novoTelefone com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.TelefonesController.Delete(System.Int32)">
+            <summary>
+            Deleta um Telefone existente
+            </summary>
+            <param name="id">ID do Telefone deletado</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.TelefonesController.Put(System.Int32,Projeto_Lattine_Group.Domains.Telefone)">
+            <summary>
+            Atualiza um Telefone existente passando o id pela URL da requisição
+            </summary>
+            <param name="id">id do Telefone que será atualizado</param>
+            <param name="TelefoneAtualizado">Objeto TelefoneAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.TipoUsuariosController.Get">
+            <summary>
+            Lista todos os TipoUsuarios
+            </summary>
+            <returns>Uma lista de TipoUsuarios com um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.TipoUsuariosController.GetById(System.Int32)">
+            <summary>
+            Busca um TipoUsuario através de seu ID
+            </summary>
+            <param name="id">ID do TipoUsuario buscado</param>
+            <returns>O TipoUsuario buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.TipoUsuariosController.Post(Projeto_Lattine_Group.Domains.TipoUsuario)">
+            <summary>
+            Cadastra um novo TipoUsuario
+            </summary>
+            <param name="novoTipoUsuario">Objeto novoTipoUsuario com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.TipoUsuariosController.Delete(System.Int32)">
+            <summary>
+            Deleta um TipoUsuario existente
+            </summary>
+            <param name="id">ID do TipoUsuario deletado</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.TipoUsuariosController.Put(System.Int32,Projeto_Lattine_Group.Domains.TipoUsuario)">
+            <summary>
+            Atualiza um TipoUsuario existente passando o id pela URL da requisição
+            </summary>
+            <param name="id">id do TipoUsuario que será atualizado</param>
+            <param name="TipoUsuarioAtualizado">Objeto TipoUsuarioAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.UsuariosController.Get">
+            <summary>
+            Lista todos os Usuarios
+            </summary>
+            <returns>Uma lista de Usuarios com um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.UsuariosController.GetById(System.Int32)">
+            <summary>
+            Busca um Usuario através de seu ID
+            </summary>
+            <param name="id">ID do Usuario buscado</param>
+            <returns>O Usuario buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.UsuariosController.Post(Projeto_Lattine_Group.Domains.Usuario)">
+            <summary>
+            Cadastra um novo Usuario
+            </summary>
+            <param name="novoUsuario">Objeto novoUsuario com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.UsuariosController.Delete(System.Int32)">
+            <summary>
+            Deleta um Usuario existente
+            </summary>
+            <param name="id">ID do Usuario deletado</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Controllers.UsuariosController.Put(System.Int32,Projeto_Lattine_Group.Domains.Usuario)">
+            <summary>
+            Atualiza um Usuario existente passando o id pela URL da requisição
+            </summary>
+            <param name="id">id do Usuario que será atualizado</param>
+            <param name="UsuarioAtualizado">Objeto UsuarioAtualizado com os novos dados</param>
+        </member>
+        <member name="T:Projeto_Lattine_Group.Interfaces.IContatosLattineRepository">
+            <summary>
+            Interface responsável pelo repositório ContatosLattineRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IContatosLattineRepository.Listar">
+            <summary>
+            Lista todos os ContatosLattines
+            </summary>
+            <returns>Lista de ContatosLattines</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IContatosLattineRepository.Listarid(System.Int32)">
+            <summary>
+            Busca um ContatosLattine através de seu id
+            </summary>
+            <param name="id">id do ContatosLattine buscado</param>
+            <returns>O ContatosLattine buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IContatosLattineRepository.Cadastrar(Projeto_Lattine_Group.Domains.ContatosLattine)">
+            <summary>
+            Cadastra um novo ContatosLattine
+            </summary>
+            <param name="novoContatosLattine">Objeto novoContatosLattine com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IContatosLattineRepository.Atualizar(System.Int32,Projeto_Lattine_Group.Domains.ContatosLattine)">
+            <summary>
+            Atualiza um ContatosLattine existente passando o id pela URL da requisição
+            </summary>
+            <param name="idContatosLattine">id do ContatosLattine que será atualizado</param>
+            <param name="ContatosLattineAtualizado">Objeto ContatosLattineAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IContatosLattineRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um ContatosLattine existente
+            </summary>
+            <param name="idContatosLattine">id do ContatosLattine deletado</param>
+        </member>
+        <member name="T:Projeto_Lattine_Group.Interfaces.IEnderecoIPRepository">
+            <summary>
+            Interface responsável pelo repositório EnderecoIPRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IEnderecoIPRepository.Listar">
+            <summary>
+            Lista todos os EnderecoIPs
+            </summary>
+            <returns>Lista de EnderecoIPs</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IEnderecoIPRepository.Listarid(System.Int32)">
+            <summary>
+            Busca um EnderecoIP através de seu id
+            </summary>
+            <param name="id">id do EnderecoIP buscado</param>
+            <returns>O EnderecoIP buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IEnderecoIPRepository.Cadastrar(Projeto_Lattine_Group.Domains.EnderecoIp)">
+            <summary>
+            Cadastra um novo EnderecoIP
+            </summary>
+            <param name="novoEnderecoIP">Objeto novoEnderecoIP com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IEnderecoIPRepository.Atualizar(System.Int32,Projeto_Lattine_Group.Domains.EnderecoIp)">
+            <summary>
+            Atualiza um EnderecoIP existente passando o id pela URL da requisição
+            </summary>
+            <param name="idEnderecoIP">id do EnderecoIP que será atualizado</param>
+            <param name="EnderecoIPAtualizado">Objeto EnderecoIPAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IEnderecoIPRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um EnderecoIP existente
+            </summary>
+            <param name="idEnderecoIP">id do EnderecoIP deletado</param>
+        </member>
+        <member name="T:Projeto_Lattine_Group.Interfaces.IGrupoInfraestruturaRepository">
+            <summary>
+            Interface responsável pelo repositório GrupoInfraestruturaRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoInfraestruturaRepository.Listar">
+            <summary>
+            Lista todos os GrupoInfraestruturas
+            </summary>
+            <returns>Lista de GrupoInfraestruturas</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoInfraestruturaRepository.Listarid(System.Int32)">
+            <summary>
+            Busca um GrupoInfraestrutura através de seu id
+            </summary>
+            <param name="id">id do GrupoInfraestrutura buscado</param>
+            <returns>O GrupoInfraestrutura buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoInfraestruturaRepository.Cadastrar(Projeto_Lattine_Group.Domains.GrupoInfraestrutura)">
+            <summary>
+            Cadastra um novo GrupoInfraestrutura
+            </summary>
+            <param name="novoGrupoInfraestrutura">Objeto novoGrupoInfraestrutura com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoInfraestruturaRepository.Atualizar(System.Int32,Projeto_Lattine_Group.Domains.GrupoInfraestrutura)">
+            <summary>
+            Atualiza um GrupoInfraestrutura existente passando o id pela URL da requisição
+            </summary>
+            <param name="idGrupoInfraestrutura">id do GrupoInfraestrutura que será atualizado</param>
+            <param name="GrupoInfraestruturaAtualizado">Objeto GrupoInfraestruturaAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoInfraestruturaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um GrupoInfraestrutura existente
+            </summary>
+            <param name="idGrupoInfraestrutura">id do GrupoInfraestrutura deletado</param>
+        </member>
+        <member name="T:Projeto_Lattine_Group.Interfaces.IGrupoRecursoRepository">
+            <summary>
+            Interface responsável pelo repositório GrupoRecursoRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoRecursoRepository.Listar">
+            <summary>
+            Lista todos os GrupoRecursos
+            </summary>
+            <returns>Lista de GrupoRecursos</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoRecursoRepository.Listarid(System.Int32)">
+            <summary>
+            Busca um GrupoRecurso através de seu id
+            </summary>
+            <param name="id">id do GrupoRecurso buscado</param>
+            <returns>O GrupoRecurso buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoRecursoRepository.Cadastrar(Projeto_Lattine_Group.Domains.GrupoRecurso)">
+            <summary>
+            Cadastra um novo GrupoRecurso
+            </summary>
+            <param name="novoGrupoRecurso">Objeto novoGrupoRecurso com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoRecursoRepository.Atualizar(System.Int32,Projeto_Lattine_Group.Domains.GrupoRecurso)">
+            <summary>
+            Atualiza um GrupoRecurso existente passando o id pela URL da requisição
+            </summary>
+            <param name="idGrupoRecurso">id do GrupoRecurso que será atualizado</param>
+            <param name="GrupoRecursoAtualizado">Objeto GrupoRecursoAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoRecursoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um GrupoRecurso existente
+            </summary>
+            <param name="idGrupoRecurso">id do GrupoRecurso deletado</param>
+        </member>
+        <member name="T:Projeto_Lattine_Group.Interfaces.IInfraestruturaRepository">
+            <summary>
+            Interface responsável pelo repositório InfraestruturaRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IInfraestruturaRepository.Listar">
+            <summary>
+            Lista todas as Infraestruturas
+            </summary>
+            <returns>Lista de Infraestruturas</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IInfraestruturaRepository.Listarid(System.Int32)">
+            <summary>
+            Busca uma Infraestrutura através de seu id
+            </summary>
+            <param name="id">id da Infraestrutura buscada</param>
+            <returns>A Infraestrutura buscada</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IInfraestruturaRepository.Cadastrar(Projeto_Lattine_Group.Domains.Infraestrutura)">
+            <summary>
+            Cadastra uma nova Infraestrutura
+            </summary>
+            <param name="novaInfraestrutura">Objeto novaInfraestrutura com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IInfraestruturaRepository.Atualizar(System.Int32,Projeto_Lattine_Group.Domains.Infraestrutura)">
+            <summary>
+            Atualiza uma Infraestrutura existente passando o id pela URL da requisição
+            </summary>
+            <param name="idInfraestrutura">id da Infraestrutura que será atualizada</param>
+            <param name="InfraestruturaAtualizada">Objeto InfraestruturaAtualizada com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IInfraestruturaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma Infraestrutura existente
+            </summary>
+            <param name="idInfraestrutura">id da Infraestrutura deletada</param>
+        </member>
+        <member name="T:Projeto_Lattine_Group.Interfaces.IMaquinaVirtualRepository">
+            <summary>
+            Interface responsável pelo repositório MaquinaVirtualRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IMaquinaVirtualRepository.Listar">
+            <summary>
+            Lista todas as MaquinaVirtuals
+            </summary>
+            <returns>Lista de MaquinaVirtuals</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IMaquinaVirtualRepository.Listarid(System.Int32)">
+            <summary>
+            Busca uma MaquinaVirtual através de seu id
+            </summary>
+            <param name="id">id da MaquinaVirtual buscada</param>
+            <returns>A MaquinaVirtual buscada</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IMaquinaVirtualRepository.Cadastrar(Projeto_Lattine_Group.Domains.MaquinaVirtual)">
+            <summary>
+            Cadastra uma nova MaquinaVirtual
+            </summary>
+            <param name="novaMaquinaVirtual">Objeto novaMaquinaVirtual com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IMaquinaVirtualRepository.Atualizar(System.Int32,Projeto_Lattine_Group.Domains.MaquinaVirtual)">
+            <summary>
+            Atualiza uma MaquinaVirtual existente passando o id pela URL da requisição
+            </summary>
+            <param name="idMaquinaVirtual">id da MaquinaVirtual que será atualizada</param>
+            <param name="MaquinaVirtualAtualizada">Objeto MaquinaVirtualAtualizada com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IMaquinaVirtualRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma MaquinaVirtual existente
+            </summary>
+            <param name="idMaquinaVirtual">id da MaquinaVirtual deletada</param>
+        </member>
+        <member name="T:Projeto_Lattine_Group.Interfaces.IRedeVirtualRepository">
+            <summary>
+            Interface responsável pelo repositório RedeVirtualRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IRedeVirtualRepository.Listar">
+            <summary>
+            Lista todas as RedeVirtuals
+            </summary>
+            <returns>Lista de RedeVirtuals</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IRedeVirtualRepository.Listarid(System.Int32)">
+            <summary>
+            Busca uma RedeVirtual através de seu id
+            </summary>
+            <param name="id">id da RedeVirtual buscada</param>
+            <returns>A RedeVirtual buscada</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IRedeVirtualRepository.Cadastrar(Projeto_Lattine_Group.Domains.RedeVirtual)">
+            <summary>
+            Cadastra uma nova RedeVirtual
+            </summary>
+            <param name="novaRedeVirtual">Objeto novaRedeVirtual com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IRedeVirtualRepository.Atualizar(System.Int32,Projeto_Lattine_Group.Domains.RedeVirtual)">
+            <summary>
+            Atualiza uma RedeVirtual existente passando o id pela URL da requisição
+            </summary>
+            <param name="idRedeVirtual">id da RedeVirtual que será atualizada</param>
+            <param name="RedeVirtualAtualizada">Objeto RedeVirtualAtualizada com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IRedeVirtualRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma RedeVirtual existente
+            </summary>
+            <param name="idRedeVirtual">id da RedeVirtual deletada</param>
+        </member>
+        <member name="T:Projeto_Lattine_Group.Interfaces.IServicoAplicacionalRepository">
+            <summary>
+            Interface responsável pelo repositório ServicoAplicacionalRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IServicoAplicacionalRepository.Listar">
+            <summary>
+            Lista todos os ServicoAplicacionals
+            </summary>
+            <returns>Lista de ServicoAplicacionals</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IServicoAplicacionalRepository.Listarid(System.Int32)">
+            <summary>
+            Busca um ServicoAplicacional através de seu id
+            </summary>
+            <param name="id">id do ServicoAplicacional buscado</param>
+            <returns>O ServicoAplicacional buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IServicoAplicacionalRepository.Cadastrar(Projeto_Lattine_Group.Domains.ServicoAplicacional)">
+            <summary>
+            Cadastra um novo ServicoAplicacional
+            </summary>
+            <param name="novoServicoAplicacional">Objeto novoServicoAplicacional com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IServicoAplicacionalRepository.Atualizar(System.Int32,Projeto_Lattine_Group.Domains.ServicoAplicacional)">
+            <summary>
+            Atualiza um ServicoAplicacional existente passando o id pela URL da requisição
+            </summary>
+            <param name="idServicoAplicacional">id do ServicoAplicacional que será atualizado</param>
+            <param name="ServicoAplicacionalAtualizado">Objeto ServicoAplicacionalAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IServicoAplicacionalRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um ServicoAplicacional existente
+            </summary>
+            <param name="idServicoAplicacional">id do ServicoAplicacional deletado</param>
+        </member>
+        <member name="T:Projeto_Lattine_Group.Interfaces.ISubRedeRepository">
+            <summary>
+            Interface responsável pelo repositório SubRedeRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.ISubRedeRepository.Listar">
+            <summary>
+            Lista todas as SubRedes
+            </summary>
+            <returns>Lista de SubRedes</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.ISubRedeRepository.Listarid(System.Int32)">
+            <summary>
+            Busca uma SubRede através de seu id
+            </summary>
+            <param name="id">id da SubRede buscada</param>
+            <returns>A SubRede buscada</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.ISubRedeRepository.Cadastrar(Projeto_Lattine_Group.Domains.SubRede)">
+            <summary>
+            Cadastra uma nova SubRede
+            </summary>
+            <param name="novaSubRede">Objeto novaSubRede com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.ISubRedeRepository.Atualizar(System.Int32,Projeto_Lattine_Group.Domains.SubRede)">
+            <summary>
+            Atualiza uma SubRede existente passando o id pela URL da requisição
+            </summary>
+            <param name="idSubRede">id da SubRede que será atualizada</param>
+            <param name="SubRedeAtualizada">Objeto SubRedeAtualizada com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.ISubRedeRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma SubRede existente
+            </summary>
+            <param name="idSubRede">id da SubRede deletada</param>
+        </member>
+        <member name="T:Projeto_Lattine_Group.Interfaces.ITelefoneRepository">
+            <summary>
+            Interface responsável pelo repositório TelefoneRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.ITelefoneRepository.Listar">
+            <summary>
+            Lista todos os Telefones
+            </summary>
+            <returns>Lista de Telefones</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.ITelefoneRepository.Listarid(System.Int32)">
+            <summary>
+            Busca um Telefone através de seu id
+            </summary>
+            <param name="id">id do Telefone buscado</param>
+            <returns>O Telefone buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.ITelefoneRepository.Cadastrar(Projeto_Lattine_Group.Domains.Telefone)">
+            <summary>
+            Cadastra um novo Telefone
+            </summary>
+            <param name="novoTelefone">Objeto novoTelefone com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.ITelefoneRepository.Atualizar(System.Int32,Projeto_Lattine_Group.Domains.Telefone)">
+            <summary>
+            Atualiza um Telefone existente passando o id pela URL da requisição
+            </summary>
+            <param name="idTelefone">id do Telefone que será atualizado</param>
+            <param name="TelefoneAtualizado">Objeto TelefoneAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.ITelefoneRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um Telefone existente
+            </summary>
+            <param name="idTelefone">id do Telefone deletado</param>
+        </member>
+        <member name="T:Projeto_Lattine_Group.Interfaces.ITipoUsuarioRepository">
+            <summary>
+            Interface responsável pelo repositório TipoUsuarioRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.ITipoUsuarioRepository.Listar">
+            <summary>
+            Lista todos os TipoUsuarios
+            </summary>
+            <returns>Lista de TipoUsuarios</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.ITipoUsuarioRepository.Listarid(System.Int32)">
+            <summary>
+            Busca um TipoUsuario através de seu id
+            </summary>
+            <param name="id">id do TipoUsuario buscado</param>
+            <returns>O TipoUsuario buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.ITipoUsuarioRepository.Cadastrar(Projeto_Lattine_Group.Domains.TipoUsuario)">
+            <summary>
+            Cadastra um novo TipoUsuario
+            </summary>
+            <param name="novoTipoUsuario">Objeto novoTipoUsuario com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.ITipoUsuarioRepository.Atualizar(System.Int32,Projeto_Lattine_Group.Domains.TipoUsuario)">
+            <summary>
+            Atualiza um TipoUsuario existente passando o id pela URL da requisição
+            </summary>
+            <param name="idTipoUsuario">id do TipoUsuario que será atualizado</param>
+            <param name="TipoUsuarioAtualizado">Objeto TipoUsuarioAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.ITipoUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um TipoUsuario existente
+            </summary>
+            <param name="idTipoUsuario">id do TipoUsuario deletado</param>
+        </member>
+        <member name="T:Projeto_Lattine_Group.Interfaces.IUsuarioRepository">
+            <summary>
+            Interface responsável pelo repositório UsuarioRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IUsuarioRepository.Listar">
+            <summary>
+            Lista todos os Usuarios
+            </summary>
+            <returns>Lista de Usuarios</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IUsuarioRepository.Listarid(System.Int32)">
+            <summary>
+            Busca um Usuario através de seu id
+            </summary>
+            <param name="id">id do Usuario buscado</param>
+            <returns>O Usuario buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IUsuarioRepository.Cadastrar(Projeto_Lattine_Group.Domains.Usuario)">
+            <summary>
+            Cadastra um novo Usuario
+            </summary>
+            <param name="novoUsuario">Objeto novoUsuario com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IUsuarioRepository.Atualizar(System.Int32,Projeto_Lattine_Group.Domains.Usuario)">
+            <summary>
+            Atualiza um Usuario existente passando o id pela URL da requisição
+            </summary>
+            <param name="idUsuario">id do Usuario que será atualizado</param>
+            <param name="UsuarioAtualizado">Objeto UsuarioAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um Usuario existente
+            </summary>
+            <param name="idUsuario">id do Usuario deletado</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Busca um usuário através de seu email e senha
+            </summary>
+            <param name="email">Email do usuário buscado</param>
+            <param name="senha">Senha do usuário buscado</param>
+            <returns>Usuário buscado</returns>
+        </member>
+    </members>
+</doc>

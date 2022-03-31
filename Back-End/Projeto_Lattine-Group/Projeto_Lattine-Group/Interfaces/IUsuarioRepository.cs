@@ -39,5 +39,13 @@ namespace Projeto_Lattine_Group.Interfaces
         /// </summary>
         /// <param name="idUsuario">id do Usuario deletado</param>
         void Deletar(int idUsuario);
+
+        /// <summary>
+        /// Busca um usuário através de seu email e senha
+        /// </summary>
+        /// <param name="email">Email do usuário buscado</param>
+        /// <param name="senha">Senha do usuário buscado</param>
+        /// <returns>Usuário buscado</returns>
+        Usuario Login(string email, string senha);
     }
 }

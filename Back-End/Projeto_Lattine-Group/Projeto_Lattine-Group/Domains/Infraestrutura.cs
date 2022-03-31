@@ -9,6 +9,7 @@ namespace Projeto_Lattine_Group.Domains
     {
         public Infraestrutura()
         {
+            GrupoInfraestruturas = new HashSet<GrupoInfraestrutura>();
             MaquinaVirtuals = new HashSet<MaquinaVirtual>();
             RedeVirtuals = new HashSet<RedeVirtual>();
             ServicoAplicacionals = new HashSet<ServicoAplicacional>();
@@ -17,6 +18,7 @@ namespace Projeto_Lattine_Group.Domains
         public short IdInfraestrutura { get; set; }
         public DateTime? DataCadastro { get; set; }
 
+        public virtual ICollection<GrupoInfraestrutura> GrupoInfraestruturas { get; set; }
         public virtual ICollection<MaquinaVirtual> MaquinaVirtuals { get; set; }
         public virtual ICollection<RedeVirtual> RedeVirtuals { get; set; }
         public virtual ICollection<ServicoAplicacional> ServicoAplicacionals { get; set; }
