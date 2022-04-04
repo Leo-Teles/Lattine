@@ -7,6 +7,9 @@ import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Cadastro from './Pages/Cadastro/Cadastro';
 import NotFound from './Pages/NotFound/NotFound';
+import Servicos from './Pages/Servicos/Servicos';
+
+
 import reportWebVitals from './reportWebVitals';
 
 import {
@@ -26,6 +29,7 @@ const routing = (
           <Route exact path="/" element={<Login />} /> 
           <Route path="/Cadastro" element={<Cadastro />} />
           <Route path="*" element={<NotFound/>} />
+          <Route path="/Servicos" element={<Servicos/>} />
           
         </Routes>
       </div>
