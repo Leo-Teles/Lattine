@@ -15,7 +15,6 @@ import reportWebVitals from './reportWebVitals';
 import {
   Route,
   BrowserRouter as Router,
-  Redirect,
   Routes,
 } from 'react-router-dom';
 
@@ -26,7 +25,8 @@ const routing = (
       <div>
         <Routes>
           
-          <Route exact path="/" element={<Login />} /> 
+          <Route exact path="/" element={<Home/>} />
+          <Route path="/Login" element={<Login />} /> 
           <Route path="/Cadastro" element={<Cadastro />} />
           <Route path="*" element={<NotFound/>} />
           <Route path="/Servicos" element={<Servicos/>} />
