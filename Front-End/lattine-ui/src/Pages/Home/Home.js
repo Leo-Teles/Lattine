@@ -1,9 +1,17 @@
-function Home(){
-    return(
-        <h1>
-            Home
-        </h1>
-    );
-}
+import { Component } from "react";
 
-export default Home;
+import './Home.css'
+
+
+export default class Home extends Component{
+    render(){
+        return(
+            <dvi>
+
+
+
+                
+            </dvi>
+        )
+    }
+}
