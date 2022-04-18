@@ -13,6 +13,7 @@ import Sidebar from './components/Sidebar/SidebarAdm'
 import ContatosAdm from './pages/ContatosLattineGroup/ContatosAdm'
 import ContatosFun from './pages/ContatosLattineGroup/ContatosFun'
 import Cadastro from './pages/Cadastro/Cadastro'
+import Home from './pages/Home/Home';
 
 import {
   Route,
@@ -63,12 +64,13 @@ const routing = (
       <Switch>
 
         <Route path="/sidebar" component={Sidebar} />
+        <Route exact path="/" component={Home} />
         <PermissaoAdm path="/contatosadm" component={ContatosAdm} />
         <PermissaoFun path="/contatosfun" component={ContatosFun} />
         <PermissaoAdm path="/servicos" component={Servicos} />
         <PermissaoCli path="/servicos" component={Servicos} />
         <PermissaoFun path="/servicos" component={Servicos} />
-        <Route exact path="/" component={props => <Login {...props} />} />
+        <Route path="/login" component={props => <Login {...props} />} />
         <Route path="/servicos" component={Servicos} />
         <Route path="/usuarios" component={Usuarios} />
         <Route path="/cadastro" component={Cadastro} />
