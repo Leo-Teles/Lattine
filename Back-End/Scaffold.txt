@@ -1,1 +1,1 @@
-Scaffold-DbContext "Data Source=LAPTOP-J7TMPQA4\SQLEXPRESS; initial catalog=lattine; user Id=sa; pwd=Senai@132;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Domains -ContextDir Contexts -Context lattineContext -force
+Scaffold-DbContext "Data Source=NOTE0113B3\SQLEXPRESS; initial catalog=lattine; user Id=sa; pwd=Senai@132;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Domains -ContextDir Contexts -Context lattineContext -force

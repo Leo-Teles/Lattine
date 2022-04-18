@@ -49,6 +49,7 @@ CREATE TABLE infraestrutura(
 go
 
 CREATE TABLE grupoInfraestrutura(
+   idGrupoInfraestrutura smallint PRIMARY KEY IDENTITY(1,1),
    idGrupoRecursos smallint FOREIGN KEY REFERENCES grupoRecursos(idGrupoRecursos),
    idInfraestrutura smallint FOREIGN KEY REFERENCES infraestrutura(idInfraestrutura),
 );

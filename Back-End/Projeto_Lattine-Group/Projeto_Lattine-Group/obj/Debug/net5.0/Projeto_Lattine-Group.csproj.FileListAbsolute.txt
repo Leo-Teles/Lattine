@@ -144,3 +144,5 @@ C:\Users\giuli\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Latt
 C:\Users\giuli\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Lattine-Group\obj\Debug\net5.0\ref\Projeto_Lattine-Group.dll
 C:\Users\giuli\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Lattine-Group\bin\Debug\net5.0\Projeto_Lattine-Group.xml
 C:\Users\giuli\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Lattine-Group\obj\Debug\net5.0\Projeto_Lattine-Group.xml
+C:\Users\48395996888.INFOSCS\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Lattine-Group\bin\Debug\net5.0\Projeto_Lattine-Group.xml
+C:\Users\48395996888.INFOSCS\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Lattine-Group\obj\Debug\net5.0\Projeto_Lattine-Group.xml

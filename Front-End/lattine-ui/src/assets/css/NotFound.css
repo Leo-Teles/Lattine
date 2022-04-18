@@ -1,0 +1,29 @@
+.error{
+    color: white;
+    background-color: #0079D1;
+    width: auto;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+}
+.fraseNaoEncontrada{
+    color:white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    font-weight: 500;
+    font-size: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+}
+
+.error img{
+    width: 35%;
+    height: auto;
+}
