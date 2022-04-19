@@ -5,7 +5,7 @@
 }
 
 .headerHome{
-    height: 100px;
+    height: 130px;
     background-color:white;
     display: flex;
     justify-content: space-around;
@@ -33,16 +33,24 @@
 
 .Conteudo{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   
+  
 }
 
 .primeiroConteudo{
-    height: 1000px;
+    height: 800px;
     width: 1700px;
     border-radius: 30px;
     background-color: #0079D1;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+
 
 }
+
 .FraseImpacto{
     color: white;
     height: 189px;
@@ -51,18 +59,45 @@
     font-style: normal;
     font-weight: 600;
     font-size: 52px;
+    margin-bottom: 24px;
 
 }
-.textoBaixo{width: 511px;
-height: 96px;
-left: 239px;
-top: 597px;
+.textoBaixo{
+    width: 511px;
+    height: 96px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 88px;
 
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
+}
 
-color: #FFFFFF;
+.cadastre{
+    color: #0079D1;
+    background-color: white;
+    height: 80px;
+    width: 280px;
+    border-radius: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 39px;
+ 
+
+}
+.imgHome{
+    height: 659px;
+    width: 827px;
+}
+
+.servicosOfertados{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 63px;
+    color:#0079D1 ;
+    margin-top: 50px;
 }
