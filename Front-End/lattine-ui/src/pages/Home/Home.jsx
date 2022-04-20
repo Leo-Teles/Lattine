@@ -36,13 +36,13 @@ export default class Home extends Component {
 
                         <h2 className="servicosOfertados">Nossos serviços </h2>
 
-                        <from>
-                            <button > Máquinas virtuais </button>
+                        <nav>
+                            <button> Máquinas virtuais </button>
 
                             <button> Redes virtuais</button>
 
                             <button> Serviços aplicacionais</button>
-                        </from>
+                        </nav>
 
 
 
