@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-import '../../assets/css/Cadastro.css'
+import '../../assets/css/style.css'
 
 import imgCadastro from '../../assets/img/pessoaCadastro.png';
 import imgUsuario from '../../assets/img/pessoa.png';

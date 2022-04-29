@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
 
-import '../../assets/css/Servicos.css';
+import '../../assets/css/style.css'
 
 import imgLattine from "../../assets/img/Lattine.png"
 import imgHome from "../../assets/img/Home.png"

@@ -1,13 +1,13 @@
 import React from 'react'
-import '../../assets/css/Sidebar/SidebarAdm.css';
+import '../../../assets/css/style.css'
 
-import imgLattine from "../../assets/img/Lattine.png"
-import imgHome from "../../assets/img/Home.png"
-import imgServicos from "../../assets/img/Ferramentas.png"
-import imgConfiguracao from "../../assets/img/configuracao.png"
-import imgSuporte from "../../assets/img/suporte.png"
-import imgSair from "../../assets/img/sair.png"
-import imgUsuario2 from "../../assets/img/users2.png"
+import imgLattine from "../../../assets/img/Lattine.png"
+import imgHome from "../../../assets/img/Home.png"
+import imgServicos from "../../../assets/img/Ferramentas.png"
+import imgConfiguracao from "../../../assets/img/configuracao.png"
+import imgSuporte from "../../../assets/img/suporte.png"
+import imgSair from "../../../assets/img/sair.png"
+import imgUsuario2 from "../../../assets/img/users2.png"
 
 export default function Sidebar() {
     return (

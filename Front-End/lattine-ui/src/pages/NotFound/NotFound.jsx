@@ -1,4 +1,4 @@
-import '../../assets/css/NotFound.css'
+import '../../assets/css/style.css'
 
 import imgNotFound from '../../assets/img/NotFound.png';
 

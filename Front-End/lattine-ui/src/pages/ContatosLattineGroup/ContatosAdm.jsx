@@ -1,16 +1,16 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
 
-import '../../assets/css/Contatos/ContatosAdm.css';
+import '../../assets/css/style.css'
 
-import SidebarAdm from "../../components/Sidebar/SidebarAdm";
+import Sidebar from "../../components/Sidebar/SiderbarAdm/SidebarAdmSuporte";
 
 
 export default class Servicos extends Component {
     render() {
         return (
             <div>
-                <SidebarAdm />
+                <Sidebar />
                 <div className="conteudo">
                     <div className="container-conteudo">
                         <h1>Contatos - Lattine Group</h1>

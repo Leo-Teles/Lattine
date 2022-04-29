@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-import '../../assets/css/Login.css'
+import '../../assets/css/style.css'
 
 import imgEsquerda from '../../assets/img/imgLogin.png'
 import imgUsuario from '../../assets/img/pessoa.png'
@@ -52,7 +52,7 @@ export default class Login extends Component {
                             break;
 
                         case "3":
-                            this.props.history.push("/servicos")
+                            this.props.history.push("/cadastro")
                             console.log("Estou logado: " + usuarioAutenticado())
                             break;
 
