@@ -12,7 +12,7 @@ import React from 'react';
 export default class Cadastro extends Component {
 
 
-    render() {
+    render() {  
         return (
 
             <div className="blocoTodo">
