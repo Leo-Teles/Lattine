@@ -40,6 +40,7 @@ export default class Servicos extends Component {
                         <p>Luca</p>
                         <h3>Origem Chave Pública SSH</h3>
                         <p>Gerar novo par de chaves</p>
+                        <a href="#">Editar informações</a>
                     </div>
                 </div>
             </div>

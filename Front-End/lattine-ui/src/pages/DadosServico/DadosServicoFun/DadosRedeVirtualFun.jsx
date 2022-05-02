@@ -48,6 +48,7 @@ export default class Servicos extends Component {
                         <p>Ativo</p>
                         <h3>Firewall</h3>
                         <p>Ativo</p>
+                        <a href="#">Editar informações</a>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,7 @@ import '../../assets/css/style.css'
 import Flecha from '../../assets/img/flecha.png'
 import Lupa from '../../assets/img/lupa.png'
 
-import Sidebar from "../../components/Sidebar/SiderbarAdm-Fun/SidebarAdmUsuarios";
+import Sidebar from "../../components/Sidebar/SiderbarAdm-Fun/SidebarAdmServicos";
 
 
 export default class Servicos extends Component {
@@ -16,57 +16,60 @@ export default class Servicos extends Component {
                 <Sidebar />
                 <div className="conteudo">
                     <div className="container-conteudo-users">
+                        <div className="container-titulo">
+                            <h1>Redes Virtuais de "Nome do Usuário"</h1>
+                        </div>
                         <div className="container-input">
                             <input type="text" placeholder="Buscar"/>
                         </div>
                         <div className="listagem">
                             <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
+                                <h1>Nome da Rede Virtual</h1>
                                 <h2>Data de Cadastro:</h2>
                                 <p>14/04/2022</p>
                             </div>
                             <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
+                                <h1>Nome da Rede Virtual</h1>
                                 <h2>Data de Cadastro:</h2>
                                 <p>14/04/2022</p>
                             </div>
                             <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
+                                <h1>Nome da Rede Virtual</h1>
                                 <h2>Data de Cadastro:</h2>
                                 <p>14/04/2022</p>
                             </div>
                             <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
+                                <h1>Nome da Rede Virtual</h1>
                                 <h2>Data de Cadastro:</h2>
                                 <p>14/04/2022</p>
                             </div>
                             <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
+                                <h1>Nome da Rede Virtual</h1>
                                 <h2>Data de Cadastro:</h2>
                                 <p>14/04/2022</p>
                             </div>
                             <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
+                                <h1>Nome da Rede Virtual</h1>
                                 <h2>Data de Cadastro:</h2>
                                 <p>14/04/2022</p>
                             </div>
                             <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
+                                <h1>Nome da Rede Virtual</h1>
                                 <h2>Data de Cadastro:</h2>
                                 <p>14/04/2022</p>
                             </div>
                             <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
+                                <h1>Nome da Rede Virtual</h1>
                                 <h2>Data de Cadastro:</h2>
                                 <p>14/04/2022</p>
                             </div>
                             <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
+                                <h1>Nome da Rede Virtual</h1>
                                 <h2>Data de Cadastro:</h2>
                                 <p>14/04/2022</p>
                             </div>
                             <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
+                                <h1>Nome da Rede Virtual</h1>
                                 <h2>Data de Cadastro:</h2>
                                 <p>14/04/2022</p>
                             </div>

@@ -10,8 +10,8 @@ import imgConfiguracao from "../../assets/img/configuracao.png"
 import imgSuporte from "../../assets/img/suporte.png"
 import imgSair from "../../assets/img/sair.png"
 import imgMaquinas from "../../assets/img/maquinaVirtual.png"
-import imgAplicacionais from "../../assets/img/aplicacionais.png"
-import imgVirtuais from "../../assets/img/virtuais.png"
+import imgAplicacionais from "../../assets/img/redesvirtuais.png"
+import imgVirtuais from "../../assets/img/servicosaplicacionais.png"
 
 
 export default class Servicos extends Component {

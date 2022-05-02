@@ -42,17 +42,17 @@ export default class Login extends Component {
 
                     switch (value) {
                         case "1":
-                            this.props.history.push("/servicos")
+                            this.props.history.push("/")
                             console.log("Estou logado: " + usuarioAutenticado())
                             break;
 
                         case "2":
-                            this.props.history.push("/servicos")
+                            this.props.history.push("/")
                             console.log("Estou logado: " + usuarioAutenticado())
                             break;
 
                         case "3":
-                            this.props.history.push("/cadastro")
+                            this.props.history.push("/")
                             console.log("Estou logado: " + usuarioAutenticado())
                             break;
 

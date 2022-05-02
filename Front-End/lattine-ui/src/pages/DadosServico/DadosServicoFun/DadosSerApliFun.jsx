@@ -17,7 +17,7 @@ export default class Servicos extends Component {
                         <h2>Detalhes do Serviço</h2>
 
                         <h3>Tipo de Serviço</h3>
-                        <p>Máquina Virtual</p>
+                        <p>Serviço Aplicacional</p>
                         <h3>Data de Cadastro</h3>
                         <p>28/04/2022</p>
                         <h3>Grupo de Recursos</h3>
@@ -25,21 +25,13 @@ export default class Servicos extends Component {
 
                         <h2>Detalhes da Instância</h2>
 
-                        <h3>Nome da Máquina Virtual</h3>
-                        <p>Minha Máquina Virtual</p>
-                        <h3>Disponibilidade</h3>
-                        <p>Zona de Disponibilidade</p>
-                        <h3>Sistema Operacional</h3>
-                        <p>Windows Server 2019</p>
-                        <h3>Tamanho</h3>
-                        <p>Standard_D2s_v3 - 2vCPU,8Gib de memória</p>
-
-                        <h2>Conta do Administrador</h2>
-
-                        <h3>Nome do Administrador</h3>
-                        <p>Luca</p>
-                        <h3>Origem Chave Pública SSH</h3>
-                        <p>Gerar novo par de chaves</p>
+                        <h3>Nome do Serviço Aplicacional</h3>
+                        <p>Meu Serviço Aplicacional</p>
+                        <h3>Pilha de Runtime</h3>
+                        <p>.NET 6 (LTS)</p>
+                        <h3>SKU  e Tamanho</h3>
+                        <p>Básico B1- 100 ACU total, 1.75 GB de memória</p>
+                        <a href="#">Editar informações</a>
                     </div>
                 </div>
             </div>

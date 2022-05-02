@@ -1,15 +1,9 @@
 import { Component } from 'react';
 import { Link } from "react-router-dom";
 
-<<<<<<< HEAD
 import '../../assets/css/style.css';
 
 import LogoLattine from '../../assets/img/Lattine.png'
-=======
-import '../../assets/css/Home.css';
-
-import LogoLattine from '../../assets/img/LogoLattine.png'
->>>>>>> 04cd197115ba9bcbeaf11bcc095fc5f08279bba8
 import imgHome from '../../assets/img/imgHome.png'
 
 export default class Home extends Component {
@@ -20,11 +14,7 @@ export default class Home extends Component {
         return (
             <div className="ConteudoTodo">
                 <header className="headerHome">
-<<<<<<< HEAD
-                    <img className="imgLattine" src={LogoLattine} alt="Logo da Lattine Group"/>
-=======
-                    <img className="imgLattine" src={LogoLattine} />
->>>>>>> 04cd197115ba9bcbeaf11bcc095fc5f08279bba8
+                    <img className="imgLattine" src={LogoLattine} alt="Logo da Lattine Group" />
                     <Link className="BotaoLogin" to="/login"> Login </Link>
                 </header>
 
@@ -38,11 +28,7 @@ export default class Home extends Component {
                             <Link className="cadastre" to="/cadastro">Cadastre-se</Link>
                         </div>
 
-<<<<<<< HEAD
-                        <img className="imgHome" src={imgHome} alt="Fundo da Página Home"/>
-=======
-                        <img className="imgHome" src={imgHome} />
->>>>>>> 04cd197115ba9bcbeaf11bcc095fc5f08279bba8
+                        <img className="imgHome" src={imgHome} alt="Fundo da Página Home" />
 
                     </div>
 

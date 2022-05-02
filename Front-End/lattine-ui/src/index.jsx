@@ -15,24 +15,30 @@ import DadosUsuarioAdm from './pages/DadosUsuario/DadosUsuarioAdm'
 import DadosMaqVirAdm from './pages/DadosServico/DadosServicoAdm/DadosMaqVirAdm'
 import DadosRedeVirtualAdm from './pages/DadosServico/DadosServicoAdm/DadosRedeVirtualAdm'
 import DadosSerApliAdm from './pages/DadosServico/DadosServicoAdm/DadosSerApliAdm'
+
+import DadosMaqVirFun from './pages/DadosServico/DadosServicoFun/DadosMaqVirFun'
+import DadosRedeVirtualFun from './pages/DadosServico/DadosServicoFun/DadosRedeVirtualFun'
+import DadosSerApliFun from './pages/DadosServico/DadosServicoFun/DadosSerApliFun'
+
 import ContatosAdm from './pages/ContatosLattineGroup/ContatosAdm'
 import ContatosFun from './pages/ContatosLattineGroup/ContatosFun'
-<<<<<<< HEAD
 import ContatosCli from './pages/ContatosLattineGroup/ContatosCli'
 import EdicaoContatosAdm from './pages/EdicaoContatos/EdicaoContatosAdm'
 import EdicaoContatosFun from './pages/EdicaoContatos/EdicaoContatosFun'
 import EscolherServicoAdm from './pages/EscolherServico/EscolherServicoAdm'
+import MaquinasVirtuaisAdm from './pages/ListagemServicos/MaquinasVirtuais/MaquinasVirtuaisAdm'
+import RedesVirtuaisAdm from './pages/ListagemServicos/RedesVirtuais/RedesVirtuaisAdm'
+import SerApliAdm from './pages/ListagemServicos/ServicosAplicacionais/ServicosAplicacionaisAdm'
+import MaquinasVirtuaisDoUsuario from './pages/ListagemServicosDoUsuario/MaquinasVirtuaisDoUsuario'
+import RedesVirtuaisDoUsuario from './pages/ListagemServicosDoUsuario/RedesVirtuaisDoUsuario'
+import SerApliDoUsuario from './pages/ListagemServicosDoUsuario/ServicosAplicacionaisDoUsuario'
 
 /* Sidebars */
-import SidebarAdm from './components/Sidebar/SiderbarAdm/SidebarAdm'
-import SidebarAdmConfig from './components/Sidebar/SiderbarAdm/SidebarAdmConfig'
-import SidebarAdmUsuarios from './components/Sidebar/SiderbarAdm/SidebarAdmUsuarios'
-import SidebarAdmServicos from './components/Sidebar/SiderbarAdm/SidebarAdmServicos'
-import SidebarAdmSuporte from './components/Sidebar/SiderbarAdm/SidebarAdmSuporte'
-=======
-import Cadastro from './pages/Cadastro/Cadastro'
-import Home from './pages/Home/Home';
->>>>>>> 04cd197115ba9bcbeaf11bcc095fc5f08279bba8
+import SidebarAdm from './components/Sidebar/SiderbarAdm-Fun/SidebarAdm'
+import SidebarAdmConfig from './components/Sidebar/SiderbarAdm-Fun/SidebarAdmConfig'
+import SidebarAdmUsuarios from './components/Sidebar/SiderbarAdm-Fun/SidebarAdmUsuarios'
+import SidebarAdmServicos from './components/Sidebar/SiderbarAdm-Fun/SidebarAdmServicos'
+import SidebarAdmSuporte from './components/Sidebar/SiderbarAdm-Fun/SidebarAdmSuporte'
 
 import {
   Route,
@@ -47,7 +53,7 @@ const PermissaoAdm = ({ component: Component }) => (
       usuarioAutenticado() && parseJWT().role === '1' ? (
         <Component {...props} />
       ) : (
-        <Redirect to="" />
+        <Redirect to="login" />
       )
     }
   />
@@ -59,7 +65,7 @@ const PermissaoCli = ({ component: Component }) => (
       usuarioAutenticado() && parseJWT().role === '2' ? (
         <Component {...props} />
       ) : (
-        <Redirect to="" />
+        <Redirect to="login" />
       )
     }
   />
@@ -71,7 +77,7 @@ const PermissaoFun = ({ component: Component }) => (
       usuarioAutenticado() && parseJWT().role === '3' ? (
         <Component {...props} />
       ) : (
-        <Redirect to="" />
+        <Redirect to="login" />
       )
     }
   />
@@ -90,36 +96,37 @@ const routing = (
         <Route path="/sidebaradmservicos" component={SidebarAdmServicos} />
         <Route path="/sidebaradmsuporte" component={SidebarAdmSuporte} />
 
-<<<<<<< HEAD
         <Route path="/usuarios" component={Usuarios} />
         <PermissaoAdm path="/edicaodadosusuario" component={EdicaoDadosUsuario} />
         <PermissaoAdm path="/dadosusuarioadm" component={DadosUsuarioAdm} />
         <PermissaoAdm path="/dadosmaqviradm" component={DadosMaqVirAdm} />
         <PermissaoAdm path="/dadosredevirtualadm" component={DadosRedeVirtualAdm} />
         <PermissaoAdm path="/dadosserapliadm" component={DadosSerApliAdm} />
-=======
-        <Route path="/sidebar" component={Sidebar} />
+        <PermissaoAdm path="/maquinasvirtuaisadm" component={MaquinasVirtuaisAdm} />
+        <PermissaoAdm path="/redesvirtuaisadm" component={RedesVirtuaisAdm} />
+        <PermissaoAdm path="/serapliadm" component={SerApliAdm} />
         <Route exact path="/" component={Home} />
->>>>>>> 04cd197115ba9bcbeaf11bcc095fc5f08279bba8
+
         <PermissaoAdm path="/contatosadm" component={ContatosAdm} />
         <PermissaoAdm path="/edicaocontatosadm" component={EdicaoContatosAdm} />
-        <PermissaoAdm path="/servicos" component={Servicos} />
         <PermissaoAdm path="/edicaocontatosadm" component={EdicaoContatosAdm} />
         <PermissaoAdm path="/escolherservicoadm" component={EscolherServicoAdm} />
 
         <PermissaoFun path="/contatosfun" component={ContatosFun} />
         <PermissaoFun path="/edicaocontatosfun" component={EdicaoContatosFun} />
-        <PermissaoFun path="/servicos" component={Servicos} />
-<<<<<<< HEAD
+        <PermissaoFun path="/maqvirusuario" component={MaquinasVirtuaisDoUsuario} />
+        <PermissaoFun path="/redesvirtuaisusuario" component={RedesVirtuaisDoUsuario} />
+        <PermissaoFun path="/serapliusuario" component={SerApliDoUsuario} />
+        <PermissaoFun path="/dadosmaqvirfun" component={DadosMaqVirFun} />
+        <PermissaoFun path="/dadosredevirtualfun" component={DadosRedeVirtualFun} />
+        <PermissaoFun path="/dadosseraplifun" component={DadosSerApliFun} />
 
         <PermissaoCli path="/contatoscli" component={ContatosCli} />
-        <PermissaoCli path="/servicos" component={Servicos} />
-=======
+
         <Route path="/login" component={props => <Login {...props} />} />
         <Route path="/servicos" component={Servicos} />
         <Route path="/usuarios" component={Usuarios} />
         <Route path="/cadastro" component={Cadastro} />
->>>>>>> 04cd197115ba9bcbeaf11bcc095fc5f08279bba8
 
         <Route path="*" component={props => <NotFound {...props} />} />
 
