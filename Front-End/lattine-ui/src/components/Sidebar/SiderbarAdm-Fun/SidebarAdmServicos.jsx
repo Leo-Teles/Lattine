@@ -8,6 +8,7 @@ import imgConfiguracao from "../../../assets/img/configuracao.png"
 import imgSuporte from "../../../assets/img/suporte.png"
 import imgSair from "../../../assets/img/sair.png"
 import imgUsuario2 from "../../../assets/img/users2.png"
+import { Link } from 'react-router-dom'
 
 export default function Sidebar() {
     return (
@@ -19,7 +20,7 @@ export default function Sidebar() {
                 <div className='linha-branca' />
                 <div className='navegacao'>
                     <img src={imgHome} alt='Imagem Home' />
-                    <p>Home</p>
+                    <Link className="Home" to="/"> Home</Link>
                 </div>
                 <div className='navegacao-selecionado'>
                     <img src={imgServicos} alt='Imagem Serviços' />

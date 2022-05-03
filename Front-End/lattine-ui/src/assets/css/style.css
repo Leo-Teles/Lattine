@@ -785,7 +785,7 @@ input::placeholder {
     color: white;
     background-color: #0079D1;
     width: auto;
-    height: 800px;
+    height: 937px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -804,7 +804,7 @@ input::placeholder {
     font-weight: 500;
     font-size: 60px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 200;
+    
 }
 
 .error img {
