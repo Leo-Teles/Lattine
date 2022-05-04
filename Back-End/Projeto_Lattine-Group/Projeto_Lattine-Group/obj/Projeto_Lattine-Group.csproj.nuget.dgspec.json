@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\48395996888.INFOSCS\\Desktop\\Lattine-Group\\Back-End\\Projeto_Lattine-Group\\Projeto_Lattine-Group\\Projeto_Lattine-Group.csproj": {}
+    "C:\\Users\\46881551827.INFOSCS\\Desktop\\Lattine-Group\\Back-End\\Projeto_Lattine-Group\\Projeto_Lattine-Group\\Projeto_Lattine-Group.csproj": {}
   },
   "projects": {
-    "C:\\Users\\48395996888.INFOSCS\\Desktop\\Lattine-Group\\Back-End\\Projeto_Lattine-Group\\Projeto_Lattine-Group\\Projeto_Lattine-Group.csproj": {
+    "C:\\Users\\46881551827.INFOSCS\\Desktop\\Lattine-Group\\Back-End\\Projeto_Lattine-Group\\Projeto_Lattine-Group\\Projeto_Lattine-Group.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\48395996888.INFOSCS\\Desktop\\Lattine-Group\\Back-End\\Projeto_Lattine-Group\\Projeto_Lattine-Group\\Projeto_Lattine-Group.csproj",
+        "projectUniqueName": "C:\\Users\\46881551827.INFOSCS\\Desktop\\Lattine-Group\\Back-End\\Projeto_Lattine-Group\\Projeto_Lattine-Group\\Projeto_Lattine-Group.csproj",
         "projectName": "Projeto_Lattine-Group",
-        "projectPath": "C:\\Users\\48395996888.INFOSCS\\Desktop\\Lattine-Group\\Back-End\\Projeto_Lattine-Group\\Projeto_Lattine-Group\\Projeto_Lattine-Group.csproj",
-        "packagesPath": "C:\\Users\\48395996888.INFOSCS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\48395996888.INFOSCS\\Desktop\\Lattine-Group\\Back-End\\Projeto_Lattine-Group\\Projeto_Lattine-Group\\obj\\",
+        "projectPath": "C:\\Users\\46881551827.INFOSCS\\Desktop\\Lattine-Group\\Back-End\\Projeto_Lattine-Group\\Projeto_Lattine-Group\\Projeto_Lattine-Group.csproj",
+        "packagesPath": "C:\\Users\\46881551827.INFOSCS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\46881551827.INFOSCS\\Desktop\\Lattine-Group\\Back-End\\Projeto_Lattine-Group\\Projeto_Lattine-Group\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\48395996888.INFOSCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\46881551827.INFOSCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,12 +85,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.13, 5.0.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
