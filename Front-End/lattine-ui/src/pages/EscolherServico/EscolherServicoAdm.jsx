@@ -15,32 +15,35 @@ export default class Servicos extends Component {
             <div>
                 <Sidebar />
                 <div className="conteudo">
-                    <div className="container-conteudo-escolher">
-                        <h1>Tipos de Serviços</h1>
-                        <div className="tabela-escolha">
-                            <div className="escolha-servico">
-                                <h2>Máquinas Virtuais</h2>
-                                <div>
-                                    <img src={MaquinasVirtuais} alt="Máquinas Virtuais" />
+                    <div className="suguraBloco">
+                        <div className="container-conteudo-escolher">
+                            <h1>Tipos de Serviços</h1>
+                            <div className="tabela-escolha">
+                                <div className="escolha-servico">
+                                    <h2>Máquinas Virtuais</h2>
+                                    <div>
+                                        <img src={MaquinasVirtuais} alt="Máquinas Virtuais" />
+                                    </div>
+                                    <div><button className="selecionar-servico">Selecionar</button></div>
                                 </div>
-                                <div><button className="selecionar-servico">Selecionar</button></div>
-                            </div>
-                            <div className="escolha-servico">
-                                <h2>Redes Virtuais</h2>
-                                <div>
-                                    <img src={RedesVirtuais} alt="Máquinas Virtuais" />
+                                <div className="escolha-servico">
+                                    <h2>Redes Virtuais</h2>
+                                    <div>
+                                        <img src={RedesVirtuais} alt="Máquinas Virtuais" />
+                                    </div>
+                                    <div><button className="selecionar-servico">Selecionar</button></div>
                                 </div>
-                                <div><button className="selecionar-servico">Selecionar</button></div>
-                            </div>
-                            <div className="escolha-servico">
-                                <h2>Serviços Aplicacionais</h2>
-                                <div>
-                                    <img src={ServicosAplicacionais} alt="Máquinas Virtuais" />
+                                <div className="escolha-servico">
+                                    <h2>Serviços Aplicacionais</h2>
+                                    <div>
+                                        <img src={ServicosAplicacionais} alt="Máquinas Virtuais" />
+                                    </div>
+                                    <div><button className="selecionar-servico">Selecionar</button></div>
                                 </div>
-                                <div><button className="selecionar-servico">Selecionar</button></div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         )

@@ -8,7 +8,7 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Cadastro from './pages/Cadastro/Cadastro'
 import NotFound from './pages/NotFound/NotFound';
-import Servicos from './pages/Servicos/Servicos';
+
 import Usuarios from './pages/ListagemUsuarios/ListagemUsuarios';
 import EdicaoDadosUsuario from './pages/EdicaoDadosUsuario/EdicaoDadosUsuario'
 import DadosUsuarioAdm from './pages/DadosUsuario/DadosUsuarioAdm'
@@ -124,7 +124,7 @@ const routing = (
         <PermissaoCli path="/contatoscli" component={ContatosCli} />
 
         <Route path="/login" component={props => <Login {...props} />} />
-        <Route path="/servicos" component={Servicos} />
+        
         <Route path="/usuarios" component={Usuarios} />
         <Route path="/cadastro" component={Cadastro} />
 
