@@ -13,12 +13,15 @@ export default class Servicos extends Component {
     render() {
         return (
             <div>
-                <Sidebar />
-                <div className="conteudo">
+                <Sidebar/>
+                <div className="conteudoEscolha">
                     <div className="suguraBloco">
+
                         <div className="container-conteudo-escolher">
                             <h1>Tipos de Serviços</h1>
-                            <div className="tabela-escolha">
+
+                            <div className="tabelaEscolha">
+
                                 <div className="escolha-servico">
                                     <h2>Máquinas Virtuais</h2>
                                     <div>
@@ -40,12 +43,15 @@ export default class Servicos extends Component {
                                     </div>
                                     <div><button className="selecionar-servico">Selecionar</button></div>
                                 </div>
+
                             </div>
                         </div>
+
                     </div>
 
                 </div>
             </div>
+            
         )
     }
 }

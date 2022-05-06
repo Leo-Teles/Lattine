@@ -15,26 +15,30 @@ export default function Sidebar() {
         <section className='sidebar'>
             <div className='sidebar-container'>
                 <div className='container-logo'>
-                    <img src={imgLattine} alt='Logo da Lattine Group' />
+                    <img className="imgLattine" src={imgLattine} alt='Logo da Lattine Group' />
                 </div>
                 <div className='linha-branca' />
-                <div className='navegacao'>
+
+                <Link className="navegacao" to="/">
                     <img src={imgHome} alt='Imagem Home' />
-                    <Link className="Home" to="/"> Home</Link>
-                </div>
-                <div className='navegacao-selecionado'>
+                    <p>Home</p>
+                </Link>
+
+                <Link to="/" className="navegacao">
                     <img src={imgServicos} alt='Imagem Serviços' />
                     <p>Serviços</p>
-                </div>
+                </Link>
+
                 <div className='navegacao'>
                     <img src={imgUsuario2} alt='Imagem Usuário' />
                     <p>Usuários</p>
                 </div>
+                
                 <div className='separacao'/>
-                <div className='navegacao'>
+                <Link to="/" className='navegacao'>
                     <img src={imgConfiguracao} alt='Imagem Configurações' />
                     <p>Configurações</p>
-                </div>
+                </Link>
                 <div className='linha-branca' />
                 <div className='navegacao'>
                     <img src={imgSuporte} alt='Imagem Suporte' />
