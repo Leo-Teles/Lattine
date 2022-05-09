@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import '../../assets/css/style.css'
 
-import SidebarAdm from "../../components/Sidebar/SiderbarAdm-Fun/SidebarAdm";
+import SidebarAdm from "../../components/Sidebar/SiderbarFun/SidebarFun";
 
 export default class Servicos extends Component {
     render() {

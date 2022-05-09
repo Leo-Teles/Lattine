@@ -6,7 +6,7 @@ import '../../assets/css/style.css'
 import Flecha from '../../assets/img/flecha.png'
 import Lupa from '../../assets/img/lupa.png'
 
-import Sidebar from "../../components/Sidebar/SiderbarAdm-Fun/SidebarAdmUsuarios";
+import Sidebar from "../../components/Sidebar/SiderbarAdm/SidebarAdmUsuarios";
 
 
 export default class Servicos extends Component {

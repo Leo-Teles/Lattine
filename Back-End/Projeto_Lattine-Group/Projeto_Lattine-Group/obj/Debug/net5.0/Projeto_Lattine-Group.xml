@@ -840,5 +840,12 @@
             <param name="senha">Senha do usuário buscado</param>
             <returns>Usuário buscado</returns>
         </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IUsuarioRepository.ListarMinhas(System.Int32)">
+            <summary>
+            Lista todos os eventos que um determinado usuário participa
+            </summary>
+            <param name="aaa">ID do usuário que participa dos eventos listados</param>
+            <returns>Uma lista de presenças com os dados dos eventos</returns>
+        </member>
     </members>
 </doc>

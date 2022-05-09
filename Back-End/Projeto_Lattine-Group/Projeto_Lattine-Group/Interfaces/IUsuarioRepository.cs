@@ -47,5 +47,12 @@ namespace Projeto_Lattine_Group.Interfaces
         /// <param name="senha">Senha do usuário buscado</param>
         /// <returns>Usuário buscado</returns>
         Usuario Login(string email, string senha);
+
+        /// <summary>
+        /// Lista todos os eventos que um determinado usuário participa
+        /// </summary>
+        /// <param name="aaa">ID do usuário que participa dos eventos listados</param>
+        /// <returns>Uma lista de presenças com os dados dos eventos</returns>
+        List<Usuario> ListarMinhas(int aaa);
     }
 }

@@ -1,4 +1,5 @@
-﻿using Projeto_Lattine_Group.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
+using Projeto_Lattine_Group.Contexts;
 using Projeto_Lattine_Group.Domains;
 using Projeto_Lattine_Group.Interfaces;
 using System.Collections.Generic;
@@ -58,6 +59,12 @@ namespace Projeto_Lattine_Group.Repositories
         public Usuario Login(string email, string senha)
         {
             return ctx.Usuarios.FirstOrDefault(x => x.Email == email && x.Senha == senha);
+        }
+        public List<Usuario> ListarMinhas(int id)
+        {
+            return ctx.Usuarios
+                .Where(p => p.IdUsuario == id)
+                .ToList();
         }
     }
 }

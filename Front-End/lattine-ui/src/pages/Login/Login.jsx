@@ -42,22 +42,22 @@ export default class Login extends Component {
 
                     switch (value) {
                         case "1":
-                            this.props.history.push("/")
+                            this.props.history.push("/escolherservicoadm")
                             console.log("Estou logado: " + usuarioAutenticado())
                             break;
 
                         case "2":
-                            this.props.history.push("/")
+                            this.props.history.push("/escolherservicocli")
                             console.log("Estou logado: " + usuarioAutenticado())
                             break;
 
                         case "3":
-                            this.props.history.push("/")
+                            this.props.history.push("/escolherservicofun")
                             console.log("Estou logado: " + usuarioAutenticado())
                             break;
 
                         default:
-                            this.props.history.push("/")
+                            this.props.history.push("/login")
                             break;
                     }
                 }

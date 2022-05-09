@@ -146,3 +146,12 @@ C:\Users\giuli\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Latt
 C:\Users\giuli\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Lattine-Group\obj\Debug\net5.0\Projeto_Lattine-Group.xml
 C:\Users\48395996888.INFOSCS\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Lattine-Group\bin\Debug\net5.0\Projeto_Lattine-Group.xml
 C:\Users\48395996888.INFOSCS\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Lattine-Group\obj\Debug\net5.0\Projeto_Lattine-Group.xml
+C:\Users\48395996888.INFOSCS\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Lattine-Group\bin\Debug\net5.0\Azure.Core.dll
+C:\Users\48395996888.INFOSCS\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Lattine-Group\bin\Debug\net5.0\Azure.Data.AppConfiguration.dll
+C:\Users\48395996888.INFOSCS\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Lattine-Group\bin\Debug\net5.0\Azure.Messaging.EventGrid.dll
+C:\Users\48395996888.INFOSCS\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Lattine-Group\bin\Debug\net5.0\Azure.Security.KeyVault.Secrets.dll
+C:\Users\48395996888.INFOSCS\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Lattine-Group\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\48395996888.INFOSCS\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Lattine-Group\bin\Debug\net5.0\Microsoft.Extensions.Configuration.AzureAppConfiguration.dll
+C:\Users\48395996888.INFOSCS\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Lattine-Group\bin\Debug\net5.0\System.Memory.Data.dll
+C:\Users\48395996888.INFOSCS\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Lattine-Group\bin\Debug\net5.0\System.Text.Json.dll
+C:\Users\48395996888.INFOSCS\Desktop\Lattine-Group\Back-End\Projeto_Lattine-Group\Projeto_Lattine-Group\bin\Debug\net5.0\Tfe.NetClient.dll

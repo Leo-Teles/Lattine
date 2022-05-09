@@ -10,8 +10,10 @@ import Cadastro from './pages/Cadastro/Cadastro'
 import NotFound from './pages/NotFound/NotFound';
 import Servicos from './pages/Servicos/Servicos';
 import Usuarios from './pages/ListagemUsuarios/ListagemUsuarios';
-import EdicaoDadosUsuario from './pages/EdicaoDadosUsuario/EdicaoDadosUsuario'
+import EdicaoDadosUsuarioAdm from './pages/EdicaoDadosUsuario/EdicaoDadosUsuarioAdm'
+import EdicaoDadosUsuarioCli from './pages/EdicaoDadosUsuario/EdicaoDadosUsuarioCli'
 import DadosUsuarioAdm from './pages/DadosUsuario/DadosUsuarioAdm'
+import DadosUsuarioCli from './pages/DadosUsuario/DadosUsuarioCli'
 import DadosMaqVirAdm from './pages/DadosServico/DadosServicoAdm/DadosMaqVirAdm'
 import DadosRedeVirtualAdm from './pages/DadosServico/DadosServicoAdm/DadosRedeVirtualAdm'
 import DadosSerApliAdm from './pages/DadosServico/DadosServicoAdm/DadosSerApliAdm'
@@ -26,19 +28,34 @@ import ContatosCli from './pages/ContatosLattineGroup/ContatosCli'
 import EdicaoContatosAdm from './pages/EdicaoContatos/EdicaoContatosAdm'
 import EdicaoContatosFun from './pages/EdicaoContatos/EdicaoContatosFun'
 import EscolherServicoAdm from './pages/EscolherServico/EscolherServicoAdm'
+import EscolherServicoFun from './pages/EscolherServico/EscolherServicoFun'
+import EscolherServicoCli from './pages/EscolherServico/EscolherServicoCli'
 import MaquinasVirtuaisAdm from './pages/ListagemServicos/MaquinasVirtuais/MaquinasVirtuaisAdm'
 import RedesVirtuaisAdm from './pages/ListagemServicos/RedesVirtuais/RedesVirtuaisAdm'
 import SerApliAdm from './pages/ListagemServicos/ServicosAplicacionais/ServicosAplicacionaisAdm'
-import MaquinasVirtuaisDoUsuario from './pages/ListagemServicosDoUsuario/MaquinasVirtuaisDoUsuario'
-import RedesVirtuaisDoUsuario from './pages/ListagemServicosDoUsuario/RedesVirtuaisDoUsuario'
-import SerApliDoUsuario from './pages/ListagemServicosDoUsuario/ServicosAplicacionaisDoUsuario'
+import MaquinasVirtuaisFun from './pages/ListagemServicos/MaquinasVirtuais/MaquinasVirtuaisFun'
+import RedesVirtuaisFun from './pages/ListagemServicos/RedesVirtuais/RedesVirtuaisFun'
+import SerApliFun from './pages/ListagemServicos/ServicosAplicacionais/ServicosAplicacionaisFun'
 
-/* Sidebars */
-import SidebarAdm from './components/Sidebar/SiderbarAdm-Fun/SidebarAdm'
-import SidebarAdmConfig from './components/Sidebar/SiderbarAdm-Fun/SidebarAdmConfig'
-import SidebarAdmUsuarios from './components/Sidebar/SiderbarAdm-Fun/SidebarAdmUsuarios'
-import SidebarAdmServicos from './components/Sidebar/SiderbarAdm-Fun/SidebarAdmServicos'
-import SidebarAdmSuporte from './components/Sidebar/SiderbarAdm-Fun/SidebarAdmSuporte'
+import EdicaoMaqVirFun from './pages/EdicaoServicos/MaquinasVirtuais/EdicaoMaqVirFun'
+import EdicaoRedesVirtuaisFun from './pages/EdicaoServicos/RedesVirtuais/EdicaoRedesVirtuaisFun'
+import EdicaoSerApliFun from './pages/EdicaoServicos/ServicosAplicacionais/EdicaoSerApliFun'
+import EdicaoMaqVirCli from './pages/EdicaoServicos/MaquinasVirtuais/EdicaoMaqVirCli'
+import EdicaoRedesVirtuaisCli from './pages/EdicaoServicos/RedesVirtuais/EdicaoRedesVirtuaisCli'
+import EdicaoSerApliCli from './pages/EdicaoServicos/ServicosAplicacionais/EdicaoSerApliCli'
+import CriacaoMaqVirCli from './pages/CriacaoServico/MaquinasVirtuais/CriacaoMaqVirCli'
+import CriacaoRedesVirtuaisCli from './pages/CriacaoServico/RedesVirtuais/CriacaoRedesVirtuaisCli'
+import CriacaoSerApliCli from './pages/CriacaoServico/ServicosAplicacionais/CriacaoSerApliCli'
+import CriacaoMaqVirFun from './pages/CriacaoServico/MaquinasVirtuais/CriacaoMaqVirFun'
+import CriacaoRedesVirtuaisFun from './pages/CriacaoServico/RedesVirtuais/CriacaoRedesVirtuaisFun'
+import CriacaoSerApliFun from './pages/CriacaoServico/ServicosAplicacionais/CriacaoSerApliFun'
+
+import MaquinasVirtuaisDoUsuarioFun from './pages/ListagemServicosDoUsuario/MaquinasVirtuais/MaquinasVirtuaisDoUsuarioFun'
+import RedesVirtuaisDoUsuarioFun from './pages/ListagemServicosDoUsuario/RedesVirtuais/RedesVirtuaisDoUsuarioFun'
+import SerApliDoUsuarioFun from './pages/ListagemServicosDoUsuario/ServicosAplicacionais/ServicosAplicacionaisDoUsuarioFun'
+import MaquinasVirtuaisDoUsuarioCli from './pages/ListagemServicosDoUsuario/MaquinasVirtuais/MaquinasVirtuaisDoUsuarioCli'
+import RedesVirtuaisDoUsuarioCli from './pages/ListagemServicosDoUsuario/RedesVirtuais/RedesVirtuaisDoUsuarioCli'
+import SerApliDoUsuarioCli from './pages/ListagemServicosDoUsuario/ServicosAplicacionais/ServicosAplicacionaisDoUsuarioCli'
 
 import {
   Route,
@@ -90,14 +107,9 @@ const routing = (
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={props => <Login {...props} />} />
         <Route path="/cadastro" component={Cadastro} />
-        <Route path="/sidebaradm" component={SidebarAdm} />
-        <Route path="/sidebaradmconfig" component={SidebarAdmConfig} />
-        <Route path="/sidebaradmusuarios" component={SidebarAdmUsuarios} />
-        <Route path="/sidebaradmservicos" component={SidebarAdmServicos} />
-        <Route path="/sidebaradmsuporte" component={SidebarAdmSuporte} />
 
         <Route path="/usuarios" component={Usuarios} />
-        <PermissaoAdm path="/edicaodadosusuario" component={EdicaoDadosUsuario} />
+        <PermissaoAdm path="/edicaodadosusuarioadm" component={EdicaoDadosUsuarioAdm} />
         <PermissaoAdm path="/dadosusuarioadm" component={DadosUsuarioAdm} />
         <PermissaoAdm path="/dadosmaqviradm" component={DadosMaqVirAdm} />
         <PermissaoAdm path="/dadosredevirtualadm" component={DadosRedeVirtualAdm} />
@@ -112,16 +124,39 @@ const routing = (
         <PermissaoAdm path="/edicaocontatosadm" component={EdicaoContatosAdm} />
         <PermissaoAdm path="/escolherservicoadm" component={EscolherServicoAdm} />
 
+        <PermissaoFun path="/escolherservicofun" component={EscolherServicoFun} />
         <PermissaoFun path="/contatosfun" component={ContatosFun} />
         <PermissaoFun path="/edicaocontatosfun" component={EdicaoContatosFun} />
-        <PermissaoFun path="/maqvirusuario" component={MaquinasVirtuaisDoUsuario} />
-        <PermissaoFun path="/redesvirtuaisusuario" component={RedesVirtuaisDoUsuario} />
-        <PermissaoFun path="/serapliusuario" component={SerApliDoUsuario} />
+        <PermissaoFun path="/maqvirusuariofun" component={MaquinasVirtuaisDoUsuarioFun} />
+        <PermissaoFun path="/redesvirtuaisusuarifun" component={RedesVirtuaisDoUsuarioFun} />
+        <PermissaoFun path="/serapliusuariofun" component={SerApliDoUsuarioFun} />
         <PermissaoFun path="/dadosmaqvirfun" component={DadosMaqVirFun} />
         <PermissaoFun path="/dadosredevirtualfun" component={DadosRedeVirtualFun} />
         <PermissaoFun path="/dadosseraplifun" component={DadosSerApliFun} />
+        <PermissaoFun path="/maquinasvirtuaisfun" component={MaquinasVirtuaisFun} />
+        <PermissaoFun path="/redesvirtuaisfun" component={RedesVirtuaisFun} />
+        <PermissaoFun path="/seraplifun" component={SerApliFun} />
 
+        <PermissaoFun path="/edicaomaqvirfun" component={EdicaoMaqVirFun} />
+        <PermissaoFun path="/edicaoredesvirtuaisfun" component={EdicaoRedesVirtuaisFun} />
+        <PermissaoFun path="/edicaoseraplifun" component={EdicaoSerApliFun} />
+        <PermissaoFun path="/criacaomaqvirfun" component={CriacaoMaqVirFun} />
+        <PermissaoFun path="/criacaoredesvirtuaisfun" component={CriacaoRedesVirtuaisFun} />
+        <PermissaoFun path="/criacaoseraplifun" component={CriacaoSerApliFun} />
+
+        <PermissaoCli path="/escolherservicocli" component={EscolherServicoCli} />
         <PermissaoCli path="/contatoscli" component={ContatosCli} />
+        <PermissaoCli path="/edicaomaqvircli" component={EdicaoMaqVirCli} />
+        <PermissaoCli path="/edicaoredesvirtuaiscli" component={EdicaoRedesVirtuaisCli} />
+        <PermissaoCli path="/edicaoseraplicli" component={EdicaoSerApliCli} />
+        <PermissaoCli path="/criacaomaqvircli" component={CriacaoMaqVirCli} />
+        <PermissaoCli path="/criacaoredesvirtuaiscli" component={CriacaoRedesVirtuaisCli} />
+        <PermissaoCli path="/criacaoseraplicli" component={CriacaoSerApliCli} />
+        <PermissaoCli path="/maqvirusuariocli" component={MaquinasVirtuaisDoUsuarioCli} />
+        <PermissaoCli path="/redesvirtuaisusuariocli" component={RedesVirtuaisDoUsuarioCli} />
+        <PermissaoCli path="/serapliusuariocli" component={SerApliDoUsuarioCli} />
+        <PermissaoCli path="/dadosusuariocli" component={DadosUsuarioCli} />
+        <PermissaoCli path="/edicaodadosusuariocli" component={EdicaoDadosUsuarioCli} />
 
         <Route path="/login" component={props => <Login {...props} />} />
         <Route path="/servicos" component={Servicos} />
