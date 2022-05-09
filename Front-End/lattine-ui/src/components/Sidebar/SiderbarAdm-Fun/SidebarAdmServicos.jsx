@@ -24,7 +24,7 @@ export default function Sidebar() {
                     <p>Home</p>
                 </Link>
 
-                <Link to="/" className="navegacao">
+                <Link to="/EscolherServicoAdm" className="navegacaoServiços">
                     <img src={imgServicos} alt='Imagem Serviços' />
                     <p>Serviços</p>
                 </Link>
@@ -35,7 +35,7 @@ export default function Sidebar() {
                 </div>
                 
                 <div className='separacao'/>
-                <Link to="/" className='navegacao'>
+                <Link to="/NotFound" className='navegacao'>
                     <img src={imgConfiguracao} alt='Imagem Configurações' />
                     <p>Configurações</p>
                 </Link>

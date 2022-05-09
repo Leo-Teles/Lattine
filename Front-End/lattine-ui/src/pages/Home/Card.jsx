@@ -1,4 +1,4 @@
-
+import '../../assets/css/style.css';
 import React from 'react';
 
 const Card = ({title}) => {

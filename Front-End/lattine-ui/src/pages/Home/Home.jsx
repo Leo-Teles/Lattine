@@ -5,17 +5,16 @@ import React, {useState} from "react";
 import '../../assets/css/style.css';
 import Card from './Card';
 
+
 import LogoLattine from '../../assets/img/Lattine.png'
 import imgHome from '../../assets/img/imgHome.png'
 
-export default class Home extends Component {
+export default function Home() {
+
+    const[ active, setActive] = useState("PrimeiroCard");
+
 
     
-    
-
-
-
-    render() {
         return (
             <div className="ConteudoTodo">
                 <header className="headerHome">
@@ -41,17 +40,19 @@ export default class Home extends Component {
 
                         <h2 className="servicosOfertados">Nossos serviços </h2>
 
-                        <nav>
-                            <button>Maquinas Virtual </button>
-                            <button>Serviços Operacionais</button>
-                            <button> Redes Virtuais</button>
+                        <nav className="menuButton">
+                            <button onClick={() => setActive("PrimeiroCard")} className="botaoCard1"> Maquinas Virtual </button>
+                            <button onClick={() => setActive("SegundoCard")} className="botaoCard2"> Serviços Operacionais</button>
+                            <button onClick={() => setActive("TerceiroCard")} className="botaoCard3"> Redes Virtuais</button>
                         </nav>
 
                         <div>
-                            <Card title="1" />
-                            <Card title="2" />
-                            <Card title="3" />
+                            {active === "PrimeiroCard"  && <Card title="1" className="testeCard"/>}
+                            {active === "SegundoCard"  && <Card title="2" className=""/>}
+                            {active === "TerceiroCard"  && <Card title="3" className=""/>}
                         </div>
+
+                        <h3 className="ultimaFrase"> Juntos podemos ir mais longe!</h3>
 
 
 
@@ -66,5 +67,5 @@ export default class Home extends Component {
 
             </div>
         )
-    }
+    
 }
