@@ -15,7 +15,7 @@ export default [
     [
         {
             title:"This is third card"
-            
+            name:"Third card"
         }
     ]
 

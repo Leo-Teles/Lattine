@@ -2,7 +2,7 @@ import { Component } from "react";
 
 import '../../assets/css/style.css'
 
-import Sidebar from "../../components/Sidebar/SiderbarAdm-Fun/SidebarAdmSuporte";
+import Sidebar from "../../components/Sidebar/SiderbarFun/SidebarFunSuporte";
 
 
 export default class Servicos extends Component {

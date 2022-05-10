@@ -5,6 +5,8 @@ using Projeto_Lattine_Group.Interfaces;
 using Projeto_Lattine_Group.Repositories;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 
 namespace Projeto_Lattine_Group.Controllers
 {
@@ -101,6 +103,29 @@ namespace Projeto_Lattine_Group.Controllers
             catch (Exception erro)
             {
                 return BadRequest(erro);
+            }
+        }
+
+        [HttpGet("minhas")]
+        public IActionResult ListarMinhas()
+        {
+            try
+            {
+                int id = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+
+                // Caso fosse necessário trazer o valor do e-mail do usuário, a partir do token
+                // string emailUsuario = HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Email).Value;
+
+                return Ok(_UsuarioRepository.ListarMinhas(id));
+            }
+            catch (Exception error)
+            {
+                return BadRequest(new
+                {
+                    mensagem = "Não é possível mostrar as presenças se o usuário não estiver logado!",
+                    erro = error
+
+                });
             }
         }
     }

@@ -6,7 +6,7 @@ import ServicosAplicacionais from '../../assets/img/servicosaplicacionais.png'
 
 import '../../assets/css/style.css'
 
-import Sidebar from "../../components/Sidebar/SiderbarAdm-Fun/SidebarAdmServicos";
+import Sidebar from "../../components/Sidebar/SiderbarAdm/SidebarAdmServicos";
 
 
 export default class Servicos extends Component {
