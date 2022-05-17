@@ -1,15 +1,15 @@
 import { Component } from "react";
-import { Link } from "react-router-dom";
 
 import '../../assets/css/style.css'
 
-import SidebarAdm from "../../components/Sidebar/SiderbarFun/SidebarFun";
+import Sidebar from "../../components/Sidebar/SiderbarFun/SidebarFunSuporte";
+
 
 export default class Servicos extends Component {
     render() {
         return (
             <div>
-                <SidebarAdm />
+                <Sidebar />
                 <div className="conteudo">
                     <div className="container-conteudo">
                         <h1>Contatos - Lattine Group</h1>
@@ -19,7 +19,7 @@ export default class Servicos extends Component {
                         <p>+55 11 4209-1000</p>
                         <h2>Localização</h2>
                         <p>Alameda Tocantins, 350 Barueri - São Paulo / SP</p>
-                        <a href="#">Editar informações</a>
+                        <a href="edicaocontatosfun">Editar informações</a>
                     </div>
                 </div>
             </div>

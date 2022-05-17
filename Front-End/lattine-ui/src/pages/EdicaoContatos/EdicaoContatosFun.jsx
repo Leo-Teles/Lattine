@@ -22,7 +22,7 @@ export default class Servicos extends Component {
 
                         <label for="localizacao">Localização</label>
                         <input id="localizacao" placeholder="Alameda Tocantins, 350 Barueri - São Paulo / SP"></input>
-                        <div>
+                        <div className="ei">
                             <button className="botao-editar">Editar</button>
                         </div>
                     </div>

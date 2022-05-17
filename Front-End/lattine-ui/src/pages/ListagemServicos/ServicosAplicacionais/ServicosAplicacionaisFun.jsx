@@ -1,84 +1,55 @@
-import { Component } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-import '../../../assets/css/style.css'
-
-import Flecha from '../../../assets/img/flecha.png'
-
-import Sidebar from "../../../components/Sidebar/SiderbarAdm/SidebarAdmServicos";
+import Sidebar from "../../../components/Sidebar/SiderbarFun/SidebarFunServicos";
 
 
-export default class Servicos extends Component {
-    render() {
-        return (
-            <div>
-                <Sidebar />
-                <div className="conteudo">
-                    <div className="container-conteudo-users">
-                        <div className="container-titulo">
-                            <h1>Serviços Aplicacionais</h1>
-                        </div>
-                        <div className="container-input">
-                            <input type="text" placeholder="Buscar"/>
-                        </div>
-                        <div className="listagem">
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Serviço Aplicacional</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Serviço Aplicacional</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Serviço Aplicacional</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Serviço Aplicacional</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Serviço Aplicacional</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Serviço Aplicacional</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Serviço Aplicacional</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Serviço Aplicacional</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Serviço Aplicacional</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Serviço Aplicacional</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                        </div>
-                        <div className="proxima-pagina">
-                            <Link><a>Próxima página <img src={Flecha} alt="Imagem de Flecha" /></a></Link>
-                        </div>
+export default function ServicosAplicacionais() {
+    const [listaServicos, setListaServicos] = useState([]);
+    const [dataCadastro, setDataCadastro] = useState("");
+
+    function buscarServicos() {
+        axios('http://localhost:5000/api/ServicoAplicacionals', {
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
+            }
+        })
+            .then(resposta => {
+                if (resposta.status === 200) {
+                    setListaServicos(resposta.data)
+                };
+            })
+            .catch(erro => console.log(erro));
+    };
+    useEffect(buscarServicos, []);
+
+    return (
+        <div>
+            <Sidebar />
+            <div className="conteudo">
+                <div className="container-conteudo-users">
+                    <div className="container-titulo">
+                        <h1>Serviços Aplicacionais</h1>
+                    </div>
+                    <div className="container-input">
+                        <input type="text" placeholder="Buscar" />
+                    </div>
+                    <div className="listagem">
+                        {
+                            listaServicos.map((servico) => (
+                                <div key={servico.IdServicoAplicacional} className="retangulo-usuario">
+                                    <h1>{servico.nomeServicoAplicacional}</h1>
+                                    <h2>Data de Cadastro:</h2>
+                                    <p>{Intl.DateTimeFormat({
+                                        year: "numeric", month: "numeric", day: "numeric"
+                                    }).format(new Date(servico.idInfraestruturaNavigation.dataCadastro))}</p>
+                                </div>
+                            )
+                            )
+                        }
                     </div>
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
 }

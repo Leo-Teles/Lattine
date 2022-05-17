@@ -1,6 +1,5 @@
 import React from 'react'
 import '../../../assets/css/style.css'
-import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
 import imgLattine from "../../../assets/img/Lattine.png"
 import imgHome from "../../../assets/img/Home.png"
@@ -17,59 +16,34 @@ export default function Sidebar() {
             <div className='sidebar-container'>
                 <div className='container-logo'>
                     <Link className="a" to=""><img className='logo-sidebar' src={imgLattine} alt='Logo da Lattine Group' /></Link>                </div>
-                <img className="imgLattine" src={imgLattine} alt='Logo da Lattine Group' />
+                <div className='linha-branca' />
+                <Link to="" className='navegacao'>
+                    <img src={imgHome} alt='Imagem Home' />
+                    <p>Home</p>
+                </Link>
+                <Link to="escolherservicoadm" className='navegacao'>
+                    <img src={imgServicos} alt='Imagem Serviços' />
+                    <p>Serviços</p>
+                </Link>
+                <Link to="listagemusuariosadm" className='navegacao'>
+                    <img src={imgUsuario2} alt='Imagem Usuário' />
+                    <p>Usuários</p>
+                </Link>
+                <div className='separacao' />
+                <a href='dadosusuarioadm' className='navegacao-selecionado'>
+                    <img src={imgConfiguracao} alt='Imagem Configurações' />
+                    <p>Configurações</p>
+                </a>
+                <div className='linha-branca' />
+                <Link to="contatosadm" className='navegacao'>
+                    <img src={imgSuporte} alt='Imagem Suporte' />
+                    <p>Suporte</p>
+                </Link>
+                <Link to="login" className='navegacao'>
+                    <img src={imgSair} alt='Imagem Sair' />
+                    <p>Sair</p>
+                </Link>
             </div>
-            <div className='linha-branca' />
-
-            <Link className="navegacao" to="/">
-                <img src={imgHome} alt='Imagem Home' />
-                <p>Home</p>
-            </Link>
-
-            <Link to="/EscolherServicoAdm" className="navegacaoServiços">
-                <img src={imgServicos} alt='Imagem Serviços' />
-                <p>Serviços</p>
-            </Link>
-
-            <div className='navegacao'>
-                <img src={imgUsuario2} alt='Imagem Usuário' />
-                <p>Usuários</p>
-            </div>
-
-            <div className='separacao' />
-            <Link to="/NotFound" className='navegacao'>
-                <img src={imgConfiguracao} alt='Imagem Configurações' />
-                <p>Configurações</p>
-            </Link>
-            <div className='linha-branca' />
-            <Link to="" className='navegacao'>
-                <img src={imgHome} alt='Imagem Home' />
-                <p>Home</p>
-            </Link>
-            <Link to="escolherservicoadm" className='navegacao'>
-                <img src={imgServicos} alt='Imagem Serviços' />
-                <p>Serviços</p>
-            </Link>
-            <Link to="listagemusuariosadm" className='navegacao'>
-                <img src={imgUsuario2} alt='Imagem Usuário' />
-                <p>Usuários</p>
-            </Link>
-            <div className='separacao' />
-            <a href='dadosusuarioadm' className='navegacao-selecionado'>
-                <img src={imgConfiguracao} alt='Imagem Configurações' />
-                <p>Configurações</p>
-            </a>
->>>>>>> 374d0a8a7951b828289d92a63958a13d8bcb4af9:Front-End/lattine-ui/src/components/Sidebar/SiderbarAdm/SidebarAdmConfig.jsx
-            <div className='linha-branca' />
-            <Link to="contatosadm" className='navegacao'>
-                <img src={imgSuporte} alt='Imagem Suporte' />
-                <p>Suporte</p>
-            </Link>
-            <Link to="login" className='navegacao'>
-                <img src={imgSair} alt='Imagem Sair' />
-                <p>Sair</p>
-            </Link>
-        </div>
-        </section >
+        </section>
     )
 }

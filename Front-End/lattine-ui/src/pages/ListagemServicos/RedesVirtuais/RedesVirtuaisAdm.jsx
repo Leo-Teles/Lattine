@@ -5,27 +5,23 @@ import Sidebar from "../../../components/Sidebar/SiderbarAdm/SidebarAdmServicos"
 
 
 export default function RedesVirtuais() {
-    const [listaMaquinas, setListaMaquinas] = useState([]);
+    const [listaRedes, setListaRedes] = useState([]);
     const [dataCadastro, setDataCadastro] = useState("");
-    const [listaDadosUsuario, setListaDadosUsuario] = useState([]);
-    const refreshPage = () => {
-        window.location.reload();
-    }
 
-    function buscarMaquinas() {
-        axios('http://localhost:5000/api/Redevirtuals', {
+    function buscarRedes() {
+        axios('http://localhost:5000/api/redevirtuals', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
         })
             .then(resposta => {
                 if (resposta.status === 200) {
-                    setListaMaquinas(resposta.data)
+                    setListaRedes(resposta.data)
                 };
             })
             .catch(erro => console.log(erro));
     };
-    useEffect(buscarMaquinas, []);
+    useEffect(buscarRedes, []);
 
     return (
         <div>
@@ -39,11 +35,18 @@ export default function RedesVirtuais() {
                         <input type="text" placeholder="Buscar" />
                     </div>
                     <div className="listagem">
-                        <div className="retangulo-usuario">
-                            <h1>Nome da Rede Virtual</h1>
-                            <h2>Data de Cadastro:</h2>
-                            <p>14/04/2022</p>
-                        </div>
+                        {
+                            listaRedes.map((rede) => (
+                                <div key={rede.IdRedeVirtual} className="retangulo-usuario">
+                                    <h1>{rede.nomeRedeVirtual}</h1>
+                                    <h2>Data de Cadastro:</h2>
+                                    <p>{Intl.DateTimeFormat({
+                                        year: "numeric", month: "numeric", day: "numeric"
+                                    }).format(new Date(rede.idInfraestruturaNavigation.dataCadastro))}</p>
+                                </div>
+                            )
+                            )
+                        }
                     </div>
                 </div>
             </div>

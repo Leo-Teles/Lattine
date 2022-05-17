@@ -8,6 +8,7 @@ import imgConfiguracao from "../../../assets/img/configuracao.png"
 import imgSuporte from "../../../assets/img/suporte.png"
 import imgSair from "../../../assets/img/sair.png"
 import imgUsuario2 from "../../../assets/img/users2.png"
+import { Link } from 'react-router-dom'
 
 export default function Sidebar() {
     return (
@@ -20,21 +21,21 @@ export default function Sidebar() {
                     <img src={imgHome} alt='Imagem Home' />
                     <p>Home</p>
                 </Link>
-                <Link to="" className='navegacao'>
+                <Link to="escolherservicofun" className='navegacao'>
                     <img src={imgServicos} alt='Imagem Serviços' />
                     <p>Serviços</p>
                 </Link>
-                <Link to="" className='navegacao'>
+                <Link to="listagemusuariosfun" className='navegacao'>
                     <img src={imgUsuario2} alt='Imagem Usuário' />
                     <p>Usuários</p>
                 </Link>
                 <div className='separacao' />
-                <a className='navegacao-selecionado'>
+                <a href='dadosusuariofun' className='navegacao-selecionado'>
                     <img src={imgConfiguracao} alt='Imagem Configurações' />
                     <p>Configurações</p>
                 </a>
                 <div className='linha-branca' />
-                <Link to="" className='navegacao'>
+                <Link to="contatosfun" className='navegacao'>
                     <img src={imgSuporte} alt='Imagem Suporte' />
                     <p>Suporte</p>
                 </Link>

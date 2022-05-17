@@ -21,21 +21,21 @@ export default function Sidebar() {
                     <img src={imgHome} alt='Imagem Home' />
                     <p>Home</p>
                 </Link>
-                <Link to="" className='navegacao'>
+                <Link to="escolherservicofun" className='navegacao'>
                     <img src={imgServicos} alt='Imagem Serviços' />
                     <p>Serviços</p>
                 </Link>
-                <a to="" className='navegacao-selecionado'>
+                <a href="listagemusuariosfun" className='navegacao-selecionado'>
                     <img src={imgUsuario2} alt='Imagem Usuário' />
                     <p>Usuários</p>
                 </a>
                 <div className='separacao' />
-                <div className='navegacao'>
+                <Link to="dadosusuariofun" className='navegacao'>
                     <img src={imgConfiguracao} alt='Imagem Configurações' />
                     <p>Configurações</p>
-                </div>
+                </Link>
                 <div className='linha-branca' />
-                <Link to="" className='navegacao'>
+                <Link to="contatosfun" className='navegacao'>
                     <img src={imgSuporte} alt='Imagem Suporte' />
                     <p>Suporte</p>
                 </Link>

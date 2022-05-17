@@ -56,13 +56,6 @@
     flex-direction: column;
 }
 
-
-
-.seguraConteudo {
-    display: flex;
-    flex-direction: column;
-}
-
 .FraseImpacto {
     color: white;
     height: 189px;
@@ -296,7 +289,7 @@
 }
 
 .sidebar {
-    width: 310px;
+    width: 16vw;
     height: 100vh;
     background-color: #0079D1;
     position: fixed;
@@ -304,9 +297,6 @@
     justify-content: center;
     align-items: center;
     box-shadow: 6px 20px 20px 0px #00000040;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-
 }
 
 .sidebar-container {
@@ -314,8 +304,6 @@
     height: 95%;
     margin-top: 25px;
     margin-bottom: 25px;
-    display: flex;
-    flex-direction: column;
 }
 
 .container-logo {
@@ -345,34 +333,12 @@
 }
 
 .navegacao {
-    width: 100%;
+    width: fit-content;
     height: 55px;
     display: flex;
     justify-content: left;
     align-items: center;
     margin-top: 15px;
-}
-
-.navegacaoServiços {
-    width: 100%;
-    height: 55px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin-top: 15px;
-    letter-spacing: 2px;
-    transition: 0.5s;
-    background-color: white;
-}
-
-.navegacaoServiços p {
-    height: 1000px;
-    align-items: center;
-    display: flex;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    color: #0079D1;
 }
 
 .navegacao img {
@@ -410,7 +376,12 @@
     height: 33%;
 }
 
+/*==========Sidebar - Cli==========*/
 
+.separacao-cli {
+    width: 100%;
+    height: 41.2%;
+}
 
 /*==========Cadastro==========*/
 
@@ -515,7 +486,7 @@ input::placeholder {
 
 .testeCadastro {
     display: flex;
-    width: 1420px;
+    width: 1188px;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -626,6 +597,14 @@ input::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container-conteudo-edicao h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 32px;
+    font-weight: 100;
+    margin-bottom: 24px;
+    margin-top: 64px;
 }
 
 * {
@@ -772,7 +751,6 @@ input::placeholder {
     display: flex;
     align-items: center;
     height: 100vh;
-
 }
 
 .a {
@@ -923,7 +901,7 @@ input::placeholder {
 
 .testeLogin {
     display: flex;
-    width: 1420px;
+    width: 1188px;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -936,7 +914,7 @@ input::placeholder {
     color: white;
     background-color: #0079D1;
     width: auto;
-    height: 937px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -955,7 +933,7 @@ input::placeholder {
     font-weight: 500;
     font-size: 60px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    font-weight: 200;
 }
 
 .error img {
@@ -1192,54 +1170,53 @@ input::placeholder {
     text-align: center;
 }
 
-/*============Escolher Serviço - Adm============*/
-.conteudoEscolha {
-    width: 1920px;
-    height: 937px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.suguraBloco {
-
-    width: 1610px;
+.escolha-servico h2{
     display: flex;
     justify-content: center;
-
-
+    align-items: center;
+    height: 15%;
+    font-family: Segoe UI;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
 }
 
+/*============Escolher Serviço - Adm============*/
+
 .container-conteudo-escolher {
-    width: 1300px;
-    height: 530px;
+    width: 100%;
+    height: fit-content;
     border-radius: 35px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #F3F3F3;
-
-
+    justify-content: space-between;
+    margin: 10vh 0 64px 21%;
+    padding: 64px 50px 64px 80px;
+    background: #F3F3F3;
 }
 
 .container-conteudo-escolher h1 {
     margin-bottom: 70px;
     font-family: Segoe UI;
     font-size: 48px;
-    font-weight: 500;
+    font-weight: 350;
     text-align: left;
     max-width: 50%;
+}
+
+.escolhas-da-vida {
+    display: flex;
 }
 
 .escolha-servico {
     height: 350px;
     width: 400px;
     border-radius: 20px;
-    background: #ffff;
+    background: white;
     margin-bottom: 30px;
-    display: flex;
+    margin-right: 30px;
+    display: inline-block;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
 }
 
@@ -1250,12 +1227,10 @@ input::placeholder {
     margin-bottom: 30px;
 }
 
-.tabelaEscolha {
-    width: 1300px;
-    display: flex;
-    justify-content: space-around;
-
-
+.tabela-escolha {
+    display: table-cell;
+    height: fit-content;
+    width: fit-content;
 }
 
 .tabela-escolha h2 {
@@ -1265,7 +1240,7 @@ input::placeholder {
     height: 15%;
     font-family: Segoe UI;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 300;
     text-align: center;
 
 }
@@ -1285,6 +1260,9 @@ input::placeholder {
     font-weight: 600;
     text-align: center;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*============Máquinas Virtuais - Adm============*/
@@ -1307,90 +1285,111 @@ input::placeholder {
     text-overflow: ellipsis;
 }
 
-/*===================== Card ==============================*/
+/*==========Edição de Dados de um Serviço - Fun==========*/
 
-.botaoCard1 {
-    box-sizing: border-box;
-    width: 236px;
-    height: 60px;
-    border: 3px solid white;
-    border-radius: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
+.container-conteudo-edicao-servico {
+    width: 900px;
+    height: fit-content;
+    background-color: #F1F4F9;
+    padding: 80px;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 64px 0 64px 0;
+}
+
+.container-conteudo-edicao-servico h1 {
+    margin-bottom: 6px;
+    font-family: Segoe UI;
+    font-size: 48px;
+    font-weight: 350;
+    text-align: left;
+}
+
+.container-conteudo-edicao-servico label {
+    margin-bottom: 20px;
+    font-family: Segoe UI;
+    font-size: 24px;
     font-weight: 600;
-    font-size: 20px;
-    color: white;
-    letter-spacing: 3px;
-    transition: 0.5s;
-    background-color: #0079D1;
+    text-align: left;
 }
 
-.botaoCard1:hover {
-    color: #0079D1;
-    background-color: white;
-    border: 3px solid #0079D1;
+.container-conteudo-edicao-servico p {
+    margin-bottom: 30px;
+    font-family: Segoe UI;
+    font-size: 24px;
+    font-weight: 350;
+    text-align: left;
 }
 
-.botaoCard2 {
-    box-sizing: border-box;
-    width: 236px;
-    height: 60px;
-    background-color: #0079D1;
-    border: 1px solid #FFFFFF;
+.container-conteudo-edicao-servico input::placeholder {
+    font-family: 'Segoe UI';
+    font-weight: 350;
+    font-size: 24px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-conteudo-edicao-servico select {
+    margin-bottom: 30px;
+    width: 50%;
+    height: 50px;
+    background: #C4C4C4;
+    border: 1px solid #AA9F9F;
     border-radius: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    color: #FFFFFF;
-    margin-left: 100px;
-    margin-right: 100px;
+    font-family: Segoe UI;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 30px;
 }
 
-.botaoCard2:hover {
-    color: #0079D1;
+.container-conteudo-edicao-servico select option {
     background-color: white;
-    border: 3px solid #0079D1;
 }
 
-.botaoCard3 {
-    box-sizing: border-box;
-    width: 236px;
-    height: 60px;
-    background-color: #0079D1;
-    border: 1px solid #FFFFFF;
-    border-radius: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    color: #FFFFFF;
+.container-conteudo-edicao-servico div {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.botaoCard3:hover {
-    color: #0079D1;
-    background-color: white;
-    border: 3px solid #0079D1;
+.container-conteudo-edicao-servico h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 32px;
+    font-weight: 100;
+    margin-bottom: 24px;
+    margin-top: 64px;
 }
 
-.card {
-    width: 1700px;
-    height: 500px;
-    background-color: #EAEAEA;
-    border-radius: 30px;
-
-
+.seguraBloco {
+    width: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.testeCard {}
+.input-text-edicao {
+    margin-bottom: 30px;
+    background: none;
+    border: 1px solid #AA9F9F;
+    height: 75px;
+    width: 95%;
+    padding-left: 30px;
+    font-family: 'Segoe UI';
+    font-weight: 350;
+    font-size: 24px;
+}
 
-
-<<<<<<< HEAD .input-check-edicao {
+.input-check-edicao {
     margin-bottom: 30px;
     background: none;
     border: 1px solid #AA9F9F;
     height: 30px;
     width: 30px;
 }
-
-=======>>>>>>>da3c381b8ef869549eb1596ae96db09f2676294f

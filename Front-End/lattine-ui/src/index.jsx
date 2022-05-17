@@ -8,13 +8,14 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Cadastro from './pages/Cadastro/Cadastro'
 import NotFound from './pages/NotFound/NotFound';
-import Servicos from './pages/Servicos/Servicos';
 import UsuariosAdm from './pages/ListagemUsuarios/ListagemUsuariosAdm';
 import UsuariosFun from './pages/ListagemUsuarios/ListagemUsuariosFun';
 import EdicaoDadosUsuarioAdm from './pages/EdicaoDadosUsuario/EdicaoDadosUsuarioAdm'
 import EdicaoDadosUsuarioCli from './pages/EdicaoDadosUsuario/EdicaoDadosUsuarioCli'
+import EdicaoDadosUsuarioFun from './pages/EdicaoDadosUsuario/EdicaoDadosUsuarioFun'
 import DadosUsuarioAdm from './pages/DadosUsuario/DadosUsuarioAdm'
 import DadosUsuarioCli from './pages/DadosUsuario/DadosUsuarioCli'
+import DadosUsuarioFun from './pages/DadosUsuario/DadosUsuarioFun'
 import DadosMaqVirAdm from './pages/DadosServico/DadosServicoAdm/DadosMaqVirAdm'
 import DadosRedeVirtualAdm from './pages/DadosServico/DadosServicoAdm/DadosRedeVirtualAdm'
 import DadosSerApliAdm from './pages/DadosServico/DadosServicoAdm/DadosSerApliAdm'
@@ -108,7 +109,7 @@ const routing = (
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={props => <Login {...props} />} />
         <Route path="/cadastro" component={Cadastro} />
-        
+
         <PermissaoAdm path="/edicaodadosusuarioadm" component={EdicaoDadosUsuarioAdm} />
         <PermissaoAdm path="/dadosusuarioadm" component={DadosUsuarioAdm} />
         <PermissaoAdm path="/dadosmaqviradm" component={DadosMaqVirAdm} />
@@ -116,7 +117,7 @@ const routing = (
         <PermissaoAdm path="/dadosserapliadm" component={DadosSerApliAdm} />
         <PermissaoAdm path="/maquinasvirtuaisadm" component={MaquinasVirtuaisAdm} />
         <PermissaoAdm path="/redesvirtuaisadm" component={RedesVirtuaisAdm} />
-        <PermissaoAdm path="/serapliadm" componennpmt={SerApliAdm} />
+        <PermissaoAdm path="/serapliadm" component={SerApliAdm} />
         <Route exact path="/" component={Home} />
 
         <PermissaoAdm path="/contatosadm" component={ContatosAdm} />
@@ -144,6 +145,8 @@ const routing = (
         <PermissaoFun path="/criacaomaqvirfun" component={CriacaoMaqVirFun} />
         <PermissaoFun path="/criacaoredesvirtuaisfun" component={CriacaoRedesVirtuaisFun} />
         <PermissaoFun path="/criacaoseraplifun" component={CriacaoSerApliFun} />
+        <PermissaoFun path="/dadosusuariofun" component={DadosUsuarioFun} />
+        <PermissaoFun path="/edicaodadosusuariofun" component={EdicaoDadosUsuarioFun} />
 
         <PermissaoCli path="/escolherservicocli" component={EscolherServicoCli} />
         <PermissaoCli path="/contatoscli" component={ContatosCli} />
@@ -160,12 +163,6 @@ const routing = (
         <PermissaoCli path="/edicaodadosusuariocli" component={EdicaoDadosUsuarioCli} />
 
         <Route path="/login" component={props => <Login {...props} />} />
-<<<<<<< HEAD
-        <Route path="/servicos" component={Servicos} />
-=======
-        
-        <Route path="/usuarios" component={Usuarios} />
->>>>>>> da3c381b8ef869549eb1596ae96db09f2676294f
         <Route path="/cadastro" component={Cadastro} />
 
         <Route path="*" component={props => <NotFound {...props} />} />

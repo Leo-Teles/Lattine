@@ -14,37 +14,37 @@ export default class Servicos extends Component {
     render() {
         return (
             <div>
-                <Sidebar/>
-                <div className="conteudoEscolha">
-                    <div className="suguraBloco">
+                <Sidebar />
+                <div className="conteudo">
+                    <div className="seguraBloco">
 
                         <div className="container-conteudo-escolher">
                             <h1>Tipos de Serviços</h1>
+                            <div className="escolhas-da-vida">
+                                <div className="tabelaEscolha">
 
-                            <div className="tabelaEscolha">
-
-                                <div className="escolha-servico">
-                                    <h2>Máquinas Virtuais</h2>
-                                    <div>
-                                        <img src={MaquinasVirtuais} alt="Máquinas Virtuais" />
+                                    <div className="escolha-servico">
+                                        <h2>Máquinas Virtuais</h2>
+                                        <div>
+                                            <img src={MaquinasVirtuais} alt="Máquinas Virtuais" />
+                                        </div>
+                                        <div><Link to="maquinasvirtuaisadm" className="selecionar-servico">Selecionar</Link></div>
                                     </div>
-                                    <div><button className="selecionar-servico">Selecionar</button></div>
                                 </div>
-                                <div><Link to="maquinasvirtuaisadm" className="selecionar-servico">Selecionar</Link></div>
-                            </div>
-                            <div className="escolha-servico">
-                                <h2>Redes Virtuais</h2>
-                                <div>
-                                    <img src={RedesVirtuais} alt="Máquinas Virtuais" />
+                                <div className="escolha-servico">
+                                    <h2>Redes Virtuais</h2>
+                                    <div>
+                                        <img src={RedesVirtuais} alt="Máquinas Virtuais" />
+                                    </div>
+                                    <div><Link to="redesvirtuaisadm" className="selecionar-servico">Selecionar</Link></div>
                                 </div>
-                                <div><Link to="redesvirtuaisusuarioadm" className="selecionar-servico">Selecionar</Link></div>
-                            </div>
-                            <div className="escolha-servico">
-                                <h2>Serviços Aplicacionais</h2>
-                                <div>
-                                    <img src={ServicosAplicacionais} alt="Máquinas Virtuais" />
+                                <div className="escolha-servico">
+                                    <h2>Serviços Aplicacionais</h2>
+                                    <div>
+                                        <img src={ServicosAplicacionais} alt="Máquinas Virtuais" />
+                                    </div>
+                                    <div><Link to="serapliadm" className="selecionar-servico">Selecionar</Link></div>
                                 </div>
-                                <div><Link to="serapliusuarioadm" className="selecionar-servico">Selecionar</Link></div>
                             </div>
                         </div>
 
@@ -52,7 +52,7 @@ export default class Servicos extends Component {
 
                 </div>
             </div>
-            
+
         )
     }
 }

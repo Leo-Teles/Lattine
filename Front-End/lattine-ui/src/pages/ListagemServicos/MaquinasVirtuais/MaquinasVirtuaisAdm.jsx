@@ -7,10 +7,6 @@ import Sidebar from "../../../components/Sidebar/SiderbarAdm/SidebarAdmServicos"
 export default function MaquinasVirtuais() {
     const [listaMaquinas, setListaMaquinas] = useState([]);
     const [dataCadastro, setDataCadastro] = useState("");
-    const [listaDadosUsuario, setListaDadosUsuario] = useState([]);
-    const refreshPage = () => {
-        window.location.reload();
-    }
 
     function buscarMaquinas() {
         axios('http://localhost:5000/api/MaquinaVirtuals', {
