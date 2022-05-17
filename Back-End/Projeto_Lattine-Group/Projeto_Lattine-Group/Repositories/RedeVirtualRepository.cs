@@ -1,4 +1,5 @@
-﻿using Projeto_Lattine_Group.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
+using Projeto_Lattine_Group.Contexts;
 using Projeto_Lattine_Group.Domains;
 using Projeto_Lattine_Group.Interfaces;
 using System.Collections.Generic;
@@ -48,12 +49,24 @@ namespace Projeto_Lattine_Group.Repositories
 
         public List<RedeVirtual> Listar()
         {
-            return ctx.RedeVirtuals.ToList();
+            return ctx.RedeVirtuals
+            .Include(p => p.IdInfraestruturaNavigation)
+            .Include(p => p.IdInfraestruturaNavigation.IdUsuarioNavigation)
+            .ToList();
         }
 
         public RedeVirtual Listarid(int id)
         {
             return ctx.RedeVirtuals.FirstOrDefault(c => c.IdRedeVirtual == id);
+        }
+
+        public List<RedeVirtual> ListarMinhas(int id)
+        {
+            return ctx.RedeVirtuals
+                .Include(p => p.IdInfraestruturaNavigation)
+                .Include(p => p.IdInfraestruturaNavigation.IdUsuarioNavigation)
+                .Where(p => p.IdInfraestruturaNavigation.IdUsuarioNavigation.IdUsuario == id)
+                .ToList();
         }
     }
 }

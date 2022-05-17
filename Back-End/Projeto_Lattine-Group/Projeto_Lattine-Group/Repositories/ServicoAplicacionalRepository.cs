@@ -1,4 +1,5 @@
-﻿using Projeto_Lattine_Group.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
+using Projeto_Lattine_Group.Contexts;
 using Projeto_Lattine_Group.Domains;
 using Projeto_Lattine_Group.Interfaces;
 using System.Collections.Generic;
@@ -45,12 +46,24 @@ namespace Projeto_Lattine_Group.Repositories
 
         public List<ServicoAplicacional> Listar()
         {
-            return ctx.ServicoAplicacionals.ToList();
+            return ctx.ServicoAplicacionals
+            .Include(p => p.IdInfraestruturaNavigation)
+            .Include(p => p.IdInfraestruturaNavigation.IdUsuarioNavigation)
+            .ToList();
         }
 
         public ServicoAplicacional Listarid(int id)
         {
             return ctx.ServicoAplicacionals.FirstOrDefault(c => c.IdServicoAplicacional == id);
+        }
+
+        public List<ServicoAplicacional> ListarMeus(int id)
+        {
+            return ctx.ServicoAplicacionals
+                .Include(p => p.IdInfraestruturaNavigation)
+                .Include(p => p.IdInfraestruturaNavigation.IdUsuarioNavigation)
+                .Where(p => p.IdInfraestruturaNavigation.IdUsuarioNavigation.IdUsuario == id)
+                .ToList();
         }
     }
 }

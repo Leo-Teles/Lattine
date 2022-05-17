@@ -13,13 +13,7 @@ GO
 SELECT * FROM usuario;
 GO
 
-SELECT * FROM grupoRecursos;
-GO
-
 SELECT * FROM infraestrutura;
-GO
-
-SELECT * FROM grupoInfraestrutura;
 GO
 
 SELECT * FROM maquinaVirtual;

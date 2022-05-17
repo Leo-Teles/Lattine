@@ -68,70 +68,6 @@
             <param name="id">id do EnderecoIP que será atualizado</param>
             <param name="EnderecoIPAtualizado">Objeto EnderecoIPAtualizado com os novos dados</param>
         </member>
-        <member name="M:Projeto_Lattine_Group.Controllers.GrupoInfraestruturasController.Get">
-            <summary>
-            Lista todos os GrupoInfraestruturas
-            </summary>
-            <returns>Uma lista de GrupoInfraestruturas com um status code 200 - Ok</returns>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Controllers.GrupoInfraestruturasController.GetById(System.Int32)">
-            <summary>
-            Busca um GrupoInfraestrutura através de seu ID
-            </summary>
-            <param name="id">ID do GrupoInfraestrutura buscado</param>
-            <returns>O GrupoInfraestrutura buscado</returns>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Controllers.GrupoInfraestruturasController.Post(Projeto_Lattine_Group.Domains.GrupoInfraestrutura)">
-            <summary>
-            Cadastra um novo GrupoInfraestrutura
-            </summary>
-            <param name="novoGrupoInfraestrutura">Objeto novoGrupoInfraestrutura com os novos dados</param>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Controllers.GrupoInfraestruturasController.Delete(System.Int32)">
-            <summary>
-            Deleta um GrupoInfraestrutura existente
-            </summary>
-            <param name="id">ID do GrupoInfraestrutura deletado</param>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Controllers.GrupoInfraestruturasController.Put(System.Int32,Projeto_Lattine_Group.Domains.GrupoInfraestrutura)">
-            <summary>
-            Atualiza um GrupoInfraestrutura existente passando o id pela URL da requisição
-            </summary>
-            <param name="id">id do GrupoInfraestrutura que será atualizado</param>
-            <param name="GrupoInfraestruturaAtualizado">Objeto GrupoInfraestruturaAtualizado com os novos dados</param>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Controllers.GrupoRecursosController.Get">
-            <summary>
-            Lista todos os GrupoRecursos
-            </summary>
-            <returns>Uma lista de GrupoRecursos com um status code 200 - Ok</returns>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Controllers.GrupoRecursosController.GetById(System.Int32)">
-            <summary>
-            Busca um GrupoRecurso através de seu ID
-            </summary>
-            <param name="id">ID do GrupoRecurso buscado</param>
-            <returns>O GrupoRecurso buscado</returns>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Controllers.GrupoRecursosController.Post(Projeto_Lattine_Group.Domains.GrupoRecurso)">
-            <summary>
-            Cadastra um novo GrupoRecurso
-            </summary>
-            <param name="novoGrupoRecurso">Objeto novoGrupoRecurso com os novos dados</param>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Controllers.GrupoRecursosController.Delete(System.Int32)">
-            <summary>
-            Deleta um GrupoRecurso existente
-            </summary>
-            <param name="id">ID do GrupoRecurso deletado</param>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Controllers.GrupoRecursosController.Put(System.Int32,Projeto_Lattine_Group.Domains.GrupoRecurso)">
-            <summary>
-            Atualiza um GrupoRecurso existente passando o id pela URL da requisição
-            </summary>
-            <param name="id">id do GrupoRecurso que será atualizado</param>
-            <param name="GrupoRecursoAtualizado">Objeto GrupoRecursoAtualizado com os novos dados</param>
-        </member>
         <member name="M:Projeto_Lattine_Group.Controllers.InfraestruturasController.Get">
             <summary>
             Lista todos os Infraestruturas
@@ -462,80 +398,6 @@
             </summary>
             <param name="idEnderecoIP">id do EnderecoIP deletado</param>
         </member>
-        <member name="T:Projeto_Lattine_Group.Interfaces.IGrupoInfraestruturaRepository">
-            <summary>
-            Interface responsável pelo repositório GrupoInfraestruturaRepository
-            </summary>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoInfraestruturaRepository.Listar">
-            <summary>
-            Lista todos os GrupoInfraestruturas
-            </summary>
-            <returns>Lista de GrupoInfraestruturas</returns>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoInfraestruturaRepository.Listarid(System.Int32)">
-            <summary>
-            Busca um GrupoInfraestrutura através de seu id
-            </summary>
-            <param name="id">id do GrupoInfraestrutura buscado</param>
-            <returns>O GrupoInfraestrutura buscado</returns>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoInfraestruturaRepository.Cadastrar(Projeto_Lattine_Group.Domains.GrupoInfraestrutura)">
-            <summary>
-            Cadastra um novo GrupoInfraestrutura
-            </summary>
-            <param name="novoGrupoInfraestrutura">Objeto novoGrupoInfraestrutura com os novos dados</param>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoInfraestruturaRepository.Atualizar(System.Int32,Projeto_Lattine_Group.Domains.GrupoInfraestrutura)">
-            <summary>
-            Atualiza um GrupoInfraestrutura existente passando o id pela URL da requisição
-            </summary>
-            <param name="idGrupoInfraestrutura">id do GrupoInfraestrutura que será atualizado</param>
-            <param name="GrupoInfraestruturaAtualizado">Objeto GrupoInfraestruturaAtualizado com os novos dados</param>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoInfraestruturaRepository.Deletar(System.Int32)">
-            <summary>
-            Deleta um GrupoInfraestrutura existente
-            </summary>
-            <param name="idGrupoInfraestrutura">id do GrupoInfraestrutura deletado</param>
-        </member>
-        <member name="T:Projeto_Lattine_Group.Interfaces.IGrupoRecursoRepository">
-            <summary>
-            Interface responsável pelo repositório GrupoRecursoRepository
-            </summary>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoRecursoRepository.Listar">
-            <summary>
-            Lista todos os GrupoRecursos
-            </summary>
-            <returns>Lista de GrupoRecursos</returns>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoRecursoRepository.Listarid(System.Int32)">
-            <summary>
-            Busca um GrupoRecurso através de seu id
-            </summary>
-            <param name="id">id do GrupoRecurso buscado</param>
-            <returns>O GrupoRecurso buscado</returns>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoRecursoRepository.Cadastrar(Projeto_Lattine_Group.Domains.GrupoRecurso)">
-            <summary>
-            Cadastra um novo GrupoRecurso
-            </summary>
-            <param name="novoGrupoRecurso">Objeto novoGrupoRecurso com os novos dados</param>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoRecursoRepository.Atualizar(System.Int32,Projeto_Lattine_Group.Domains.GrupoRecurso)">
-            <summary>
-            Atualiza um GrupoRecurso existente passando o id pela URL da requisição
-            </summary>
-            <param name="idGrupoRecurso">id do GrupoRecurso que será atualizado</param>
-            <param name="GrupoRecursoAtualizado">Objeto GrupoRecursoAtualizado com os novos dados</param>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Interfaces.IGrupoRecursoRepository.Deletar(System.Int32)">
-            <summary>
-            Deleta um GrupoRecurso existente
-            </summary>
-            <param name="idGrupoRecurso">id do GrupoRecurso deletado</param>
-        </member>
         <member name="T:Projeto_Lattine_Group.Interfaces.IInfraestruturaRepository">
             <summary>
             Interface responsável pelo repositório InfraestruturaRepository
@@ -610,6 +472,13 @@
             </summary>
             <param name="idMaquinaVirtual">id da MaquinaVirtual deletada</param>
         </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IMaquinaVirtualRepository.ListarMinhas(System.Int32)">
+            <summary>
+            Lista todas as máquinas virtuais do usuário logado
+            </summary>
+            <param name="id">ID do usuário logado</param>
+            <returns>Uma lista de máquinas virtuais do usuário</returns>
+        </member>
         <member name="T:Projeto_Lattine_Group.Interfaces.IRedeVirtualRepository">
             <summary>
             Interface responsável pelo repositório RedeVirtualRepository
@@ -647,6 +516,13 @@
             </summary>
             <param name="idRedeVirtual">id da RedeVirtual deletada</param>
         </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IRedeVirtualRepository.ListarMinhas(System.Int32)">
+            <summary>
+            Lista todas as redes virtuais do usuário logado
+            </summary>
+            <param name="id">ID do usuário logado</param>
+            <returns>Uma lista de redes virtuais do usuário</returns>
+        </member>
         <member name="T:Projeto_Lattine_Group.Interfaces.IServicoAplicacionalRepository">
             <summary>
             Interface responsável pelo repositório ServicoAplicacionalRepository
@@ -683,6 +559,13 @@
             Deleta um ServicoAplicacional existente
             </summary>
             <param name="idServicoAplicacional">id do ServicoAplicacional deletado</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IServicoAplicacionalRepository.ListarMeus(System.Int32)">
+            <summary>
+            Lista todos os serviços aplicacionais do usuário logado
+            </summary>
+            <param name="id">ID do usuário logado</param>
+            <returns>Uma lista de serviços aplicacionais do usuário</returns>
         </member>
         <member name="T:Projeto_Lattine_Group.Interfaces.ISubRedeRepository">
             <summary>
@@ -840,12 +723,12 @@
             <param name="senha">Senha do usuário buscado</param>
             <returns>Usuário buscado</returns>
         </member>
-        <member name="M:Projeto_Lattine_Group.Interfaces.IUsuarioRepository.ListarMinhas(System.Int32)">
+        <member name="M:Projeto_Lattine_Group.Interfaces.IUsuarioRepository.ListarMeus(System.Int32)">
             <summary>
-            Lista todos os eventos que um determinado usuário participa
+            Lista todos os dados do usuário logado
             </summary>
-            <param name="aaa">ID do usuário que participa dos eventos listados</param>
-            <returns>Uma lista de presenças com os dados dos eventos</returns>
+            <param name="id">ID do usuário logado</param>
+            <returns>Uma lista de dados do usuário</returns>
         </member>
     </members>
 </doc>

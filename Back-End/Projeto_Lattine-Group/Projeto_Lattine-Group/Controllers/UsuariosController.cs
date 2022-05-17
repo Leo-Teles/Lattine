@@ -106,23 +106,20 @@ namespace Projeto_Lattine_Group.Controllers
             }
         }
 
-        [HttpGet("minhas")]
-        public IActionResult ListarMinhas()
+        [HttpGet("meus")]
+        public IActionResult ListarMeus()
         {
             try
             {
                 int id = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
 
-                // Caso fosse necessário trazer o valor do e-mail do usuário, a partir do token
-                // string emailUsuario = HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Email).Value;
-
-                return Ok(_UsuarioRepository.ListarMinhas(id));
+                return Ok(_UsuarioRepository.ListarMeus(id));
             }
             catch (Exception error)
             {
                 return BadRequest(new
                 {
-                    mensagem = "Não é possível mostrar as presenças se o usuário não estiver logado!",
+                    mensagem = "Não é possível mostrar os dados se o usuário não estiver logado!",
                     erro = error
 
                 });

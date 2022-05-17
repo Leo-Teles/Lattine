@@ -25,25 +25,11 @@ VALUES
 (3, 'Gabriel', 'Brito', 'gabriel@email.com', 'gabriel*123', '25/03/2022');
 GO
 
-INSERT INTO grupoRecursos (idUsuario, nomeGrupoRecursos, dataCadastro) 
+INSERT INTO infraestrutura (idUsuario, dataCadastro) 
 VALUES
-(1, 'Grupo Luca', '25/03/2022'),
-(2, 'Grupo Flávia', '25/03/2022'),
-(3, 'Grupo Gabriel', '25/03/2022');
-GO
-
-INSERT INTO infraestrutura (dataCadastro) 
-VALUES
-('25/03/2022'),
-('25/03/2022'),
-('25/03/2022');
-GO
-
-INSERT INTO grupoInfraestrutura (idGrupoRecursos, idInfraestrutura) 
-VALUES
-(1, 1),
-(2, 2),
-(3, 3);
+(1, '25/03/2022'),
+(2, '25/03/2022'),
+(3, '25/03/2022');
 GO
 
 INSERT INTO maquinaVirtual (idInfraestrutura, nomeMaquinaVirtual, opcoesDisponibilidade, sistemaOperacional, tamanho, nomeAdmin, origemChavePublicaSSH) 

@@ -22,17 +22,17 @@ export default class Servicos extends Component {
 
                         <h2>Detalhes da Instância</h2>
                         <label for="nomeredevir">Nome da Rede Virtual</label>
-                        <input className="input-text-edicao" id="nomeredevir" placeholder="Minha Rede Virtual"></input>
+                        <input className="input-text-edicao" id="nomeredevir"></input>
                         
                         <h2>Endereço de IP</h2>
                         <label for="ip">Espaço de Endereço IPv4</label>
-                        <input className="input-text-edicao" id="ip" placeholder="192.168.3.151"></input>
+                        <input className="input-text-edicao" id="ip"></input>
 
                         <h2>Sub-Rede</h2>
                         <label for="nomesubrede">Nome de Sub-Rede</label>
-                        <input className="input-text-edicao" id="nomesubrede" placeholder="Minha Sub-Rede"></input>
+                        <input className="input-text-edicao" id="nomesubrede"></input>
                         <label for="enderecos">Intervalo de Endereços de Sub-Rede</label>
-                        <input className="input-text-edicao" id="enderecos" placeholder="10.0.0.1.0/24"></input>
+                        <input className="input-text-edicao" id="enderecos"></input>
 
                         <h2>Segurança</h2>
                         <label for="bastionhost">BastionHost</label>

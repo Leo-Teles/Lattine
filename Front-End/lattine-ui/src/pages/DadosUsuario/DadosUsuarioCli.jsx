@@ -8,7 +8,7 @@ export default function DadosUsuario() {
     const [listaDadosUsuario, setListaDadosUsuario] = useState([]);
 
     function buscarMeusDados(){
-        axios('http://localhost:5000/api/usuarios/minhas', {
+        axios('http://localhost:5000/api/usuarios/meus', {
             headers : {
                 'Authorization' : 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -20,7 +20,6 @@ export default function DadosUsuario() {
         })
         .catch( erro => console.log(erro) );
     };
-
     useEffect( buscarMeusDados, [] );
 
     return (

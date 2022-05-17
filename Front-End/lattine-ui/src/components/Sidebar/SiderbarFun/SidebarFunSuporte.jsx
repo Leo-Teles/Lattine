@@ -16,8 +16,7 @@ export default function Sidebar() {
         <section className='sidebar'>
             <div className='sidebar-container'>
                 <div className='container-logo'>
-                    <Link to=""><img src={imgLattine} alt='Logo da Lattine Group' /></Link>
-                </div>
+                    <Link className="a" to=""><img className='logo-sidebar' src={imgLattine} alt='Logo da Lattine Group' /></Link>                </div>
                 <div className='linha-branca' />
                 <Link to="" className='navegacao'>
                     <img src={imgHome} alt='Imagem Home' />
@@ -41,7 +40,7 @@ export default function Sidebar() {
                     <img src={imgSuporte} alt='Imagem Suporte' />
                     <p>Suporte</p>
                 </a>
-                <Link to="" className='navegacao'>
+                <Link to="login" className='navegacao'>
                     <img src={imgSair} alt='Imagem Sair' />
                     <p>Sair</p>
                 </Link>

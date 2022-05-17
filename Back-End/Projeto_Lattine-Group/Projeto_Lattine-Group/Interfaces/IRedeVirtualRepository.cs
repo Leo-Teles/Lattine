@@ -39,5 +39,12 @@ namespace Projeto_Lattine_Group.Interfaces
         /// </summary>
         /// <param name="idRedeVirtual">id da RedeVirtual deletada</param>
         void Deletar(int idRedeVirtual);
+
+        /// <summary>
+        /// Lista todas as redes virtuais do usuário logado
+        /// </summary>
+        /// <param name="id">ID do usuário logado</param>
+        /// <returns>Uma lista de redes virtuais do usuário</returns>
+        List<RedeVirtual> ListarMinhas(int id);
     }
 }

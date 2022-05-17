@@ -39,5 +39,12 @@ namespace Projeto_Lattine_Group.Interfaces
         /// </summary>
         /// <param name="idMaquinaVirtual">id da MaquinaVirtual deletada</param>
         void Deletar(int idMaquinaVirtual);
+
+        /// <summary>
+        /// Lista todas as máquinas virtuais do usuário logado
+        /// </summary>
+        /// <param name="id">ID do usuário logado</param>
+        /// <returns>Uma lista de máquinas virtuais do usuário</returns>
+        List<MaquinaVirtual> ListarMinhas(int id);
     }
 }

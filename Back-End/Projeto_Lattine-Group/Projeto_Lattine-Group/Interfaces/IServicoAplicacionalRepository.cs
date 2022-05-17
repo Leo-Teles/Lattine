@@ -39,5 +39,12 @@ namespace Projeto_Lattine_Group.Interfaces
         /// </summary>
         /// <param name="idServicoAplicacional">id do ServicoAplicacional deletado</param>
         void Deletar(int idServicoAplicacional);
+
+        /// <summary>
+        /// Lista todos os serviços aplicacionais do usuário logado
+        /// </summary>
+        /// <param name="id">ID do usuário logado</param>
+        /// <returns>Uma lista de serviços aplicacionais do usuário</returns>
+        List<ServicoAplicacional> ListarMeus(int id);
     }
 }

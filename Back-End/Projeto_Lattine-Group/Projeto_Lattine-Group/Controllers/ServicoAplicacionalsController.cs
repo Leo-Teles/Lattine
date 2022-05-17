@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Projeto_Lattine_Group.Domains;
 using Projeto_Lattine_Group.Interfaces;
 using Projeto_Lattine_Group.Repositories;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 
 namespace Projeto_Lattine_Group.Controllers
 {
@@ -101,6 +102,26 @@ namespace Projeto_Lattine_Group.Controllers
             catch (Exception erro)
             {
                 return BadRequest(erro);
+            }
+        }
+
+        [HttpGet("meus")]
+        public IActionResult ListarMeus()
+        {
+            try
+            {
+                int id = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+
+                return Ok(_ServicoAplicacionalRepository.ListarMeus(id));
+            }
+            catch (Exception error)
+            {
+                return BadRequest(new
+                {
+                    mensagem = "Não é possível mostrar os dados se o usuário não estiver logado!",
+                    erro = error
+
+                });
             }
         }
     }

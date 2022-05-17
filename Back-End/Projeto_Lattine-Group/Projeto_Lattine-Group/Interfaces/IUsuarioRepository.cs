@@ -49,10 +49,10 @@ namespace Projeto_Lattine_Group.Interfaces
         Usuario Login(string email, string senha);
 
         /// <summary>
-        /// Lista todos os eventos que um determinado usuário participa
+        /// Lista todos os dados do usuário logado
         /// </summary>
-        /// <param name="aaa">ID do usuário que participa dos eventos listados</param>
-        /// <returns>Uma lista de presenças com os dados dos eventos</returns>
-        List<Usuario> ListarMinhas(int aaa);
+        /// <param name="id">ID do usuário logado</param>
+        /// <returns>Uma lista de dados do usuário</returns>
+        List<Usuario> ListarMeus(int id);
     }
 }

@@ -9,7 +9,7 @@ namespace Projeto_Lattine_Group.Domains
     {
         public Usuario()
         {
-            GrupoRecursos = new HashSet<GrupoRecurso>();
+            Infraestruturas = new HashSet<Infraestrutura>();
         }
 
         public short IdUsuario { get; set; }
@@ -21,6 +21,6 @@ namespace Projeto_Lattine_Group.Domains
         public DateTime? DataCadastro { get; set; }
 
         public virtual TipoUsuario IdTipoUsuarioNavigation { get; set; }
-        public virtual ICollection<GrupoRecurso> GrupoRecursos { get; set; }
+        public virtual ICollection<Infraestrutura> Infraestruturas { get; set; }
     }
 }

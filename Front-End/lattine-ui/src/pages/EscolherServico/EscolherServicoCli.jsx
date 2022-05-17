@@ -24,21 +24,21 @@ export default class Servicos extends Component {
                                 <div>
                                     <img src={MaquinasVirtuais} alt="Máquinas Virtuais" />
                                 </div>
-                                <div><Link className="selecionar-servico">Selecionar</Link></div>
+                                <div><Link to="maqvirusuariocli" className="selecionar-servico">Selecionar</Link></div>
                             </div>
                             <div className="escolha-servico">
                                 <h2>Redes Virtuais</h2>
                                 <div>
                                     <img src={RedesVirtuais} alt="Máquinas Virtuais" />
                                 </div>
-                                <div><Link className="selecionar-servico">Selecionar</Link></div>
+                                <div><Link to="redesvirtuaisusuariocli" className="selecionar-servico">Selecionar</Link></div>
                             </div>
                             <div className="escolha-servico">
                                 <h2>Serviços Aplicacionais</h2>
                                 <div>
                                     <img src={ServicosAplicacionais} alt="Máquinas Virtuais" />
                                 </div>
-                                <div><Link className="selecionar-servico">Selecionar</Link></div>
+                                <div><Link to="serapliusuariocli" className="selecionar-servico">Selecionar</Link></div>
                             </div>
                         </div>
                     </div>

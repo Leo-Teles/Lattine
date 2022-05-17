@@ -34,24 +34,10 @@ CREATE TABLE usuario(
 );
 go
 
-CREATE TABLE grupoRecursos(
-   idGrupoRecursos smallint PRIMARY KEY IDENTITY(1,1),
-   idUsuario smallint FOREIGN KEY REFERENCES usuario(idUsuario),
-   nomeGrupoRecursos varchar (256) unique not null,
-   dataCadastro datetime
-);
-go
-
 CREATE TABLE infraestrutura(
    idInfraestrutura smallint PRIMARY KEY IDENTITY(1,1),
+   idUsuario smallint FOREIGN KEY REFERENCES usuario(idUsuario),
    dataCadastro datetime
-);
-go
-
-CREATE TABLE grupoInfraestrutura(
-   idGrupoInfraestrutura smallint PRIMARY KEY IDENTITY(1,1),
-   idGrupoRecursos smallint FOREIGN KEY REFERENCES grupoRecursos(idGrupoRecursos),
-   idInfraestrutura smallint FOREIGN KEY REFERENCES infraestrutura(idInfraestrutura),
 );
 go
 

@@ -60,7 +60,8 @@ namespace Projeto_Lattine_Group.Repositories
         {
             return ctx.Usuarios.FirstOrDefault(x => x.Email == email && x.Senha == senha);
         }
-        public List<Usuario> ListarMinhas(int id)
+
+        public List<Usuario> ListarMeus(int id)
         {
             return ctx.Usuarios
                 .Where(p => p.IdUsuario == id)
