@@ -98,7 +98,7 @@ export default function Cadastro() {
                     <div>
                         <img className="imgUsuario" src={imgCadeado} alt="Imagem Cadeado" />
 
-                        <input value={senha} onChange={(campo) =>
+                        <input type="password" value={senha} onChange={(campo) =>
                             setSenha(campo.target.value)} placeholder="Senha" className="input" />
                     </div>
                         <button type="submit" className="cadastrar"> Cadastrar </button>

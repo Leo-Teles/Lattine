@@ -1195,7 +1195,28 @@ input::placeholder {
     background: #F3F3F3;
 }
 
+.container-conteudo-escolher-cli {
+    width: 75%;
+    height: fit-content;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10vh 0 64px 17.5%;
+    padding: 64px 50px 64px 80px;
+    background: #F3F3F3;
+}
+
 .container-conteudo-escolher h1 {
+    margin-bottom: 70px;
+    font-family: Segoe UI;
+    font-size: 48px;
+    font-weight: 350;
+    text-align: left;
+    max-width: 50%;
+}
+
+.container-conteudo-escolher-cli h1 {
     margin-bottom: 70px;
     font-family: Segoe UI;
     font-size: 48px;
