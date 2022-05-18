@@ -1,9 +1,10 @@
-import { Component } from 'react';
+
 import { Link } from "react-router-dom";
 import React, {useState} from "react";
 
 import '../../assets/css/style.css';
 import Card from './Card';
+import Data from './Data'
 
 
 import LogoLattine from '../../assets/img/Lattine.png'
@@ -47,9 +48,9 @@ export default function Home() {
                         </nav>
 
                         <div>
-                            {active === "PrimeiroCard"  && <Card title="1" className="testeCard"/>}
-                            {active === "SegundoCard"  && <Card title="2" className=""/>}
-                            {active === "TerceiroCard"  && <Card title="3" className=""/>}
+                            {active === "PrimeiroCard"  && <Card data={Data} cardHome={0} className="primeiroCard"/>}
+                            {active === "SegundoCard"  && <Card data={Data} cardHome={1} className="sugundoCard"/>}
+                            {active === "TerceiroCard"  && <Card data={Data} cardHome={2} className="terceiroCard"/>}
                         </div>
 
                         <h3 className="ultimaFrase"> Juntos podemos ir mais longe!</h3>
