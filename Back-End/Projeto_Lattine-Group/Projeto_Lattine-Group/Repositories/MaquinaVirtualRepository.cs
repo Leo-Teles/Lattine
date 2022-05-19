@@ -17,13 +17,14 @@ namespace Projeto_Lattine_Group.Repositories
 
             if (MaquinaVirtualBuscada != null)
             {
-                MaquinaVirtualBuscada.IdInfraestrutura = MaquinaVirtualAtualizada.IdInfraestrutura;
                 MaquinaVirtualBuscada.NomeMaquinaVirtual = MaquinaVirtualAtualizada.NomeMaquinaVirtual;
                 MaquinaVirtualBuscada.OpcoesDisponibilidade = MaquinaVirtualAtualizada.OpcoesDisponibilidade;
                 MaquinaVirtualBuscada.SistemaOperacional = MaquinaVirtualAtualizada.SistemaOperacional;
                 MaquinaVirtualBuscada.Tamanho = MaquinaVirtualAtualizada.Tamanho;
                 MaquinaVirtualBuscada.NomeAdmin = MaquinaVirtualAtualizada.NomeAdmin;
                 MaquinaVirtualBuscada.OrigemChavePublicaSsh = MaquinaVirtualAtualizada.OrigemChavePublicaSsh;
+                MaquinaVirtualBuscada.IdUsuario = MaquinaVirtualAtualizada.IdUsuario;
+                MaquinaVirtualBuscada.DataCadastro = MaquinaVirtualAtualizada.DataCadastro;
             }
 
             ctx.MaquinaVirtuals.Update(MaquinaVirtualBuscada);
@@ -50,8 +51,7 @@ namespace Projeto_Lattine_Group.Repositories
         public List<MaquinaVirtual> Listar()
         {
             return ctx.MaquinaVirtuals
-            .Include(p => p.IdInfraestruturaNavigation)
-            .Include(p => p.IdInfraestruturaNavigation.IdUsuarioNavigation)
+            .Include(p => p.IdUsuarioNavigation)
             .ToList();
         }
 
@@ -63,9 +63,8 @@ namespace Projeto_Lattine_Group.Repositories
         public List<MaquinaVirtual> ListarMinhas(int id)
         {
             return ctx.MaquinaVirtuals
-                .Include(p => p.IdInfraestruturaNavigation)
-                .Include(p => p.IdInfraestruturaNavigation.IdUsuarioNavigation)
-                .Where(p => p.IdInfraestruturaNavigation.IdUsuarioNavigation.IdUsuario == id)
+                .Include(p => p.IdUsuarioNavigation)
+                .Where(p => p.IdUsuarioNavigation.IdUsuario == id)
                 .ToList();
         }
 

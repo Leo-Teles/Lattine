@@ -68,38 +68,6 @@
             <param name="id">id do EnderecoIP que será atualizado</param>
             <param name="EnderecoIPAtualizado">Objeto EnderecoIPAtualizado com os novos dados</param>
         </member>
-        <member name="M:Projeto_Lattine_Group.Controllers.InfraestruturasController.Get">
-            <summary>
-            Lista todos os Infraestruturas
-            </summary>
-            <returns>Uma lista de Infraestruturas com um status code 200 - Ok</returns>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Controllers.InfraestruturasController.GetById(System.Int32)">
-            <summary>
-            Busca um Infraestrutura através de seu ID
-            </summary>
-            <param name="id">ID do Infraestrutura buscado</param>
-            <returns>O Infraestrutura buscado</returns>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Controllers.InfraestruturasController.Post(Projeto_Lattine_Group.Domains.Infraestrutura)">
-            <summary>
-            Cadastra um novo Infraestrutura
-            </summary>
-            <param name="novoInfraestrutura">Objeto novoInfraestrutura com os novos dados</param>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Controllers.InfraestruturasController.Delete(System.Int32)">
-            <summary>
-            Deleta um Infraestrutura existente
-            </summary>
-            <param name="id">ID do Infraestrutura deletado</param>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Controllers.InfraestruturasController.Put(System.Int32,Projeto_Lattine_Group.Domains.Infraestrutura)">
-            <summary>
-            Atualiza um Infraestrutura existente passando o id pela URL da requisição
-            </summary>
-            <param name="id">id do Infraestrutura que será atualizado</param>
-            <param name="InfraestruturaAtualizado">Objeto InfraestruturaAtualizado com os novos dados</param>
-        </member>
         <member name="M:Projeto_Lattine_Group.Controllers.MaquinaVirtualsController.Get">
             <summary>
             Lista todos os MaquinaVirtuals
@@ -398,42 +366,12 @@
             </summary>
             <param name="idEnderecoIP">id do EnderecoIP deletado</param>
         </member>
-        <member name="T:Projeto_Lattine_Group.Interfaces.IInfraestruturaRepository">
+        <member name="M:Projeto_Lattine_Group.Interfaces.IEnderecoIPRepository.ListarMeus(System.Int32)">
             <summary>
-            Interface responsável pelo repositório InfraestruturaRepository
+            Lista todos os ips do usuário logado
             </summary>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Interfaces.IInfraestruturaRepository.Listar">
-            <summary>
-            Lista todas as Infraestruturas
-            </summary>
-            <returns>Lista de Infraestruturas</returns>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Interfaces.IInfraestruturaRepository.Listarid(System.Int32)">
-            <summary>
-            Busca uma Infraestrutura através de seu id
-            </summary>
-            <param name="id">id da Infraestrutura buscada</param>
-            <returns>A Infraestrutura buscada</returns>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Interfaces.IInfraestruturaRepository.Cadastrar(Projeto_Lattine_Group.Domains.Infraestrutura)">
-            <summary>
-            Cadastra uma nova Infraestrutura
-            </summary>
-            <param name="novaInfraestrutura">Objeto novaInfraestrutura com os novos dados</param>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Interfaces.IInfraestruturaRepository.Atualizar(System.Int32,Projeto_Lattine_Group.Domains.Infraestrutura)">
-            <summary>
-            Atualiza uma Infraestrutura existente passando o id pela URL da requisição
-            </summary>
-            <param name="idInfraestrutura">id da Infraestrutura que será atualizada</param>
-            <param name="InfraestruturaAtualizada">Objeto InfraestruturaAtualizada com os novos dados</param>
-        </member>
-        <member name="M:Projeto_Lattine_Group.Interfaces.IInfraestruturaRepository.Deletar(System.Int32)">
-            <summary>
-            Deleta uma Infraestrutura existente
-            </summary>
-            <param name="idInfraestrutura">id da Infraestrutura deletada</param>
+            <param name="id">ID do usuário logado</param>
+            <returns>Uma lista de ips do usuário</returns>
         </member>
         <member name="T:Projeto_Lattine_Group.Interfaces.IMaquinaVirtualRepository">
             <summary>
@@ -603,6 +541,13 @@
             Deleta uma SubRede existente
             </summary>
             <param name="idSubRede">id da SubRede deletada</param>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.ISubRedeRepository.ListarMinhas(System.Int32)">
+            <summary>
+            Lista todas as sub-redes do usuário logado
+            </summary>
+            <param name="id">ID do usuário logado</param>
+            <returns>Uma lista de sub-redes do usuário</returns>
         </member>
         <member name="T:Projeto_Lattine_Group.Interfaces.ITelefoneRepository">
             <summary>

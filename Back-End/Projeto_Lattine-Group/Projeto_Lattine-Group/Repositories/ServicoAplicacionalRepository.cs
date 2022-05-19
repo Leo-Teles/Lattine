@@ -17,10 +17,11 @@ namespace Projeto_Lattine_Group.Repositories
 
             if (ServicoAplicacionalBuscada != null)
             {
-                ServicoAplicacionalBuscada.IdInfraestrutura = ServicoAplicacionalAtualizada.IdInfraestrutura;
                 ServicoAplicacionalBuscada.NomeServicoAplicacional = ServicoAplicacionalAtualizada.NomeServicoAplicacional;
                 ServicoAplicacionalBuscada.PilhaRuntime = ServicoAplicacionalAtualizada.PilhaRuntime;
                 ServicoAplicacionalBuscada.SkueTamanho = ServicoAplicacionalAtualizada.SkueTamanho;
+                ServicoAplicacionalBuscada.IdUsuario = ServicoAplicacionalAtualizada.IdUsuario;
+                ServicoAplicacionalBuscada.DataCadastro = ServicoAplicacionalAtualizada.DataCadastro;
             }
 
             ctx.ServicoAplicacionals.Update(ServicoAplicacionalBuscada);
@@ -47,8 +48,7 @@ namespace Projeto_Lattine_Group.Repositories
         public List<ServicoAplicacional> Listar()
         {
             return ctx.ServicoAplicacionals
-            .Include(p => p.IdInfraestruturaNavigation)
-            .Include(p => p.IdInfraestruturaNavigation.IdUsuarioNavigation)
+            .Include(p => p.IdUsuarioNavigation)
             .ToList();
         }
 
@@ -60,9 +60,8 @@ namespace Projeto_Lattine_Group.Repositories
         public List<ServicoAplicacional> ListarMeus(int id)
         {
             return ctx.ServicoAplicacionals
-                .Include(p => p.IdInfraestruturaNavigation)
-                .Include(p => p.IdInfraestruturaNavigation.IdUsuarioNavigation)
-                .Where(p => p.IdInfraestruturaNavigation.IdUsuarioNavigation.IdUsuario == id)
+                .Include(p => p.IdUsuarioNavigation)
+                .Where(p => p.IdUsuarioNavigation.IdUsuario == id)
                 .ToList();
         }
     }

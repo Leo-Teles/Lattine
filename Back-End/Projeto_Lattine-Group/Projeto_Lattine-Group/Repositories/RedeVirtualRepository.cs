@@ -17,13 +17,15 @@ namespace Projeto_Lattine_Group.Repositories
 
             if (RedeVirtualBuscada != null)
             {
-                RedeVirtualBuscada.IdInfraestrutura = RedeVirtualAtualizada.IdInfraestrutura;
                 RedeVirtualBuscada.IdEnderecoIp = RedeVirtualAtualizada.IdEnderecoIp;
                 RedeVirtualBuscada.IdSubRede = RedeVirtualAtualizada.IdSubRede;
                 RedeVirtualBuscada.NomeRedeVirtual = RedeVirtualAtualizada.NomeRedeVirtual;
                 RedeVirtualBuscada.BastionHost = RedeVirtualAtualizada.BastionHost;
                 RedeVirtualBuscada.ProtecaoDdoS = RedeVirtualAtualizada.ProtecaoDdoS;
                 RedeVirtualBuscada.FireWall = RedeVirtualAtualizada.FireWall;
+                RedeVirtualBuscada.IdUsuario = RedeVirtualAtualizada.IdUsuario;
+                RedeVirtualBuscada.DataCadastro = RedeVirtualAtualizada.DataCadastro;
+
             }
 
             ctx.RedeVirtuals.Update(RedeVirtualBuscada);
@@ -50,8 +52,7 @@ namespace Projeto_Lattine_Group.Repositories
         public List<RedeVirtual> Listar()
         {
             return ctx.RedeVirtuals
-            .Include(p => p.IdInfraestruturaNavigation)
-            .Include(p => p.IdInfraestruturaNavigation.IdUsuarioNavigation)
+            .Include(p => p.IdUsuarioNavigation)
             .ToList();
         }
 
@@ -63,9 +64,8 @@ namespace Projeto_Lattine_Group.Repositories
         public List<RedeVirtual> ListarMinhas(int id)
         {
             return ctx.RedeVirtuals
-                .Include(p => p.IdInfraestruturaNavigation)
-                .Include(p => p.IdInfraestruturaNavigation.IdUsuarioNavigation)
-                .Where(p => p.IdInfraestruturaNavigation.IdUsuarioNavigation.IdUsuario == id)
+                .Include(p => p.IdUsuarioNavigation)
+                .Where(p => p.IdUsuarioNavigation.IdUsuario == id)
                 .ToList();
         }
     }

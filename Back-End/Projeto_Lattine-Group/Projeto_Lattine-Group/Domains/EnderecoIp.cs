@@ -13,8 +13,10 @@ namespace Projeto_Lattine_Group.Domains
         }
 
         public short IdEnderecoIp { get; set; }
+        public short? IdUsuario { get; set; }
         public string Endereco { get; set; }
 
+        public virtual Usuario IdUsuarioNavigation { get; set; }
         public virtual ICollection<RedeVirtual> RedeVirtuals { get; set; }
     }
 }

@@ -709,6 +709,17 @@ input::placeholder {
     color: #0089CD;
 }
 
+.criarredeip {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-family: Segoe UI;
+    font-size: 20px;
+    text-align: left;
+    height: 100%;
+    color: #0089CD;
+}
+
 .proxima-pagina a img {
     height: 100%;
     width: auto;

@@ -1,4 +1,5 @@
-﻿using Projeto_Lattine_Group.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
+using Projeto_Lattine_Group.Contexts;
 using Projeto_Lattine_Group.Domains;
 using Projeto_Lattine_Group.Interfaces;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace Projeto_Lattine_Group.Repositories
             {
                 SubRedeBuscada.NomeSubRede = SubRedeAtualizada.NomeSubRede;
                 SubRedeBuscada.IntervalosEndereco = SubRedeAtualizada.IntervalosEndereco;
+                SubRedeBuscada.IdUsuario = SubRedeAtualizada.IdUsuario;
             }
 
             ctx.SubRedes.Update(SubRedeBuscada);
@@ -49,6 +51,14 @@ namespace Projeto_Lattine_Group.Repositories
         public SubRede Listarid(int id)
         {
             return ctx.SubRedes.FirstOrDefault(c => c.IdSubRede == id);
+        }
+
+        public List<SubRede> ListarMinhas(int id)
+        {
+            return ctx.SubRedes
+                .Include(p => p.IdUsuarioNavigation)
+                .Where(p => p.IdUsuarioNavigation.IdUsuario == id)
+                .ToList();
         }
     }
 }

@@ -20,7 +20,6 @@ namespace Projeto_Lattine_Group.Contexts
 
         public virtual DbSet<ContatosLattine> ContatosLattines { get; set; }
         public virtual DbSet<EnderecoIp> EnderecoIps { get; set; }
-        public virtual DbSet<Infraestrutura> Infraestruturas { get; set; }
         public virtual DbSet<MaquinaVirtual> MaquinaVirtuals { get; set; }
         public virtual DbSet<RedeVirtual> RedeVirtuals { get; set; }
         public virtual DbSet<ServicoAplicacional> ServicoAplicacionals { get; set; }
@@ -45,11 +44,11 @@ namespace Projeto_Lattine_Group.Contexts
             modelBuilder.Entity<ContatosLattine>(entity =>
             {
                 entity.HasKey(e => e.IdContatosLattine)
-                    .HasName("PK__contatos__4E9166FA82216851");
+                    .HasName("PK__contatos__4E9166FACE49AF27");
 
                 entity.ToTable("contatosLattine");
 
-                entity.HasIndex(e => e.Localizacao, "UQ__contatos__601F35960EE2ADCB")
+                entity.HasIndex(e => e.Localizacao, "UQ__contatos__601F3596BC3664FB")
                     .IsUnique();
 
                 entity.Property(e => e.IdContatosLattine).HasColumnName("idContatosLattine");
@@ -64,7 +63,7 @@ namespace Projeto_Lattine_Group.Contexts
             modelBuilder.Entity<EnderecoIp>(entity =>
             {
                 entity.HasKey(e => e.IdEnderecoIp)
-                    .HasName("PK__endereco__C4CF02F8F46AD679");
+                    .HasName("PK__endereco__C4CF02F8B88A5DE1");
 
                 entity.ToTable("enderecoIP");
 
@@ -75,45 +74,35 @@ namespace Projeto_Lattine_Group.Contexts
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("endereco");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
+
+                entity.HasOne(d => d.IdUsuarioNavigation)
+                    .WithMany(p => p.EnderecoIps)
+                    .HasForeignKey(d => d.IdUsuario)
+                    .HasConstraintName("FK__enderecoI__idUsu__36B12243");
             });
 
-            modelBuilder.Entity<Infraestrutura>(entity =>
+            modelBuilder.Entity<MaquinaVirtual>(entity =>
             {
-                entity.HasKey(e => e.IdInfraestrutura)
-                    .HasName("PK__infraest__973745E96D6899D7");
+                entity.HasKey(e => e.IdMaquinaVirtual)
+                    .HasName("PK__maquinaV__3F823F3390109B3F");
 
-                entity.ToTable("infraestrutura");
+                entity.ToTable("maquinaVirtual");
 
-                entity.Property(e => e.IdInfraestrutura).HasColumnName("idInfraestrutura");
+                entity.HasIndex(e => e.NomeMaquinaVirtual, "UQ__maquinaV__3F71306AF38C0FFD")
+                    .IsUnique();
+
+                entity.HasIndex(e => e.NomeAdmin, "UQ__maquinaV__B0F01B072A989BF3")
+                    .IsUnique();
+
+                entity.Property(e => e.IdMaquinaVirtual).HasColumnName("idMaquinaVirtual");
 
                 entity.Property(e => e.DataCadastro)
                     .HasColumnType("datetime")
                     .HasColumnName("dataCadastro");
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
-
-                entity.HasOne(d => d.IdUsuarioNavigation)
-                    .WithMany(p => p.Infraestruturas)
-                    .HasForeignKey(d => d.IdUsuario)
-                    .HasConstraintName("FK__infraestr__idUsu__31EC6D26");
-            });
-
-            modelBuilder.Entity<MaquinaVirtual>(entity =>
-            {
-                entity.HasKey(e => e.IdMaquinaVirtual)
-                    .HasName("PK__maquinaV__3F823F337D8FF8A0");
-
-                entity.ToTable("maquinaVirtual");
-
-                entity.HasIndex(e => e.NomeMaquinaVirtual, "UQ__maquinaV__3F71306A1AE54B0C")
-                    .IsUnique();
-
-                entity.HasIndex(e => e.NomeAdmin, "UQ__maquinaV__B0F01B07B9FBAB6A")
-                    .IsUnique();
-
-                entity.Property(e => e.IdMaquinaVirtual).HasColumnName("idMaquinaVirtual");
-
-                entity.Property(e => e.IdInfraestrutura).HasColumnName("idInfraestrutura");
 
                 entity.Property(e => e.NomeAdmin)
                     .IsRequired()
@@ -151,33 +140,37 @@ namespace Projeto_Lattine_Group.Contexts
                     .IsUnicode(false)
                     .HasColumnName("tamanho");
 
-                entity.HasOne(d => d.IdInfraestruturaNavigation)
+                entity.HasOne(d => d.IdUsuarioNavigation)
                     .WithMany(p => p.MaquinaVirtuals)
-                    .HasForeignKey(d => d.IdInfraestrutura)
-                    .HasConstraintName("FK__maquinaVi__idInf__36B12243");
+                    .HasForeignKey(d => d.IdUsuario)
+                    .HasConstraintName("FK__maquinaVi__idUsu__33D4B598");
             });
 
             modelBuilder.Entity<RedeVirtual>(entity =>
             {
                 entity.HasKey(e => e.IdRedeVirtual)
-                    .HasName("PK__redeVirt__B3038BF6C005EBC7");
+                    .HasName("PK__redeVirt__B3038BF6F7D938AA");
 
                 entity.ToTable("redeVirtual");
 
-                entity.HasIndex(e => e.NomeRedeVirtual, "UQ__redeVirt__035723158F48B5AA")
+                entity.HasIndex(e => e.NomeRedeVirtual, "UQ__redeVirt__0357231544E517A9")
                     .IsUnique();
 
                 entity.Property(e => e.IdRedeVirtual).HasColumnName("idRedeVirtual");
 
                 entity.Property(e => e.BastionHost).HasColumnName("bastionHost");
 
+                entity.Property(e => e.DataCadastro)
+                    .HasColumnType("datetime")
+                    .HasColumnName("dataCadastro");
+
                 entity.Property(e => e.FireWall).HasColumnName("fireWall");
 
                 entity.Property(e => e.IdEnderecoIp).HasColumnName("idEnderecoIP");
 
-                entity.Property(e => e.IdInfraestrutura).HasColumnName("idInfraestrutura");
-
                 entity.Property(e => e.IdSubRede).HasColumnName("idSubRede");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
 
                 entity.Property(e => e.NomeRedeVirtual)
                     .IsRequired()
@@ -190,32 +183,36 @@ namespace Projeto_Lattine_Group.Contexts
                 entity.HasOne(d => d.IdEnderecoIpNavigation)
                     .WithMany(p => p.RedeVirtuals)
                     .HasForeignKey(d => d.IdEnderecoIp)
-                    .HasConstraintName("FK__redeVirtu__idEnd__403A8C7D");
-
-                entity.HasOne(d => d.IdInfraestruturaNavigation)
-                    .WithMany(p => p.RedeVirtuals)
-                    .HasForeignKey(d => d.IdInfraestrutura)
-                    .HasConstraintName("FK__redeVirtu__idInf__3F466844");
+                    .HasConstraintName("FK__redeVirtu__idEnd__3E52440B");
 
                 entity.HasOne(d => d.IdSubRedeNavigation)
                     .WithMany(p => p.RedeVirtuals)
                     .HasForeignKey(d => d.IdSubRede)
-                    .HasConstraintName("FK__redeVirtu__idSub__412EB0B6");
+                    .HasConstraintName("FK__redeVirtu__idSub__3F466844");
+
+                entity.HasOne(d => d.IdUsuarioNavigation)
+                    .WithMany(p => p.RedeVirtuals)
+                    .HasForeignKey(d => d.IdUsuario)
+                    .HasConstraintName("FK__redeVirtu__idUsu__403A8C7D");
             });
 
             modelBuilder.Entity<ServicoAplicacional>(entity =>
             {
                 entity.HasKey(e => e.IdServicoAplicacional)
-                    .HasName("PK__servicoA__632AB756AED0C194");
+                    .HasName("PK__servicoA__632AB7566A650C73");
 
                 entity.ToTable("servicoAplicacional");
 
-                entity.HasIndex(e => e.NomeServicoAplicacional, "UQ__servicoA__C836D3AA8EEED27A")
+                entity.HasIndex(e => e.NomeServicoAplicacional, "UQ__servicoA__C836D3AAAE72D29D")
                     .IsUnique();
 
                 entity.Property(e => e.IdServicoAplicacional).HasColumnName("idServicoAplicacional");
 
-                entity.Property(e => e.IdInfraestrutura).HasColumnName("idInfraestrutura");
+                entity.Property(e => e.DataCadastro)
+                    .HasColumnType("datetime")
+                    .HasColumnName("dataCadastro");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
 
                 entity.Property(e => e.NomeServicoAplicacional)
                     .IsRequired()
@@ -235,23 +232,25 @@ namespace Projeto_Lattine_Group.Contexts
                     .IsUnicode(false)
                     .HasColumnName("SKUeTamanho");
 
-                entity.HasOne(d => d.IdInfraestruturaNavigation)
+                entity.HasOne(d => d.IdUsuarioNavigation)
                     .WithMany(p => p.ServicoAplicacionals)
-                    .HasForeignKey(d => d.IdInfraestrutura)
-                    .HasConstraintName("FK__servicoAp__idInf__44FF419A");
+                    .HasForeignKey(d => d.IdUsuario)
+                    .HasConstraintName("FK__servicoAp__idUsu__440B1D61");
             });
 
             modelBuilder.Entity<SubRede>(entity =>
             {
                 entity.HasKey(e => e.IdSubRede)
-                    .HasName("PK__subRede__12D6C82EE2C164DA");
+                    .HasName("PK__subRede__12D6C82EE393D859");
 
                 entity.ToTable("subRede");
 
-                entity.HasIndex(e => e.NomeSubRede, "UQ__subRede__60FA1F7BFA4552C5")
+                entity.HasIndex(e => e.NomeSubRede, "UQ__subRede__60FA1F7B6C2AAE63")
                     .IsUnique();
 
                 entity.Property(e => e.IdSubRede).HasColumnName("idSubRede");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
 
                 entity.Property(e => e.IntervalosEndereco)
                     .IsRequired()
@@ -264,12 +263,17 @@ namespace Projeto_Lattine_Group.Contexts
                     .HasMaxLength(256)
                     .IsUnicode(false)
                     .HasColumnName("nomeSubRede");
+
+                entity.HasOne(d => d.IdUsuarioNavigation)
+                    .WithMany(p => p.SubRedes)
+                    .HasForeignKey(d => d.IdUsuario)
+                    .HasConstraintName("FK__subRede__idUsuar__3A81B327");
             });
 
             modelBuilder.Entity<Telefone>(entity =>
             {
                 entity.HasKey(e => e.IdTelefone)
-                    .HasName("PK__telefone__39C142D55C6B0A57");
+                    .HasName("PK__telefone__39C142D5B064CD17");
 
                 entity.ToTable("telefone");
 
@@ -292,11 +296,11 @@ namespace Projeto_Lattine_Group.Contexts
             modelBuilder.Entity<TipoUsuario>(entity =>
             {
                 entity.HasKey(e => e.IdTipoUsuario)
-                    .HasName("PK__tipoUsua__03006BFF1B739E75");
+                    .HasName("PK__tipoUsua__03006BFF1ECE2211");
 
                 entity.ToTable("tipoUsuario");
 
-                entity.HasIndex(e => e.Titulo, "UQ__tipoUsua__38FA640FA3138439")
+                entity.HasIndex(e => e.Titulo, "UQ__tipoUsua__38FA640F8C28BB89")
                     .IsUnique();
 
                 entity.Property(e => e.IdTipoUsuario).HasColumnName("idTipoUsuario");
@@ -311,14 +315,14 @@ namespace Projeto_Lattine_Group.Contexts
             modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.HasKey(e => e.IdUsuario)
-                    .HasName("PK__usuario__645723A6B27FF2FD");
+                    .HasName("PK__usuario__645723A6A26376A7");
 
                 entity.ToTable("usuario");
 
-                entity.HasIndex(e => e.Email, "UQ__usuario__AB6E61640963A59D")
+                entity.HasIndex(e => e.Email, "UQ__usuario__AB6E61647D736C0D")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Senha, "UQ__usuario__D8D98E8212D99190")
+                entity.HasIndex(e => e.Senha, "UQ__usuario__D8D98E82964019FB")
                     .IsUnique();
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");

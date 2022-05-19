@@ -39,5 +39,12 @@ namespace Projeto_Lattine_Group.Interfaces
         /// </summary>
         /// <param name="idSubRede">id da SubRede deletada</param>
         void Deletar(int idSubRede);
+
+        /// <summary>
+        /// Lista todas as sub-redes do usuário logado
+        /// </summary>
+        /// <param name="id">ID do usuário logado</param>
+        /// <returns>Uma lista de sub-redes do usuário</returns>
+        List<SubRede> ListarMinhas(int id);
     }
 }

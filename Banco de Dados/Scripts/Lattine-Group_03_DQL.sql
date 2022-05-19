@@ -13,9 +13,6 @@ GO
 SELECT * FROM usuario;
 GO
 
-SELECT * FROM infraestrutura;
-GO
-
 SELECT * FROM maquinaVirtual;
 GO
 
