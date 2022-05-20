@@ -1,4 +1,5 @@
-﻿using Projeto_Lattine_Group.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
+using Projeto_Lattine_Group.Contexts;
 using Projeto_Lattine_Group.Domains;
 using Projeto_Lattine_Group.Interfaces;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace Projeto_Lattine_Group.Repositories
             if (EnderecoIPBuscada != null)
             {
                 EnderecoIPBuscada.Endereco = EnderecoIPAtualizada.Endereco;
+                EnderecoIPBuscada.IdUsuario = EnderecoIPAtualizada.IdUsuario;
             }
 
             ctx.EnderecoIps.Update(EnderecoIPBuscada);
@@ -48,6 +50,14 @@ namespace Projeto_Lattine_Group.Repositories
         public EnderecoIp Listarid(int id)
         {
             return ctx.EnderecoIps.FirstOrDefault(c => c.IdEnderecoIp == id);
+        }
+
+        public List<EnderecoIp> ListarMeus(int id)
+        {
+            return ctx.EnderecoIps
+                .Include(p => p.IdUsuarioNavigation)
+                .Where(p => p.IdUsuarioNavigation.IdUsuario == id)
+                .ToList();
         }
     }
 }

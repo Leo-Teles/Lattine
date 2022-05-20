@@ -34,55 +34,53 @@ CREATE TABLE usuario(
 );
 go
 
-CREATE TABLE infraestrutura(
-   idInfraestrutura smallint PRIMARY KEY IDENTITY(1,1),
+CREATE TABLE maquinaVirtual(
+   idMaquinaVirtual smallint PRIMARY KEY IDENTITY(1,1),
+   nomeMaquinaVirtual varchar (256) not null,
+   opcoesDisponibilidade varchar (50) not null,
+   sistemaOperacional varchar (50) not null,
+   tamanho varchar (50) not null,
+   nomeAdmin varchar (256) not null,
+   origemChavePublicaSSH varchar (50) not null,
    idUsuario smallint FOREIGN KEY REFERENCES usuario(idUsuario),
    dataCadastro datetime
 );
 go
 
-CREATE TABLE maquinaVirtual(
-   idMaquinaVirtual smallint PRIMARY KEY IDENTITY(1,1),
-   idInfraestrutura smallint FOREIGN KEY REFERENCES infraestrutura(idInfraestrutura),
-   nomeMaquinaVirtual varchar (256) unique not null,
-   opcoesDisponibilidade varchar (50) not null,
-   sistemaOperacional varchar (50) not null,
-   tamanho varchar (50) not null,
-   nomeAdmin varchar (256) unique not null,
-   origemChavePublicaSSH varchar (50) not null
-);
-go
-
 CREATE TABLE enderecoIP(
    idEnderecoIP smallint PRIMARY KEY IDENTITY(1,1),
+   idUsuario smallint FOREIGN KEY REFERENCES usuario(idUsuario),
    endereco varchar(50) not null
 );
 go
 
 CREATE TABLE subRede(
    idSubRede smallint PRIMARY KEY IDENTITY(1,1),
-   nomeSubRede varchar(256) unique not null,
+   idUsuario smallint FOREIGN KEY REFERENCES usuario(idUsuario),
+   nomeSubRede varchar(256) not null,
    intervalosEndereco varchar(50) not null
 );
 go
 
 CREATE TABLE redeVirtual(
    idRedeVirtual smallint PRIMARY KEY IDENTITY(1,1),
-   idInfraestrutura smallint FOREIGN KEY REFERENCES infraestrutura(idInfraestrutura),
    idEnderecoIP smallint FOREIGN KEY REFERENCES enderecoIP(idEnderecoIP),
    idSubRede smallint FOREIGN KEY REFERENCES subRede(idSubRede),
-   nomeRedeVirtual varchar (256) unique not null,
+   nomeRedeVirtual varchar (256) not null,
    bastionHost bit not null,
    protecaoDDoS bit not null,
-   fireWall bit not null
+   fireWall bit not null,
+   idUsuario smallint FOREIGN KEY REFERENCES usuario(idUsuario),
+   dataCadastro datetime
 );
 go
 
 CREATE TABLE servicoAplicacional(
    idServicoAplicacional smallint PRIMARY KEY IDENTITY(1,1),
-   idInfraestrutura smallint FOREIGN KEY REFERENCES infraestrutura(idInfraestrutura),
-   nomeServicoAplicacional varchar (256) unique not null,
+   nomeServicoAplicacional varchar (256) not null,
    pilhaRuntime varchar (50) not null,
-   SKUeTamanho varchar (50) not null
+   SKUeTamanho varchar (50) not null,
+   idUsuario smallint FOREIGN KEY REFERENCES usuario(idUsuario),
+   dataCadastro datetime
 );
 go

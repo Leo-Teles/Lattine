@@ -16,7 +16,7 @@ export default class Servicos extends Component {
             <div>
                 <Sidebar />
                 <div className="conteudo">
-                    <div className="container-conteudo-escolher">
+                    <div className="container-conteudo-escolher-cli">
                         <h1>Tipos de Serviços</h1>
                         <div className="tabela-escolha">
                             <div className="escolha-servico">

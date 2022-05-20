@@ -39,5 +39,12 @@ namespace Projeto_Lattine_Group.Interfaces
         /// </summary>
         /// <param name="idEnderecoIP">id do EnderecoIP deletado</param>
         void Deletar(int idEnderecoIP);
+
+        /// <summary>
+        /// Lista todos os ips do usuário logado
+        /// </summary>
+        /// <param name="id">ID do usuário logado</param>
+        /// <returns>Uma lista de ips do usuário</returns>
+        List<EnderecoIp> ListarMeus(int id);
     }
 }

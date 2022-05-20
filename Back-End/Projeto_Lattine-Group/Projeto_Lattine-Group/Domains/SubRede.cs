@@ -13,9 +13,11 @@ namespace Projeto_Lattine_Group.Domains
         }
 
         public short IdSubRede { get; set; }
+        public short? IdUsuario { get; set; }
         public string NomeSubRede { get; set; }
         public string IntervalosEndereco { get; set; }
 
+        public virtual Usuario IdUsuarioNavigation { get; set; }
         public virtual ICollection<RedeVirtual> RedeVirtuals { get; set; }
     }
 }

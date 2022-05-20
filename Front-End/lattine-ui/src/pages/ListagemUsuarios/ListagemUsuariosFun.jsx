@@ -1,79 +1,52 @@
-import { Component } from "react";
-import { Link } from "react-router-dom";
-
+import { useState, useEffect } from "react";
+import axios from "axios";
 import '../../assets/css/style.css'
 
-import Flecha from '../../assets/img/flecha.png'
-import Lupa from '../../assets/img/lupa.png'
-
-import Sidebar from "../../components/Sidebar/SiderbarAdm/SidebarAdmUsuarios";
+import Sidebar from "../../components/Sidebar/SiderbarFun/SidebarFunUsuarios";
 
 
-export default class Servicos extends Component {
-    render() {
-        return (
-            <div>
-                <Sidebar />
-                <div className="conteudo">
-                    <div className="container-conteudo-users">
-                        <div className="container-input">
-                            <input type="text" placeholder="Buscar" />
-                        </div>
-                        <div className="listagem">
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                            <div className="retangulo-usuario">
-                                <h1>Nome do Usuário</h1>
-                                <h2>Data de Cadastro:</h2>
-                                <p>14/04/2022</p>
-                            </div>
-                        </div>
+export default function Usuarios() {
+    const [listaUsuarios, setListaUsuarios] = useState([]);
+
+    function buscarUsuarios() {
+        axios('http://localhost:5000/api/usuarios', {
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
+            }
+        })
+            .then(resposta => {
+                if (resposta.status === 200) {
+                    setListaUsuarios(resposta.data)
+                };
+            })
+            .catch(erro => console.log(erro));
+    };
+    useEffect(buscarUsuarios, []);
+
+    return (
+        <div>
+            <Sidebar />
+            <div className="conteudo">
+                <div className="container-conteudo-users">
+                    <div className="container-input">
+                        <input type="text" placeholder="Buscar" />
+                    </div>
+                    <div className="listagem">
+                        {
+                            listaUsuarios.map((user) => (
+                                <div key={user.IdUsuario} className="retangulo-usuario">
+                                    <h1>{user.nome} {user.sobrenome}</h1>
+                                    <h2>Data de Cadastro:</h2>
+                                    <p>{Intl.DateTimeFormat({
+                                        year: "numeric", month: "numeric", day: "numeric"
+                                    }).format(new Date(user.dataCadastro))}</p>
+                                </div>
+                            )
+                            )
+                        }
                     </div>
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
 }

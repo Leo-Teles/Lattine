@@ -42,7 +42,7 @@ export default function MaquinasVirtuais() {
                                     <h2>Data de Cadastro:</h2>
                                     <p>{Intl.DateTimeFormat({
                                         year: "numeric", month: "numeric", day: "numeric"
-                                    }).format(new Date(maquina.idInfraestruturaNavigation.dataCadastro))}</p>
+                                    }).format(new Date(maquina.dataCadastro))}</p>
                                 </div>
                             )
                             )

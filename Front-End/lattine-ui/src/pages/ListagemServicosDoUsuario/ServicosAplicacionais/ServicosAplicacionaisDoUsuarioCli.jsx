@@ -75,7 +75,7 @@ export default function DadosServicoAplicacional() {
                                     <h2>Data de Cadastro:</h2>
                                     <p>{Intl.DateTimeFormat({
                                         year: "numeric", month: "numeric", day: "numeric"
-                                    }).format(new Date(servico.idInfraestruturaNavigation.dataCadastro))}</p>
+                                    }).format(new Date(servico.dataCadastro))}</p>
                                 </div>
                             )
                             )
