@@ -257,6 +257,7 @@
     margin-top: 54px;
     margin-bottom: 54px;
     display: flex;
+    align-items: center;
    
   
 
@@ -305,9 +306,19 @@ font-weight: 600;
 font-size: 24px;
 }
 
-.teteftHome{
+.ftHomeMaquina{
     width: 700px;
-height: 450px;
+    height: 450px;
+}
+.ftHomeRede{
+    width: 650px;
+    height: 400px;
+
+}
+.ftHomeServicos{
+    width: 650px;
+    height: 400px;
+
 }
 /*==========Contatos Lattine Group - Adm==========*/
 

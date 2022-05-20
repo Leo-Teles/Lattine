@@ -3,8 +3,8 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 import MaquinaHome from "../../assets/img/MaquinaHome.png"
-import img2 from "../../assets/img/cadeado.png"
-import img3 from "../../assets/img/cadeado.png"
+import redeHome from "../../assets/img/redeHome.png"
+import servicosHome from "../../assets/img/servicosHome.png"
 
 const Card = ({ data, cardHome }) => {
 
@@ -29,15 +29,15 @@ const Card = ({ data, cardHome }) => {
                     
 
                     {item.id == 1 &&
-                        <img className="teteftHome" src={MaquinaHome} alt="" />
+                        <img className="ftHomeMaquina" src={MaquinaHome} alt="" />
                     }
 
                     {item.id == 2 &&
-                        <img src={img2} alt="" />
+                        <img className="ftHomeServicos" src={servicosHome} alt="" />
                     }
 
                     {item.id == 3 &&
-                        <img src={img3} alt="" />
+                        <img className="ftHomeRede" src={redeHome} alt="" />
                     }
 
                 </div>
