@@ -1,17 +1,15 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import '../../../assets/css/style.css'
-
+import { useParams } from "react-router-dom";
 import Sidebar from "../../../components/Sidebar/SidebarCli/SidebarCliServicos";
-
 
 export default function DadosMaquina() {
     const [listaDadosMaquina, setListaDadosMaquina] = useState([]);
+    const { id } = useParams();
 
-    let id = this.props.match.params.id;
-
-    function buscarDadosMaquina() {
-        axios('http://localhost:5000/api/maquinavirtuals/' + id, {
+    function buscarMeusDados() {
+        axios('http://localhost:5000/api/MaquinaVirtuals/', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -23,7 +21,7 @@ export default function DadosMaquina() {
             })
             .catch(erro => console.log(erro));
     };
-    useEffect(buscarDadosMaquina, []);
+    useEffect(buscarMeusDados, []);
 
     return (
         <div>
@@ -32,34 +30,34 @@ export default function DadosMaquina() {
                 {
                     listaDadosMaquina.map((maquina) => (
                         <div className="container-conteudo-servico">
-                            <h1>Dados do Serviço número {this.props.match.params.id}</h1>
+                            <h1>Dados do Serviço {id}</h1>
 
                             <h2>Detalhes do Serviço</h2>
 
                             <h3>Tipo de Serviço</h3>
                             <p>Máquina Virtual</p>
                             <h3>Data de Cadastro</h3>
-                            <p>{maquina.dataCadastro}</p>
-                            <h3>Grupo de Recursos</h3>
-                            <p>Grupo 1</p>
+                            <p>{Intl.DateTimeFormat({
+                                        year: "numeric", month: "numeric", day: "numeric"
+                                    }).format(new Date(maquina.dataCadastro))}</p>
 
                             <h2>Detalhes da Instância</h2>
 
                             <h3>Nome da Máquina Virtual</h3>
-                            <p>Minha Máquina Virtual</p>
+                            <p>{maquina.nomeMaquinaVirtual}</p>
                             <h3>Disponibilidade</h3>
-                            <p>Zona de Disponibilidade</p>
+                            <p>{maquina.opcoesDisponibilidade}</p>
                             <h3>Sistema Operacional</h3>
-                            <p>Windows Server 2019</p>
+                            <p>{maquina.sistemaOperacional}</p>
                             <h3>Tamanho</h3>
-                            <p>Standard_D2s_v3 - 2vCPU,8Gib de memória</p>
+                            <p>{maquina.tamanho}</p>
 
                             <h2>Conta do Administrador</h2>
 
                             <h3>Nome do Administrador</h3>
-                            <p>Luca</p>
+                            <p>{maquina.nomeAdmin}</p>
                             <h3>Origem Chave Pública SSH</h3>
-                            <p>Gerar novo par de chaves</p>
+                            <p>{maquina.origemChavePublicaSsh}</p>
                         </div>
                     )
                     )
