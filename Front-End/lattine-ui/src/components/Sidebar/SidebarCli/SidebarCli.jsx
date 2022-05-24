@@ -16,7 +16,7 @@ export default function Sidebar() {
                 <div className='container-logo'>
                 <Link className="a" to=""><img className='logo-sidebar' src={imgLattine} alt='Logo da Lattine Group' /></Link>                </div>
                 <div className='linha-branca' />
-                <Link to="" className='navegacao'>
+                <Link to="homecli" className='navegacao'>
                     <img src={imgHome} alt='Imagem Home' />
                     <p>Home</p>
                 </Link>

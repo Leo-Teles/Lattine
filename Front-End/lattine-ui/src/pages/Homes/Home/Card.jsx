@@ -1,10 +1,10 @@
-import '../../assets/css/style.css';
+import '../../../assets/css/style.css';
 import React from 'react';
 import { Link } from "react-router-dom";
 
-import MaquinaHome from "../../assets/img/MaquinaHome.png"
-import redeHome from "../../assets/img/redeHome.png"
-import servicosHome from "../../assets/img/servicosHome.png"
+import MaquinaHome from "../../../assets/img/MaquinaHome.png"
+import redeHome from "../../../assets/img/redeHome.png"
+import servicosHome from "../../../assets/img/servicosHome.png"
 
 const Card = ({ data, cardHome }) => {
 

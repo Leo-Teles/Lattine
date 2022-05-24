@@ -69,13 +69,13 @@ export default function DadosRedeVirtual() {
                     <div className="listagem">
                         {
                             listaRedes.map((rede) => (
-                                <div key={rede.IdRedeVirtual} className="retangulo-usuario">
+                                <Link to="dadosredevirtualci" key={rede.IdRedeVirtual} className="retangulo-usuario">
                                     <h1>{rede.nomeRedeVirtual}</h1>
                                     <h2>Data de Cadastro:</h2>
                                     <p>{Intl.DateTimeFormat({
                                         year: "numeric", month: "numeric", day: "numeric"
                                     }).format(new Date(rede.dataCadastro))}</p>
-                                </div>
+                                </Link>
                             )
                             )
                         }

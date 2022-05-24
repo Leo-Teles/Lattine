@@ -2,13 +2,13 @@
 import { Link } from "react-router-dom";
 import React, {useState} from "react";
 
-import '../../assets/css/style.css';
+import '../../../assets/css/style.css';
 import Card from './Card';
-import Data from './Data'
+import Data from './DataFun'
 
 
-import LogoLattine from '../../assets/img/Lattine.png'
-import imgHome from '../../assets/img/imgHome.png'
+import LogoLattine from '../../../assets/img/Lattine.png'
+import imgHome from '../../../assets/img/imgHome.png'
 
 export default function Home() {
 
@@ -20,7 +20,7 @@ export default function Home() {
             <div className="ConteudoTodo">
                 <header className="headerHome">
                     <img className="imgLattine" src={LogoLattine} alt="Logo da Lattine Group" />
-                    <Link className="BotaoLogin" to="/login"> Login </Link>
+                    <Link className="BotaoLogin" to="/login"> Deslogar </Link>
                 </header>
 
                 <div className="Conteudo">
@@ -42,7 +42,7 @@ export default function Home() {
                         <h2 className="servicosOfertados">Nossos serviços </h2>
 
                         <nav className="menuButton">
-                            <button onClick={() => setActive("PrimeiroCard")} className="botaoCard1"> Maquinas Virtual </button>
+                            <button onClick={() => setActive("PrimeiroCard")} className="botaoCard1"> Máquinas Virtuais </button>
                             <button onClick={() => setActive("SegundoCard")} className="botaoCard2"> Serviços Aplicacionais</button>
                             <button onClick={() => setActive("TerceiroCard")} className="botaoCard3"> Redes Virtuais</button>
                         </nav>

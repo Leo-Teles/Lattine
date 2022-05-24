@@ -4,7 +4,10 @@ import reportWebVitals from './reportWebVitals';
 import { parseJWT, usuarioAutenticado } from './services/auth';
 import './index.css';
 
-import Home from './pages/Home/Home';
+import HomeLogadoAdm from './pages/Homes/HomeLogado/HomeAdm';
+import HomeLogadoFun from './pages/Homes/HomeLogado/HomeFun';
+import HomeLogadoCli from './pages/Homes/HomeLogado/HomeCli';
+import Home from './pages/Homes/Home/Home';
 import Login from './pages/Login/Login';
 import Cadastro from './pages/Cadastro/Cadastro'
 import NotFound from './pages/NotFound/NotFound';
@@ -56,6 +59,10 @@ import CriacaoSerApliCli from './pages/CriacaoServico/ServicosAplicacionais/Cria
 import CriacaoMaqVirFun from './pages/CriacaoServico/MaquinasVirtuais/CriacaoMaqVirFun'
 import CriacaoRedesVirtuaisFun from './pages/CriacaoServico/RedesVirtuais/CriacaoRedesVirtuaisFun'
 import CriacaoSerApliFun from './pages/CriacaoServico/ServicosAplicacionais/CriacaoSerApliFun'
+
+import DadosMaqVirCli from './pages/DadosServico/DadosServicoCli/DadosMaqVirCli'
+import DadosRedeVirtualCli from './pages/DadosServico/DadosServicoCli/DadosRedeVirtualCli'
+import DadosSerApliCli from './pages/DadosServico/DadosServicoCli/DadosSerApliCli'
 
 import MaquinasVirtuaisDoUsuarioFun from './pages/ListagemServicosDoUsuario/MaquinasVirtuais/MaquinasVirtuaisDoUsuarioFun'
 import RedesVirtuaisDoUsuarioFun from './pages/ListagemServicosDoUsuario/RedesVirtuais/RedesVirtuaisDoUsuarioFun'
@@ -111,7 +118,6 @@ const routing = (
   <Router>
     <div>
       <Switch>
-        <Route exact path="/" component={Home} />
         <Route exact path="/login" component={props => <Login {...props} />} />
         <Route path="/cadastro" component={Cadastro} />
 
@@ -124,6 +130,9 @@ const routing = (
         <PermissaoAdm path="/redesvirtuaisadm" component={RedesVirtuaisAdm} />
         <PermissaoAdm path="/serapliadm" component={SerApliAdm} />
         <Route exact path="/" component={Home} />
+        <PermissaoCli path="/HomeCli" component={HomeLogadoCli} />
+        <PermissaoFun path="/HomeFun" component={HomeLogadoFun} />
+        <PermissaoAdm path="/HomeAdm" component={HomeLogadoAdm} />
 
         <PermissaoAdm path="/contatosadm" component={ContatosAdm} />
         <PermissaoAdm path="/edicaocontatosadm" component={EdicaoContatosAdm} />
@@ -155,6 +164,8 @@ const routing = (
         <PermissaoFun path="/dadosusuariofun" component={DadosUsuarioFun} />
         <PermissaoFun path="/edicaodadosusuariofun" component={EdicaoDadosUsuarioFun} />
 
+        <PermissaoCli path="/dadosredevirtualci" component={DadosRedeVirtualCli} />
+        <PermissaoCli path="/dadosseraplicli" component={DadosSerApliCli} />
         <PermissaoCli path="/escolherservicocli" component={EscolherServicoCli} />
         <PermissaoCli path="/contatoscli" component={ContatosCli} />
         <PermissaoCli path="/edicaomaqvircli" component={EdicaoMaqVirCli} />
@@ -163,7 +174,10 @@ const routing = (
         <PermissaoCli path="/criacaomaqvircli" component={CriacaoMaqVirCli} />
         <PermissaoCli path="/criacaoredesvirtuaiscli" component={CriacaoRedesVirtuaisCli} />
         <PermissaoCli path="/criacaoseraplicli" component={CriacaoSerApliCli} />
-        <PermissaoCli path="/maqvirusuariocli" component={MaquinasVirtuaisDoUsuarioCli} />
+
+        <Route path="/maqvirusuariocli" component={MaquinasVirtuaisDoUsuarioCli}/>
+        <Route path="/dadosmaqvircli/:id" component={DadosMaqVirCli}/>
+
         <PermissaoCli path="/redesvirtuaisusuariocli" component={RedesVirtuaisDoUsuarioCli} />
         <PermissaoCli path="/serapliusuariocli" component={SerApliDoUsuarioCli} />
         <PermissaoCli path="/dadosusuariocli" component={DadosUsuarioCli} />
@@ -171,7 +185,7 @@ const routing = (
         <PermissaoCli path="/criacaoipcli" component={CriacaoIpCli} />
         <PermissaoCli path="/criacaosubredecli" component={CriacaoSubRedeCli} />
 
-        <Route path="/login" component={props => <Login {...props} />} />
+        <Route path="/login/:id" component={props => <Login {...props} />} />
         <Route path="/cadastro" component={Cadastro} />
 
         <Route path="*" component={props => <NotFound {...props} />} />

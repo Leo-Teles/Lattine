@@ -70,13 +70,13 @@ export default function DadosServicoAplicacional() {
                     <div className="listagem">
                         {
                             listaServicos.map((servico) => (
-                                <div key={servico.IdServicoAplicacional} className="retangulo-usuario">
+                                <Link to="dadosseraplicli" key={servico.IdServicoAplicacional} className="retangulo-usuario">
                                     <h1>{servico.nomeServicoAplicacional}</h1>
                                     <h2>Data de Cadastro:</h2>
                                     <p>{Intl.DateTimeFormat({
                                         year: "numeric", month: "numeric", day: "numeric"
                                     }).format(new Date(servico.dataCadastro))}</p>
-                                </div>
+                                </Link>
                             )
                             )
                         }

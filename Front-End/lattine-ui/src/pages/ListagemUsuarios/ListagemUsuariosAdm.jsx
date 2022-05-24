@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import '../../assets/css/style.css'
+import { Link } from "react-router-dom";
 
 import Sidebar from "../../components/Sidebar/SiderbarAdm/SidebarAdmUsuarios";
 
@@ -34,13 +35,13 @@ export default function Usuarios() {
                     <div className="listagem">
                         {
                             listaUsuarios.map((user) => (
-                                <div key={user.IdUsuario} className="retangulo-usuario">
+                                <Link to="dadosusuarioadm" key={user.IdUsuario} className="retangulo-usuario">
                                     <h1>{user.nome} {user.sobrenome}</h1>
                                     <h2>Data de Cadastro:</h2>
                                     <p>{Intl.DateTimeFormat({
                                         year: "numeric", month: "numeric", day: "numeric"
                                     }).format(new Date(user.dataCadastro))}</p>
-                                </div>
+                                </Link>
                             )
                             )
                         }

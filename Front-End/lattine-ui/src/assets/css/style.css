@@ -131,6 +131,7 @@
     font-size: 36px;
     line-height: 44px;
     color: #0079D1;
+    margin-bottom: 64px;
 }
 
 /*==========Contatos Lattine Group - Adm==========*/
@@ -284,13 +285,15 @@
     
 }
 
-.card span{
+.card span {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
     font-weight: 600;
     line-height: 19px;
+    text-align: justify;
     margin-bottom: 54px;
 }
+
 .botaoDentro{
     width: 200px;
     height: 50px;
@@ -306,19 +309,19 @@ font-weight: 600;
 font-size: 24px;
 }
 
-.ftHomeMaquina{
+.ftHomeMaquina {
     width: 700px;
-    height: 450px;
+    height: auto;
 }
+
 .ftHomeRede{
     width: 650px;
-    height: 400px;
-
+    height: auto;
 }
-.ftHomeServicos{
-    width: 650px;
-    height: 400px;
 
+.ftHomeServicos {
+    width: 650px;
+    height: auto;
 }
 /*==========Contatos Lattine Group - Adm==========*/
 
@@ -748,6 +751,8 @@ input::placeholder {
     justify-content: center;
     padding-left: 4%;
     margin-bottom: 3%;
+    text-decoration: none;
+    color: black;
 }
 
 .retangulo-usuario h1 {
@@ -758,6 +763,8 @@ input::placeholder {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    text-decoration: none;
+    color: black;
 }
 
 .proxima-pagina {
@@ -808,6 +815,7 @@ input::placeholder {
     font-size: 16px;
     font-weight: 350;
     text-align: left;
+    color: black;
 }
 
 .retangulo-usuario p {
@@ -815,6 +823,7 @@ input::placeholder {
     font-size: 16px;
     font-weight: 350;
     text-align: left;
+    color: black;
 }
 
 /*==========Login==========*/
@@ -1475,6 +1484,16 @@ input::placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media only screen and (max-device-width: 900px) {
+    .conteudo {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .input-text-edicao {

@@ -88,14 +88,18 @@ export default class CadastroServicoAplicacionalCli extends Component {
                         <label for="nomeserapli">Nome do Serviço Aplicacional</label>
                         <input
                             type="text"
-                            name="nomeserapli"
+                            name="nomeServicoAplicacional"
                             value={this.state.nomeServicoAplicacional}
                             onChange={this.atualizaStateCampo}
                             className="input-text-edicao"
                             id="nomeserapli"></input>
 
                         <label for="runtime">Pilha de Runtime</label>
-                        <select id="runtime">
+                        <select
+                            id="runtime"
+                            name="pilhaRuntime"
+                            value={this.state.pilhaRuntime}
+                            onChange={this.atualizaStateCampo}>
                             <option value="0" hidden>Selecione</option>
                             <option value=".NET 6 (LTS)">.NET 6 (LTS)</option>
                             <option value=".NET 5">.NET 5</option>
@@ -104,11 +108,15 @@ export default class CadastroServicoAplicacionalCli extends Component {
                         </select>
 
                         <label for="sku">SKU e Tamanho</label>
-                        <select id="sku">
-                            <option value="0" selected disabled hidden>Selecione</option>
-                            <option value="1">Básico B1- 100 ACU total, 1.75 GB de memória</option>
-                            <option value="2">Básico B2 -200 ACU total, 3.5 GB de memória</option>
-                            <option value="3">Gratuito F1 - 1 GB de memória</option>
+                        <select
+                            id="sku"
+                            name="skueTamanho"
+                            value={this.state.skueTamanho}
+                            onChange={this.atualizaStateCampo}>
+                            <option value="0" hidden>Selecione</option>
+                            <option value="Básico B1- 100 ACU total, 1.75 GB de memória">Básico B1- 100 ACU total, 1.75 GB de memória</option>
+                            <option value="Básico B2 -200 ACU total, 3.5 GB de memória">Básico B2 -200 ACU total, 3.5 GB de memória</option>
+                            <option value="Gratuito F1 - 1 GB de memória">Gratuito F1 - 1 GB de memória</option>
                         </select>
 
 

@@ -2,7 +2,7 @@ import { Component } from "react";
 import axios from "axios";
 import { parseJWT } from '../../../services/auth';
 import '../../../assets/css/style.css'
-import Sidebar from "../../../components/Sidebar/SidebarCli/SidebarCliServicos";
+import Sidebar from "../../../components/Sidebar/SiderbarFun/SidebarFunServicos";
 import { Link } from "react-router-dom";
 
 

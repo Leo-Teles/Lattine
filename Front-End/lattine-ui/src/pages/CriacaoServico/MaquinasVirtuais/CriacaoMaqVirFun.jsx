@@ -4,7 +4,7 @@ import { parseJWT } from '../../../services/auth';
 
 import '../../../assets/css/style.css'
 
-import Sidebar from "../../../components/Sidebar/SidebarCli/SidebarCliServicos";
+import Sidebar from "../../../components/Sidebar/SiderbarFun/SidebarFunServicos";
 
 
 export default class CadastroMaqVirCli extends Component {
