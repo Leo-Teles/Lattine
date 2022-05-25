@@ -41,7 +41,6 @@ export default function DadosUsuario() {
                                 <p>{usuario.senha}</p>
                                 <h2>Tipo de Usuário</h2>
                                 <p>Cliente</p>
-                                <a href="/edicaodadosusuariocli">Editar Informações</a>
                             </div>
                         )
                         )

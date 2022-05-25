@@ -15,31 +15,31 @@ export default function Sidebar() {
         <section className='sidebar'>
             <div className='sidebar-container'>
                 <div className='container-logo'>
-                <Link className="a" to=""><img className='logo-sidebar' src={imgLattine} alt='Logo da Lattine Group' /></Link>                </div>
+                <Link className="a" to="/"><img className='logo-sidebar' src={imgLattine} alt='Logo da Lattine Group' /></Link>                </div>
                 <div className='linha-branca' />
-                <Link to="" className='navegacao'>
+                <Link to="/" className='navegacao'>
                     <img src={imgHome} alt='Imagem Home' />
                     <p>Home</p>
                 </Link>
-                <Link to="escolherservicofun" className='navegacao'>
+                <Link to="/escolherservicofun" className='navegacao'>
                     <img src={imgServicos} alt='Imagem Serviços' />
                     <p>Serviços</p>
                 </Link>
-                <Link to="listagemusuariosfun" className='navegacao'>
+                <Link to="/listagemusuariosfun" className='navegacao'>
                     <img src={imgUsuario2} alt='Imagem Usuário' />
                     <p>Usuários</p>
                 </Link>
                 <div className='separacao' />
-                <Link to="dadosusuariofun" className='navegacao'>
+                <Link to="/dadosusuariofun" className='navegacao'>
                     <img src={imgConfiguracao} alt='Imagem Configurações' />
                     <p>Configurações</p>
                 </Link>
                 <div className='linha-branca' />
-                <Link to="contatosfun" className='navegacao'>
+                <Link to="/contatosfun" className='navegacao'>
                     <img src={imgSuporte} alt='Imagem Suporte' />
                     <p>Suporte</p>
                 </Link>
-                <Link to="login" className='navegacao'>
+                <Link to="/login" className='navegacao'>
                     <img src={imgSair} alt='Imagem Sair' />
                     <p>Sair</p>
                 </Link>

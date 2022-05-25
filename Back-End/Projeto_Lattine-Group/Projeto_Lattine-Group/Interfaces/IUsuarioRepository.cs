@@ -54,5 +54,12 @@ namespace Projeto_Lattine_Group.Interfaces
         /// <param name="id">ID do usuário logado</param>
         /// <returns>Uma lista de dados do usuário</returns>
         List<Usuario> ListarMeus(int id);
+
+        /// <summary>
+        /// Lista um usuário
+        /// </summary>
+        /// <param name="id">ID do usuário</param>
+        /// <returns>Um usuário</returns>
+        List<Usuario> ListarUm(int id);
     }
 }

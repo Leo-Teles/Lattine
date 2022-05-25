@@ -124,5 +124,25 @@ namespace Projeto_Lattine_Group.Controllers
                 });
             }
         }
+
+        [HttpGet("um/{id}")]
+        public IActionResult ListarUm(int id)
+        {
+            try
+            {
+                ServicoAplicacional ServicoAplicacionalBuscado = _ServicoAplicacionalRepository.Listarid(id);
+
+                return Ok(_ServicoAplicacionalRepository.ListarUm(id));
+            }
+            catch (Exception error)
+            {
+                return BadRequest(new
+                {
+                    mensagem = "Não é possível mostrar os dados sem o id.",
+                    erro = error
+
+                });
+            }
+        }
     }
 }

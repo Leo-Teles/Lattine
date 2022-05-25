@@ -68,5 +68,14 @@ namespace Projeto_Lattine_Group.Repositories
                 .Where(p => p.IdUsuarioNavigation.IdUsuario == id)
                 .ToList();
         }
+
+        public List<RedeVirtual> ListarUma(int id)
+        {
+            return ctx.RedeVirtuals
+                .Include(p => p.IdEnderecoIpNavigation)
+                .Include(p => p.IdSubRedeNavigation)
+                .Where(p => p.IdRedeVirtual == id)
+                .ToList();
+        }
     }
 }

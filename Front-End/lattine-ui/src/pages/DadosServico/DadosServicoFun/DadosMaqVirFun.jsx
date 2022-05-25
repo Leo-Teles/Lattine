@@ -1,90 +1,68 @@
-import { Component } from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-
+import { useState, useEffect } from "react";
+import axios from "axios";
 import '../../../assets/css/style.css'
-
+import { useParams } from "react-router-dom";
 import Sidebar from "../../../components/Sidebar/SiderbarFun/SidebarFunServicos";
 
+export default function DadosMaquina() {
+    const [listaDadosMaquina, setListaDadosMaquina] = useState([]);
+    const { id } = useParams();
 
-export default class DadosMaqVir extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            listaMaqVir: [],
-            IdInfraestrutura: 0,
-            NomeMaquinaVirtual: '',
-            OpcoesDisponibilidade: '',
-            SistemaOperacional: '',
-            Tamanho: '',
-            NomeAdmin: '',
-            OrigemChavePublicaSsh: '',
-            titulo: '',
-            idMaqVirAlterada: 0,
-            titulosecao: 'Lista DadosMaqVir',
-        };
-    }
-
-    BuscarMaquinas = () => {
-        console.log('Agora vamos fazer a chamada para a api.');
-        fetch('http://localhost:5000/api/maquinavirtuals', {
+    function buscarMeusDados() {
+        axios('http://localhost:5000/api/MaquinaVirtuals/uma/'+id, {
             headers: {
-                Authorization: 'Bearer ' + localStorage.getItem('usuario-login'),
-            },
+                'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
+            }
         })
-
-            .then((resposta) => resposta.json())
-            .then((dados) => this.setState({ listaMaqVir: dados }))
-            .catch((erro) => console.log(erro));
+            .then(resposta => {
+                if (resposta.status === 200) {
+                    setListaDadosMaquina(resposta.data)
+                };
+            })
+            .catch(erro => console.log(erro));
     };
+    useEffect(buscarMeusDados, []);
 
-    componentDidMount() {
-        this.BuscarMaquinas();
-    }
+    return (
+        <div>
+            <Sidebar />
+            <div className="conteudo">
+                {
+                    listaDadosMaquina.map((maquina) => (
+                        <div className="container-conteudo-servico">
+                            <h1>Dados do Serviço</h1>
 
-    render() {
-        return (
-            <div>
-                <Sidebar />
-                <div className="conteudo">
-                    <div className="container-conteudo-servico">
-                        <h1>Dados do Serviço</h1>
+                            <h2>Detalhes do Serviço</h2>
 
-                        {this.state.listaMaqVir.map((maqvir) => {
-                            return (
-                                <div key={maqvir.idMaquinaVirtual}>
-                                    <h2>Detalhes do Serviço</h2>
-                                    <h3>Tipo de Serviço</h3>
-                                    <p>Máquina Virtual</p>
-                                    <h3>Data de Cadastro</h3>
-                                    <p>28/04/2022</p>
-                                    <h3>Grupo de Recursos</h3>
-                                    <p>Grupo 1</p>
+                            <h3>Tipo de Serviço</h3>
+                            <p>Máquina Virtual</p>
+                            <h3>Data de Cadastro</h3>
+                            <p>{Intl.DateTimeFormat({
+                                        year: "numeric", month: "numeric", day: "numeric"
+                                    }).format(new Date(maquina.dataCadastro))}</p>
 
-                                    <h2>Detalhes da Instância</h2>
+                            <h2>Detalhes da Instância</h2>
 
-                                    <h3>Nome da Máquina Virtual</h3>
-                                    <p>{maqvir.nomeMaquinaVirtual}</p>
-                                    <h3>Disponibilidade</h3>
-                                    <p>{maqvir.opcoesDisponibilidade}</p>
-                                    <h3>Sistema Operacional</h3>
-                                    <p>{maqvir.sistemaOperacional}</p>
-                                    <h3>Tamanho</h3>
-                                    <p>{maqvir.tamanho}</p>
+                            <h3>Nome da Máquina Virtual</h3>
+                            <p>{maquina.nomeMaquinaVirtual}</p>
+                            <h3>Disponibilidade</h3>
+                            <p>{maquina.opcoesDisponibilidade}</p>
+                            <h3>Sistema Operacional</h3>
+                            <p>{maquina.sistemaOperacional}</p>
+                            <h3>Tamanho</h3>
+                            <p>{maquina.tamanho}</p>
 
-                                    <h2>Conta do Administrador</h2>
+                            <h2>Conta do Administrador</h2>
 
-                                    <h3>Nome do Administrador</h3>
-                                    <p>{maqvir.nomeAdmin}</p>
-                                    <h3>Origem Chave Pública SSH</h3>
-                                    <p>{maqvir.origemChavePublicaSsh}</p>
-                                </div>
-                            );
-                        })}
-
-                        <Link to="edicaomaqvirfun">Editar informações</Link>
-                    </div>
-                </div>
+                            <h3>Nome do Administrador</h3>
+                            <p>{maquina.nomeAdmin}</p>
+                            <h3>Origem Chave Pública SSH</h3>
+                            <p>{maquina.origemChavePublicaSsh}</p>
+                        </div>
+                    )
+                    )
+                }
             </div>
-        )
-    }
+        </div>
+    )
 }

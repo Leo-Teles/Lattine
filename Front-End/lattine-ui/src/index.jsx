@@ -123,9 +123,6 @@ const routing = (
 
         <PermissaoAdm path="/edicaodadosusuarioadm" component={EdicaoDadosUsuarioAdm} />
         <PermissaoAdm path="/dadosusuarioadm" component={DadosUsuarioAdm} />
-        <PermissaoAdm path="/dadosmaqviradm" component={DadosMaqVirAdm} />
-        <PermissaoAdm path="/dadosredevirtualadm" component={DadosRedeVirtualAdm} />
-        <PermissaoAdm path="/dadosserapliadm" component={DadosSerApliAdm} />
         <PermissaoAdm path="/maquinasvirtuaisadm" component={MaquinasVirtuaisAdm} />
         <PermissaoAdm path="/redesvirtuaisadm" component={RedesVirtuaisAdm} />
         <PermissaoAdm path="/serapliadm" component={SerApliAdm} />
@@ -164,8 +161,6 @@ const routing = (
         <PermissaoFun path="/dadosusuariofun" component={DadosUsuarioFun} />
         <PermissaoFun path="/edicaodadosusuariofun" component={EdicaoDadosUsuarioFun} />
 
-        <PermissaoCli path="/dadosredevirtualci" component={DadosRedeVirtualCli} />
-        <PermissaoCli path="/dadosseraplicli" component={DadosSerApliCli} />
         <PermissaoCli path="/escolherservicocli" component={EscolherServicoCli} />
         <PermissaoCli path="/contatoscli" component={ContatosCli} />
         <PermissaoCli path="/edicaomaqvircli" component={EdicaoMaqVirCli} />
@@ -175,8 +170,15 @@ const routing = (
         <PermissaoCli path="/criacaoredesvirtuaiscli" component={CriacaoRedesVirtuaisCli} />
         <PermissaoCli path="/criacaoseraplicli" component={CriacaoSerApliCli} />
 
-        <Route path="/maqvirusuariocli" component={MaquinasVirtuaisDoUsuarioCli}/>
+        <PermissaoCli path="/maqvirusuariocli" component={MaquinasVirtuaisDoUsuarioCli}/>
+
         <Route path="/dadosmaqvircli/:id" component={DadosMaqVirCli}/>
+        <Route path="/dadosredevirtualcli/:id" component={DadosRedeVirtualCli} />
+        <Route path="/dadosseraplicli/:id" component={DadosSerApliCli} />
+
+        <Route path="/dadosmaqviradm/:id" component={DadosMaqVirAdm} />
+        <Route path="/dadosredevirtualadm/:id" component={DadosRedeVirtualAdm} />
+        <Route path="/dadosserapliadm/:id" component={DadosSerApliAdm} />
 
         <PermissaoCli path="/redesvirtuaisusuariocli" component={RedesVirtuaisDoUsuarioCli} />
         <PermissaoCli path="/serapliusuariocli" component={SerApliDoUsuarioCli} />

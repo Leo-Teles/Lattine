@@ -417,6 +417,13 @@
             <param name="id">ID do usuário logado</param>
             <returns>Uma lista de máquinas virtuais do usuário</returns>
         </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IMaquinaVirtualRepository.ListarUma(System.Int32)">
+            <summary>
+            Lista uma máquina virtual
+            </summary>
+            <param name="id">ID da máquina virtual</param>
+            <returns>Uma máquina virtual</returns>
+        </member>
         <member name="T:Projeto_Lattine_Group.Interfaces.IRedeVirtualRepository">
             <summary>
             Interface responsável pelo repositório RedeVirtualRepository
@@ -461,6 +468,13 @@
             <param name="id">ID do usuário logado</param>
             <returns>Uma lista de redes virtuais do usuário</returns>
         </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IRedeVirtualRepository.ListarUma(System.Int32)">
+            <summary>
+            Lista uma rede virtual
+            </summary>
+            <param name="id">ID da rede virtual</param>
+            <returns>Uma rede virtual</returns>
+        </member>
         <member name="T:Projeto_Lattine_Group.Interfaces.IServicoAplicacionalRepository">
             <summary>
             Interface responsável pelo repositório ServicoAplicacionalRepository
@@ -504,6 +518,13 @@
             </summary>
             <param name="id">ID do usuário logado</param>
             <returns>Uma lista de serviços aplicacionais do usuário</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IServicoAplicacionalRepository.ListarUm(System.Int32)">
+            <summary>
+            Lista um serviço aplicacional
+            </summary>
+            <param name="id">ID do serviço aplicacional</param>
+            <returns>Um serviço aplicacional</returns>
         </member>
         <member name="T:Projeto_Lattine_Group.Interfaces.ISubRedeRepository">
             <summary>
@@ -674,6 +695,13 @@
             </summary>
             <param name="id">ID do usuário logado</param>
             <returns>Uma lista de dados do usuário</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IUsuarioRepository.ListarUm(System.Int32)">
+            <summary>
+            Lista um usuário
+            </summary>
+            <param name="id">ID do usuário</param>
+            <returns>Um usuário</returns>
         </member>
     </members>
 </doc>

@@ -64,5 +64,13 @@ namespace Projeto_Lattine_Group.Repositories
                 .Where(p => p.IdUsuarioNavigation.IdUsuario == id)
                 .ToList();
         }
+
+        public List<ServicoAplicacional> ListarUm(int id)
+        {
+            return ctx.ServicoAplicacionals
+                .Include(p => p.IdUsuarioNavigation)
+                .Where(p => p.IdServicoAplicacional == id)
+                .ToList();
+        }
     }
 }

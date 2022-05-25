@@ -46,5 +46,12 @@ namespace Projeto_Lattine_Group.Interfaces
         /// <param name="id">ID do usuário logado</param>
         /// <returns>Uma lista de máquinas virtuais do usuário</returns>
         List<MaquinaVirtual> ListarMinhas(int id);
+
+        /// <summary>
+        /// Lista uma máquina virtual
+        /// </summary>
+        /// <param name="id">ID da máquina virtual</param>
+        /// <returns>Uma máquina virtual</returns>
+        List<MaquinaVirtual> ListarUma(int id);
     }
 }

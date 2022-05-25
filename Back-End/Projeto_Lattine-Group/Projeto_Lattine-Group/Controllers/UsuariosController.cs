@@ -125,5 +125,25 @@ namespace Projeto_Lattine_Group.Controllers
                 });
             }
         }
+
+        [HttpGet("um/{id}")]
+        public IActionResult ListarUm(int id)
+        {
+            try
+            {
+                Usuario UsuarioBuscado = _UsuarioRepository.Listarid(id);
+
+                return Ok(_UsuarioRepository.ListarUm(id));
+            }
+            catch (Exception error)
+            {
+                return BadRequest(new
+                {
+                    mensagem = "Não é possível mostrar os dados sem o id.",
+                    erro = error
+
+                });
+            }
+        }
     }
 }

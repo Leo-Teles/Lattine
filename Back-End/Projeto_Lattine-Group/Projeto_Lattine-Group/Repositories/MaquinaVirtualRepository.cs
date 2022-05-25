@@ -68,5 +68,12 @@ namespace Projeto_Lattine_Group.Repositories
                 .ToList();
         }
 
+        public List<MaquinaVirtual> ListarUma(int id)
+        {
+            return ctx.MaquinaVirtuals
+                .Include(p => p.IdUsuarioNavigation)
+                .Where(p => p.IdMaquinaVirtual == id)
+                .ToList();
+        }
     }
 }

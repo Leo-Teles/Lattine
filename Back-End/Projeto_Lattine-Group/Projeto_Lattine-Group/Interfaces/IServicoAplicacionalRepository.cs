@@ -46,5 +46,12 @@ namespace Projeto_Lattine_Group.Interfaces
         /// <param name="id">ID do usuário logado</param>
         /// <returns>Uma lista de serviços aplicacionais do usuário</returns>
         List<ServicoAplicacional> ListarMeus(int id);
+
+        /// <summary>
+        /// Lista um serviço aplicacional
+        /// </summary>
+        /// <param name="id">ID do serviço aplicacional</param>
+        /// <returns>Um serviço aplicacional</returns>
+        List<ServicoAplicacional> ListarUm(int id);
     }
 }

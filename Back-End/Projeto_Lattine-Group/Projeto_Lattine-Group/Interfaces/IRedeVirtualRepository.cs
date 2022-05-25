@@ -46,5 +46,12 @@ namespace Projeto_Lattine_Group.Interfaces
         /// <param name="id">ID do usuário logado</param>
         /// <returns>Uma lista de redes virtuais do usuário</returns>
         List<RedeVirtual> ListarMinhas(int id);
+
+        /// <summary>
+        /// Lista uma rede virtual
+        /// </summary>
+        /// <param name="id">ID da rede virtual</param>
+        /// <returns>Uma rede virtual</returns>
+        List<RedeVirtual> ListarUma(int id);
     }
 }

@@ -14,27 +14,27 @@ export default function Sidebar() {
         <section className='sidebar'>
             <div className='sidebar-container'>
                 <div className='container-logo'>
-                <Link className="a" to=""><img className='logo-sidebar' src={imgLattine} alt='Logo da Lattine Group' /></Link>                </div>
+                <Link className="a" to="/"><img className='logo-sidebar' src={imgLattine} alt='Logo da Lattine Group' /></Link>                </div>
                 <div className='linha-branca' />
-                <Link to="homecli" className='navegacao'>
+                <Link to="/homecli" className='navegacao'>
                     <img src={imgHome} alt='Imagem Home' />
                     <p>Home</p>
                 </Link>
-                <Link to="escolherservicocli" className='navegacao'>
+                <Link to="/escolherservicocli" className='navegacao'>
                     <img src={imgServicos} alt='Imagem Serviços' />
                     <p>Serviços</p>
                 </Link>
                 <div className='separacao-cli' />
-                <Link to="dadosusuariocli" className='navegacao-selecionado'>
+                <Link to="/dadosusuariocli" className='navegacao-selecionado'>
                     <img src={imgConfiguracao} alt='Imagem Configurações' />
                     <p>Configurações</p>
                 </Link>
                 <div className='linha-branca' />
-                <Link to="contatoscli" className='navegacao'>
+                <Link to="/contatoscli" className='navegacao'>
                     <img src={imgSuporte} alt='Imagem Suporte' />
                     <p>Suporte</p>
                 </Link>
-                <Link to="login" className='navegacao'>
+                <Link to="/login" className='navegacao'>
                     <img src={imgSair} alt='Imagem Sair' />
                     <p>Sair</p>
                 </Link>

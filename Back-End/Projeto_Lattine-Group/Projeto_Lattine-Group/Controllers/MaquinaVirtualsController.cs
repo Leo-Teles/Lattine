@@ -125,5 +125,25 @@ namespace Projeto_Lattine_Group.Controllers
                 });
             }
         }
+
+        [HttpGet("uma/{id}")]
+        public IActionResult ListarUma(int id)
+        {
+            try
+            {
+                MaquinaVirtual MaquinaVirtualBuscado = _MaquinaVirtualRepository.Listarid(id);
+
+                return Ok(_MaquinaVirtualRepository.ListarUma(id));
+            }
+            catch (Exception error)
+            {
+                return BadRequest(new
+                {
+                    mensagem = "Não é possível mostrar os dados sem o id.",
+                    erro = error
+
+                });
+            }
+        }
     }
 }

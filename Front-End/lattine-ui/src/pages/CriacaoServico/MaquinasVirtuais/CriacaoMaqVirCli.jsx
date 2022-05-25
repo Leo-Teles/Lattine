@@ -1,9 +1,7 @@
 import { Component } from "react";
 import axios from "axios";
 import { parseJWT } from '../../../services/auth';
-
 import '../../../assets/css/style.css'
-
 import Sidebar from "../../../components/Sidebar/SidebarCli/SidebarCliServicos";
 
 

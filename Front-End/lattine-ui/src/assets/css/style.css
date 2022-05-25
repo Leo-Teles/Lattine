@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+.excluir-servico {
+    margin-top: 40px;
+    font-family: Segoe UI;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+    text-decoration: underline;
+    color: red;
+    max-width: 100%;
+    width: fit-content;
+    border: none;
+    background: none;
+}
+
 /*==========Home==========*/
 
 .headerHome {
@@ -154,7 +168,7 @@
     font-size: 48px;
     font-weight: 350;
     text-align: left;
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .container-conteudo h2 {
@@ -163,7 +177,7 @@
     font-size: 24px;
     font-weight: 600;
     text-align: left;
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .container-conteudo p {
@@ -172,7 +186,7 @@
     font-size: 24px;
     font-weight: 350;
     text-align: left;
-    max-width: 75%;
+    max-width: 100%;
 }
 
 .container-conteudo a {
@@ -183,7 +197,7 @@
     text-align: left;
     text-decoration: underline;
     color: #0089CD;
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .botaoCard1 {
@@ -1187,7 +1201,7 @@ input::placeholder {
     font-size: 48px;
     font-weight: 350;
     text-align: left;
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .container-conteudo-servico h2 {
@@ -1204,7 +1218,7 @@ input::placeholder {
     font-size: 24px;
     font-weight: 600;
     text-align: left;
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .container-conteudo-servico p {
@@ -1213,10 +1227,10 @@ input::placeholder {
     font-size: 24px;
     font-weight: 350;
     text-align: left;
-    max-width: 75%;
+    max-width: 100%;
 }
 
-.container-conteudo-servico a {
+.editar-servico {
     margin-top: 40px;
     font-family: Segoe UI;
     font-size: 24px;
@@ -1224,7 +1238,7 @@ input::placeholder {
     text-align: left;
     text-decoration: underline;
     color: #0089CD;
-    max-width: 50%;
+    max-width: 100%;
 }
 
 
@@ -1304,7 +1318,7 @@ input::placeholder {
     font-size: 48px;
     font-weight: 350;
     text-align: left;
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .container-conteudo-escolher-cli h1 {
@@ -1313,7 +1327,7 @@ input::placeholder {
     font-size: 48px;
     font-weight: 350;
     text-align: left;
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .escolhas-da-vida {

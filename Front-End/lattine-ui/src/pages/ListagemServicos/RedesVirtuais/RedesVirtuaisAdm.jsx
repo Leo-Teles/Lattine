@@ -38,11 +38,13 @@ export default function RedesVirtuais() {
                         {
                             listaRedes.map((rede) => (
                                 <div key={rede.IdRedeVirtual} className="retangulo-usuario">
+                                    <a href={"dadosredevirtualadm/"+rede.idRedeVirtual}>
                                     <h1>{rede.nomeRedeVirtual}</h1>
                                     <h2>Data de Cadastro:</h2>
                                     <p>{Intl.DateTimeFormat({
                                         year: "numeric", month: "numeric", day: "numeric"
                                     }).format(new Date(rede.dataCadastro))}</p>
+                                    </a>
                                 </div>
                             )
                             )

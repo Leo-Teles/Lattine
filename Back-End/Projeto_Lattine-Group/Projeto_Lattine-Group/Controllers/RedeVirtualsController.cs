@@ -125,5 +125,25 @@ namespace Projeto_Lattine_Group.Controllers
                 });
             }
         }
+
+        [HttpGet("uma/{id}")]
+        public IActionResult ListarUma(int id)
+        {
+            try
+            {
+                RedeVirtual RedeVirtualBuscado = _RedeVirtualRepository.Listarid(id);
+
+                return Ok(_RedeVirtualRepository.ListarUma(id));
+            }
+            catch (Exception error)
+            {
+                return BadRequest(new
+                {
+                    mensagem = "Não é possível mostrar os dados sem o id.",
+                    erro = error
+
+                });
+            }
+        }
     }
 }
