@@ -22,6 +22,13 @@ namespace Projeto_Lattine_Group.Interfaces
         RedeVirtual Listarid(int id);
 
         /// <summary>
+        /// Busca uma RedeVirtual através do id do usuário
+        /// </summary>
+        /// <param name="id">id da RedeVirtual buscada</param>
+        /// <returns>A RedeVirtual buscada</returns>
+        RedeVirtual Listaridusuario(int id);
+
+        /// <summary>
         /// Cadastra uma nova RedeVirtual
         /// </summary>
         /// <param name="novaRedeVirtual">Objeto novaRedeVirtual com os novos dados</param>
@@ -53,5 +60,12 @@ namespace Projeto_Lattine_Group.Interfaces
         /// <param name="id">ID da rede virtual</param>
         /// <returns>Uma rede virtual</returns>
         List<RedeVirtual> ListarUma(int id);
+
+        /// <summary>
+        /// Lista uma rede virtual através do id do usuário
+        /// </summary>
+        /// <param name="id">ID do usuário</param>
+        /// <returns>Uma rede virtual do usuário escolhido</returns>
+        List<RedeVirtual> ListarPeloUsuario(int id);
     }
 }

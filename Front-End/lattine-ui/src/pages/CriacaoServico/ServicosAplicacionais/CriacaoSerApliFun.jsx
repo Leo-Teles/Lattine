@@ -1,62 +1,159 @@
 import { Component } from "react";
-
+import axios from "axios";
+import { parseJWT } from '../../../services/auth';
 import '../../../assets/css/style.css'
 
-import Sidebar from "../../../components/Sidebar/SiderbarFun/SidebarFunServicos";
+import Sidebar from "../../../components/Sidebar/SidebarCli/SidebarCliServicos";
 
-export default class Servicos extends Component {
+
+export default class CadastroServicoAplicacionalCli extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            nomeServicoAplicacional: '',
+            pilhaRuntime: '',
+            skueTamanho: '',
+            dataCadastro: new Date(),
+            idUsuario: 0,
+
+            listaServicos: [],
+            listaUsuarios: [],
+
+            isLoading: false,
+        };
+    }
+
+    buscarUsuarios = () => {
+        axios('http://localhost:5000/api/usuarios')
+            .then((resposta) => {
+                if (resposta.status === 200) {
+                    this.setState({ listaUsuarios: resposta.data });
+                    console.log(this.state.listaUsuarios);
+                }
+            })
+            .catch((erro) => console.log(erro));
+    };
+
+    buscarServicosAplicacionais = () => {
+        axios('http://localhost:5000/api/servicoaplicacionals')
+            .then((resposta) => {
+                if (resposta.status === 200) {
+                    this.setState({ listaServicos: resposta.data });
+                    console.log(this.state.listaServicos);
+                }
+            })
+            .catch((erro) => console.log(erro));
+    };
+
+    atualizaStateCampo = (campo) => {
+        this.setState({ [campo.target.name]: campo.target.value });
+    };
+
+    componentDidMount() {
+        console.log(parseJWT().jti);
+        console.log('inicia ciclo de vida');
+        this.buscarServicosAplicacionais();
+        this.buscarUsuarios();
+    }
+
+    cadastrarServico = (event) => {
+        event.preventDefault();
+        this.setState({ isLoading: true });
+
+        let servico = {
+            nomeServicoAplicacional: this.state.nomeServicoAplicacional,
+            pilhaRuntime: this.state.pilhaRuntime,
+            skueTamanho: this.state.skueTamanho,
+            dataCadastro: new Date(this.state.dataCadastro),
+            idUsuario: this.state.idUsuario,
+        };
+
+        axios
+            .post('http://localhost:5000/api/servicoaplicacionals', servico, {
+                headers: {
+                    Authorization: 'Bearer ' + localStorage.getItem('usuario-login'),
+                },
+            })
+            .then((resposta) => {
+                if (resposta.status === 201) {
+                    console.log('Serviço Aplicacional Cadastrado.');
+                    this.setState({ isLoading: false });
+                }
+            })
+            .catch((erro) => {
+                console.log(erro);
+                this.setState({ isLoading: false });
+            })
+            .then(this.buscarServicosAplicacionais);
+
+        window.location.href = "seraplifun";
+    };
+
     render() {
         return (
             <div>
                 <Sidebar />
                 <div className="conteudo">
-                    <div className="container-conteudo-edicao-servico">
+                    <form onSubmit={this.cadastrarServico} className="container-conteudo-edicao-servico">
                         <h1>Dados do Serviço</h1>
-                        <h2>Detalhes do Serviço</h2>
-                        <label for="gruporecursos">Grupo de Recursos</label>
-                        <select id="gruporecursos">
-                            <option value="1">Grupo 1</option>
-                        </select>
 
                         <h2>Detalhes da Instância</h2>
-                        <label for="nomemaqvir">Nome da Máquina Virtual</label>
-                        <input className="input-text-edicao" id="nomemaqvir" placeholder="Minha Máquina Virtual"></input>
+                        <label htmlFor="idUsuario">Cliente dono do serviço</label>
+                        <select
+                            id="idUsuario"
+                            name="idUsuario"
+                            value={this.state.idUsuario}
+                            onChange={this.atualizaStateCampo}>
+                            <option value="0" hidden>Selecione</option>
 
-                        <label for="disponibilidade">Disponibilidade</label>
-                        <select id="disponibilidade">
-                            <option value="1">Zona de disponibilidade</option>
-                            <option value="2">Conjuto de dimensionamento da máquinas virtuais</option>
-                            <option value="3">Conjuto de disponibilidade</option>
+                            {this.state.listaUsuarios.map((usuario) => {
+                                return (
+                                    <option key={usuario.idUsuario} value={usuario.idUsuario}>
+                                        {usuario.nome + " " + usuario.sobrenome}
+                                    </option>
+                                );
+                            })}
+
+                        </select>
+                        <label for="nomeserapli">Nome do Serviço Aplicacional</label>
+                        <input
+                            type="text"
+                            name="nomeServicoAplicacional"
+                            value={this.state.nomeServicoAplicacional}
+                            onChange={this.atualizaStateCampo}
+                            className="input-text-edicao"
+                            id="nomeserapli"></input>
+
+                        <label for="runtime">Pilha de Runtime</label>
+                        <select
+                            id="runtime"
+                            name="pilhaRuntime"
+                            value={this.state.pilhaRuntime}
+                            onChange={this.atualizaStateCampo}>
+                            <option value="0" hidden>Selecione</option>
+                            <option value=".NET 6 (LTS)">.NET 6 (LTS)</option>
+                            <option value=".NET 5">.NET 5</option>
+                            <option value="NODE 16 (LTS)">NODE 16 (LTS)</option>
+                            <option value="NODE 15 (LTS)">NODE 15 (LTS)</option>
                         </select>
 
-                        <label for="sistemaoperacional">Sistema Operacional</label>
-                        <select id="sistemaoperacional">
-                            <option value="1">Windows Server 2019</option>
-                            <option value="2">Ubuntu Server 20.04 - Gen2</option>
-                            <option value="3">Debian 11 "Bullseye" - Gen2</option>
+                        <label for="sku">SKU e Tamanho</label>
+                        <select
+                            id="sku"
+                            name="skueTamanho"
+                            value={this.state.skueTamanho}
+                            onChange={this.atualizaStateCampo}>
+                            <option value="0" hidden>Selecione</option>
+                            <option value="Básico B1- 100 ACU total, 1.75 GB de memória">Básico B1- 100 ACU total, 1.75 GB de memória</option>
+                            <option value="Básico B2 -200 ACU total, 3.5 GB de memória">Básico B2 -200 ACU total, 3.5 GB de memória</option>
+                            <option value="Gratuito F1 - 1 GB de memória">Gratuito F1 - 1 GB de memória</option>
                         </select>
 
-                        <label for="tamanho">Tamanho</label>
-                        <select id="tamanho">
-                            <option value="1">Standard_D2s_v3 - 2vCPU,8Gib de memória</option>
-                            <option value="2">Standard_D4s_v3 - 4vCPU,16Gib de memória</option>
-                            <option value="3">Standard_E2s_v3 - 2vCPU,16Gib de memória</option>
-                        </select>
-                        
-                        <h2>Conta do Administrador</h2>
-                        <label for="nomeadmin">Nome do Administrador</label>
-                        <input className="input-text-edicao" id="nomeadmin" placeholder="Luca"></input>
-
-                        <label for="chave">Origem Chave Pública SSH</label>
-                        <select id="chave">
-                            <option value="1">Gerar novo par de chaves</option>
-                            <option value="2">Utilizar chave existente</option>
-                        </select>
 
                         <div>
-                            <button className="botao-editar">Editar</button>
+                            <button className="botao-editar">Criar</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         )

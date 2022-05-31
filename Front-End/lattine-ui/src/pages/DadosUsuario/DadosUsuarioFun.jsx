@@ -42,7 +42,6 @@ export default function DadosUsuario() {
                                 <p>{usuario.senha}</p>
                                 <h2>Tipo de Usuário</h2>
                                 <p>Funcionário Lattine Group</p>
-                                <a href="edicaodadosusuariofun">Editar informações</a>
                             </div>
                         )
                         )

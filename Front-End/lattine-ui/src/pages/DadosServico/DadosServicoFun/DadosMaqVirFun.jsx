@@ -3,10 +3,20 @@ import axios from "axios";
 import '../../../assets/css/style.css'
 import { useParams } from "react-router-dom";
 import Sidebar from "../../../components/Sidebar/SiderbarFun/SidebarFunServicos";
+import { Link } from "react-router-dom";
 
 export default function DadosMaquina() {
     const [listaDadosMaquina, setListaDadosMaquina] = useState([]);
     const { id } = useParams();
+    const Excluir = (idMaquina) => {
+        axios.delete('http://localhost:5000/api/maquinavirtuals/Excluir/'+idMaquina)
+        .then(() => {
+          buscarMeusDados();
+        })
+        .catch(erro => console.log(erro))
+
+        window.location.href = "/maquinasvirtuaisfun";
+      }
 
     function buscarMeusDados() {
         axios('http://localhost:5000/api/MaquinaVirtuals/uma/'+id, {
@@ -36,6 +46,8 @@ export default function DadosMaquina() {
 
                             <h3>Tipo de Serviço</h3>
                             <p>Máquina Virtual</p>
+                            <h3>Cliente dono do serviço</h3>
+                            <p>{maquina.idUsuarioNavigation.nome + " " + maquina.idUsuarioNavigation.sobrenome}</p>
                             <h3>Data de Cadastro</h3>
                             <p>{Intl.DateTimeFormat({
                                         year: "numeric", month: "numeric", day: "numeric"
@@ -58,6 +70,7 @@ export default function DadosMaquina() {
                             <p>{maquina.nomeAdmin}</p>
                             <h3>Origem Chave Pública SSH</h3>
                             <p>{maquina.origemChavePublicaSsh}</p>
+                            <Link onClick={() => Excluir(maquina.idMaquinaVirtual)} className="excluir-servico">Excluir Serviço</Link>
                         </div>
                     )
                     )

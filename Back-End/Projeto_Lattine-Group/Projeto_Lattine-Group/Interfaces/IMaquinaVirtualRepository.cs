@@ -22,6 +22,13 @@ namespace Projeto_Lattine_Group.Interfaces
         MaquinaVirtual Listarid(int id);
 
         /// <summary>
+        /// Busca uma MaquinaVirtual através do id do usuário
+        /// </summary>
+        /// <param name="id">id da MaquinaVirtual buscada</param>
+        /// <returns>A MaquinaVirtual buscada</returns>
+        MaquinaVirtual Listaridusuario(int id);
+
+        /// <summary>
         /// Cadastra uma nova MaquinaVirtual
         /// </summary>
         /// <param name="novaMaquinaVirtual">Objeto novaMaquinaVirtual com os novos dados</param>
@@ -53,5 +60,12 @@ namespace Projeto_Lattine_Group.Interfaces
         /// <param name="id">ID da máquina virtual</param>
         /// <returns>Uma máquina virtual</returns>
         List<MaquinaVirtual> ListarUma(int id);
+
+        /// <summary>
+        /// Lista uma máquina virtual através do id do usuário
+        /// </summary>
+        /// <param name="id">ID do usuário</param>
+        /// <returns>Uma máquina virtual do usuário escolhido</returns>
+        List<MaquinaVirtual> ListarPeloUsuario(int id);
     }
 }

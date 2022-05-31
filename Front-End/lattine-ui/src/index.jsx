@@ -17,6 +17,7 @@ import EdicaoDadosUsuarioAdm from './pages/EdicaoDadosUsuario/EdicaoDadosUsuario
 import EdicaoDadosUsuarioCli from './pages/EdicaoDadosUsuario/EdicaoDadosUsuarioCli'
 import EdicaoDadosUsuarioFun from './pages/EdicaoDadosUsuario/EdicaoDadosUsuarioFun'
 import DadosUsuarioAdm from './pages/DadosUsuario/DadosUsuarioAdm'
+import DadosDeUmUsuarioAdm from './pages/DadosUsuario/DadosDeUmUsuarioAdm'
 import DadosUsuarioCli from './pages/DadosUsuario/DadosUsuarioCli'
 import DadosUsuarioFun from './pages/DadosUsuario/DadosUsuarioFun'
 import DadosMaqVirAdm from './pages/DadosServico/DadosServicoAdm/DadosMaqVirAdm'
@@ -140,12 +141,6 @@ const routing = (
         <PermissaoFun path="/escolherservicofun" component={EscolherServicoFun} />
         <PermissaoFun path="/contatosfun" component={ContatosFun} />
         <PermissaoFun path="/edicaocontatosfun" component={EdicaoContatosFun} />
-        <PermissaoFun path="/maqvirusuariofun" component={MaquinasVirtuaisDoUsuarioFun} />
-        <PermissaoFun path="/redesvirtuaisusuarifun" component={RedesVirtuaisDoUsuarioFun} />
-        <PermissaoFun path="/serapliusuariofun" component={SerApliDoUsuarioFun} />
-        <PermissaoFun path="/dadosmaqvirfun" component={DadosMaqVirFun} />
-        <PermissaoFun path="/dadosredevirtualfun" component={DadosRedeVirtualFun} />
-        <PermissaoFun path="/dadosseraplifun" component={DadosSerApliFun} />
         <PermissaoFun path="/maquinasvirtuaisfun" component={MaquinasVirtuaisFun} />
         <PermissaoFun path="/redesvirtuaisfun" component={RedesVirtuaisFun} />
         <PermissaoFun path="/seraplifun" component={SerApliFun} />
@@ -179,6 +174,16 @@ const routing = (
         <Route path="/dadosmaqviradm/:id" component={DadosMaqVirAdm} />
         <Route path="/dadosredevirtualadm/:id" component={DadosRedeVirtualAdm} />
         <Route path="/dadosserapliadm/:id" component={DadosSerApliAdm} />
+
+        <Route path="/dadosmaqvirfun/:id" component={DadosMaqVirFun} />
+        <Route path="/dadosredevirtualfun/:id" component={DadosRedeVirtualFun} />
+        <Route path="/dadosseraplifun/:id" component={DadosSerApliFun} />
+
+        <Route path="/maqvirusuariofun/:id" component={MaquinasVirtuaisDoUsuarioFun} />
+        <Route path="/redesvirtuaisusuariofun/:id" component={RedesVirtuaisDoUsuarioFun} />
+        <Route path="/serapliusuariofun/:id" component={SerApliDoUsuarioFun} />
+
+        <Route path="/dadosdeumusuarioadm/:id" component={DadosDeUmUsuarioAdm} />
 
         <PermissaoCli path="/redesvirtuaisusuariocli" component={RedesVirtuaisDoUsuarioCli} />
         <PermissaoCli path="/serapliusuariocli" component={SerApliDoUsuarioCli} />

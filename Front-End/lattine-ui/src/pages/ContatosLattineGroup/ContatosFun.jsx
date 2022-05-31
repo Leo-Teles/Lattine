@@ -19,7 +19,6 @@ export default class Servicos extends Component {
                         <p>+55 11 4209-1000</p>
                         <h2>Localização</h2>
                         <p>Alameda Tocantins, 350 Barueri - São Paulo / SP</p>
-                        <a href="edicaocontatosfun">Editar informações</a>
                     </div>
                 </div>
             </div>

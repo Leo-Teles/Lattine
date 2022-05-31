@@ -60,6 +60,11 @@ namespace Projeto_Lattine_Group.Repositories
         {
             return ctx.RedeVirtuals.FirstOrDefault(c => c.IdRedeVirtual == id);
         }
+        public RedeVirtual Listaridusuario(int id)
+        {
+            return ctx.RedeVirtuals.FirstOrDefault(c => c.IdUsuarioNavigation.IdUsuario == id);
+        }
+
 
         public List<RedeVirtual> ListarMinhas(int id)
         {
@@ -74,7 +79,16 @@ namespace Projeto_Lattine_Group.Repositories
             return ctx.RedeVirtuals
                 .Include(p => p.IdEnderecoIpNavigation)
                 .Include(p => p.IdSubRedeNavigation)
+                .Include(p => p.IdUsuarioNavigation)
                 .Where(p => p.IdRedeVirtual == id)
+                .ToList();
+        }
+
+        public List<RedeVirtual> ListarPeloUsuario(int id)
+        {
+            return ctx.RedeVirtuals
+                .Include(p => p.IdUsuarioNavigation)
+                .Where(p => p.IdUsuarioNavigation.IdTipoUsuario == id)
                 .ToList();
         }
     }

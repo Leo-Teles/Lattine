@@ -22,6 +22,13 @@ namespace Projeto_Lattine_Group.Interfaces
         ServicoAplicacional Listarid(int id);
 
         /// <summary>
+        /// Busca um Serviço Aplicacional através do id do usuário
+        /// </summary>
+        /// <param name="id">id da Serviço Aplicacional buscado</param>
+        /// <returns>O Serviço Aplicacional buscado</returns>
+        ServicoAplicacional Listaridusuario(int id);
+
+        /// <summary>
         /// Cadastra um novo ServicoAplicacional
         /// </summary>
         /// <param name="novoServicoAplicacional">Objeto novoServicoAplicacional com os novos dados</param>
@@ -53,5 +60,12 @@ namespace Projeto_Lattine_Group.Interfaces
         /// <param name="id">ID do serviço aplicacional</param>
         /// <returns>Um serviço aplicacional</returns>
         List<ServicoAplicacional> ListarUm(int id);
+
+        /// <summary>
+        /// Lista um Serviço Aplicacional através do id do usuário
+        /// </summary>
+        /// <param name="id">ID do usuário</param>
+        /// <returns>Um Serviço Aplicacional do usuário escolhido</returns>
+        List<ServicoAplicacional> ListarPeloUsuario(int id);
     }
 }

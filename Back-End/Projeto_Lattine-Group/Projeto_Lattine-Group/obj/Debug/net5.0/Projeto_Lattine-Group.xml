@@ -391,6 +391,13 @@
             <param name="id">id da MaquinaVirtual buscada</param>
             <returns>A MaquinaVirtual buscada</returns>
         </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IMaquinaVirtualRepository.Listaridusuario(System.Int32)">
+            <summary>
+            Busca uma MaquinaVirtual através do id do usuário
+            </summary>
+            <param name="id">id da MaquinaVirtual buscada</param>
+            <returns>A MaquinaVirtual buscada</returns>
+        </member>
         <member name="M:Projeto_Lattine_Group.Interfaces.IMaquinaVirtualRepository.Cadastrar(Projeto_Lattine_Group.Domains.MaquinaVirtual)">
             <summary>
             Cadastra uma nova MaquinaVirtual
@@ -424,6 +431,13 @@
             <param name="id">ID da máquina virtual</param>
             <returns>Uma máquina virtual</returns>
         </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IMaquinaVirtualRepository.ListarPeloUsuario(System.Int32)">
+            <summary>
+            Lista uma máquina virtual através do id do usuário
+            </summary>
+            <param name="id">ID do usuário</param>
+            <returns>Uma máquina virtual do usuário escolhido</returns>
+        </member>
         <member name="T:Projeto_Lattine_Group.Interfaces.IRedeVirtualRepository">
             <summary>
             Interface responsável pelo repositório RedeVirtualRepository
@@ -438,6 +452,13 @@
         <member name="M:Projeto_Lattine_Group.Interfaces.IRedeVirtualRepository.Listarid(System.Int32)">
             <summary>
             Busca uma RedeVirtual através de seu id
+            </summary>
+            <param name="id">id da RedeVirtual buscada</param>
+            <returns>A RedeVirtual buscada</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IRedeVirtualRepository.Listaridusuario(System.Int32)">
+            <summary>
+            Busca uma RedeVirtual através do id do usuário
             </summary>
             <param name="id">id da RedeVirtual buscada</param>
             <returns>A RedeVirtual buscada</returns>
@@ -475,6 +496,13 @@
             <param name="id">ID da rede virtual</param>
             <returns>Uma rede virtual</returns>
         </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IRedeVirtualRepository.ListarPeloUsuario(System.Int32)">
+            <summary>
+            Lista uma rede virtual através do id do usuário
+            </summary>
+            <param name="id">ID do usuário</param>
+            <returns>Uma rede virtual do usuário escolhido</returns>
+        </member>
         <member name="T:Projeto_Lattine_Group.Interfaces.IServicoAplicacionalRepository">
             <summary>
             Interface responsável pelo repositório ServicoAplicacionalRepository
@@ -492,6 +520,13 @@
             </summary>
             <param name="id">id do ServicoAplicacional buscado</param>
             <returns>O ServicoAplicacional buscado</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IServicoAplicacionalRepository.Listaridusuario(System.Int32)">
+            <summary>
+            Busca um Serviço Aplicacional através do id do usuário
+            </summary>
+            <param name="id">id da Serviço Aplicacional buscado</param>
+            <returns>O Serviço Aplicacional buscado</returns>
         </member>
         <member name="M:Projeto_Lattine_Group.Interfaces.IServicoAplicacionalRepository.Cadastrar(Projeto_Lattine_Group.Domains.ServicoAplicacional)">
             <summary>
@@ -525,6 +560,13 @@
             </summary>
             <param name="id">ID do serviço aplicacional</param>
             <returns>Um serviço aplicacional</returns>
+        </member>
+        <member name="M:Projeto_Lattine_Group.Interfaces.IServicoAplicacionalRepository.ListarPeloUsuario(System.Int32)">
+            <summary>
+            Lista um Serviço Aplicacional através do id do usuário
+            </summary>
+            <param name="id">ID do usuário</param>
+            <returns>Um Serviço Aplicacional do usuário escolhido</returns>
         </member>
         <member name="T:Projeto_Lattine_Group.Interfaces.ISubRedeRepository">
             <summary>

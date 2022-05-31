@@ -35,11 +35,13 @@ export default function Usuarios() {
                         {
                             listaUsuarios.map((user) => (
                                 <div key={user.IdUsuario} className="retangulo-usuario">
+                                    <a href={"maqvirusuariofun/" + user.idUsuario}>
                                     <h1>{user.nome} {user.sobrenome}</h1>
                                     <h2>Data de Cadastro:</h2>
                                     <p>{Intl.DateTimeFormat({
                                         year: "numeric", month: "numeric", day: "numeric"
                                     }).format(new Date(user.dataCadastro))}</p>
+                                    </a>
                                 </div>
                             )
                             )

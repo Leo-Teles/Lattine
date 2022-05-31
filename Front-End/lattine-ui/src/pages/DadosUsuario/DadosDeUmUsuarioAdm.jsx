@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import '../../assets/css/style.css'
+import { useParams } from "react-router-dom";
 
-import Sidebar from "../../components/Sidebar/SiderbarAdm/SidebarAdmConfig";
+import Sidebar from "../../components/Sidebar/SiderbarAdm/SidebarAdmUsuarios";
 
 
 export default function DadosUsuario() {
     const [listaDadosUsuario, setListaDadosUsuario] = useState([]);
+    const { id } = useParams();
 
-    function buscarMeusDados() {
-        axios('http://localhost:5000/api/usuarios/meus', {
+    function buscarDadosUsuario() {
+        axios('http://localhost:5000/api/usuarios/um/'+id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -21,7 +23,7 @@ export default function DadosUsuario() {
             })
             .catch(erro => console.log(erro));
     };
-    useEffect(buscarMeusDados, []);
+    useEffect(buscarDadosUsuario, []);
 
     return (
         <div>
@@ -41,7 +43,7 @@ export default function DadosUsuario() {
                                 <h2>Senha</h2>
                                 <p>{usuario.senha}</p>
                                 <h2>Tipo de Usuário</h2>
-                                <p>Administrador</p>
+                                <p>{usuario.idTipoUsuarioNavigation.titulo}</p>
                             </div>
                         )
                         )

@@ -18,6 +18,16 @@
     background: none;
 }
 
+.titulo-outro {
+    font-family: Segoe UI;
+    font-size: 32px;
+    font-weight: 100;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 30px;
+}
+
 /*==========Home==========*/
 
 .headerHome {
@@ -822,6 +832,7 @@ input::placeholder {
     flex-flow: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 64px;
 }
 
 .retangulo-usuario h2 {

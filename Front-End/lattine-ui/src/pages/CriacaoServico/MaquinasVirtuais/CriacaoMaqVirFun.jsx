@@ -1,13 +1,11 @@
 import { Component } from "react";
 import axios from "axios";
 import { parseJWT } from '../../../services/auth';
-
 import '../../../assets/css/style.css'
-
 import Sidebar from "../../../components/Sidebar/SiderbarFun/SidebarFunServicos";
 
 
-export default class CadastroMaqVirCli extends Component {
+export default class CadastroMaqVirFun extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,10 +19,22 @@ export default class CadastroMaqVirCli extends Component {
             idUsuario: 0,
 
             listaMaquinas: [],
+            listaUsuarios: [],
 
             isLoading: false,
         };
     }
+
+    buscarUsuarios = () => {
+        axios('http://localhost:5000/api/usuarios')
+            .then((resposta) => {
+                if (resposta.status === 200) {
+                    this.setState({ listaUsuarios: resposta.data });
+                    console.log(this.state.listaUsuarios);
+                }
+            })
+            .catch((erro) => console.log(erro));
+    };
 
     buscarMaquinasVirtuais = () => {
         axios('http://localhost:5000/api/maquinavirtuals')
@@ -45,6 +55,7 @@ export default class CadastroMaqVirCli extends Component {
         console.log(parseJWT().jti);
         console.log('inicia ciclo de vida');
         this.buscarMaquinasVirtuais();
+        this.buscarUsuarios();
     }
 
     cadastrarMaquina = (event) => {
@@ -59,7 +70,7 @@ export default class CadastroMaqVirCli extends Component {
             nomeAdmin: this.state.nomeAdmin,
             origemChavePublicaSsh: this.state.origemChavePublicaSsh,
             dataCadastro: new Date(this.state.dataCadastro),
-            idUsuario: parseJWT().jti
+            idUsuario: this.state.idUsuario,
         };
 
         axios
@@ -80,7 +91,7 @@ export default class CadastroMaqVirCli extends Component {
             })
             .then(this.buscarMaquinasVirtuais);
 
-            window.location.href = "maqvirusuariocli";
+        window.location.href = "maquinasvirtuaisfun";
     };
 
     render() {
@@ -92,6 +103,23 @@ export default class CadastroMaqVirCli extends Component {
                         <h1>Dados do Serviço</h1>
 
                         <h2>Detalhes da Instância</h2>
+                        <label htmlFor="idUsuario">Cliente dono do serviço</label>
+                        <select
+                            id="idUsuario"
+                            name="idUsuario"
+                            value={this.state.idUsuario}
+                            onChange={this.atualizaStateCampo}>
+                            <option value="0" hidden>Selecione</option>
+
+                            {this.state.listaUsuarios.map((usuario) => {
+                                return (
+                                    <option key={usuario.idUsuario} value={usuario.idUsuario}>
+                                        {usuario.nome + " " + usuario.sobrenome}
+                                    </option>
+                                );
+                            })}
+
+                        </select>
                         <label htmlFor="nomemaqvir">Nome da Máquina Virtual</label>
                         <input
                             required

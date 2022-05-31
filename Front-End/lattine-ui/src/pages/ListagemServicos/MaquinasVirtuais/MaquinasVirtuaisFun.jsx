@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import Sidebar from "../../../components/Sidebar/SiderbarFun/SidebarFunServicos";
 
@@ -38,15 +39,21 @@ export default function MaquinasVirtuais() {
                         {
                             listaMaquinas.map((maquina) => (
                                 <div key={maquina.IdMaquinaVirtual} className="retangulo-usuario">
-                                    <h1>{maquina.nomeMaquinaVirtual}</h1>
-                                    <h2>Data de Cadastro:</h2>
-                                    <p>{Intl.DateTimeFormat({
-                                        year: "numeric", month: "numeric", day: "numeric"
-                                    }).format(new Date(maquina.dataCadastro))}</p>
+                                    <a href={"dadosmaqvirfun/" + maquina.idMaquinaVirtual}>
+                                        <h1>{maquina.nomeMaquinaVirtual}</h1>
+                                        <h2>Data de Cadastro:</h2>
+                                        <p>{Intl.DateTimeFormat({
+                                            year: "numeric", month: "numeric", day: "numeric"
+                                        }).format(new Date(maquina.dataCadastro))}</p>
+                                    </a>
                                 </div>
                             )
                             )
                         }
+                    </div>
+
+                    <div className="proxima-pagina">
+                        <Link to="criacaomaqvirfun"><a>+ Criar Máquina Virtual</a></Link>
                     </div>
                 </div>
             </div>
