@@ -44,11 +44,11 @@ namespace Projeto_Lattine_Group.Contexts
             modelBuilder.Entity<ContatosLattine>(entity =>
             {
                 entity.HasKey(e => e.IdContatosLattine)
-                    .HasName("PK__contatos__4E9166FA94581A3A");
+                    .HasName("PK__contatos__4E9166FAA36CD128");
 
                 entity.ToTable("contatosLattine");
 
-                entity.HasIndex(e => e.Localizacao, "UQ__contatos__601F3596E41CD581")
+                entity.HasIndex(e => e.Localizacao, "UQ__contatos__601F35968D8DA4DD")
                     .IsUnique();
 
                 entity.Property(e => e.IdContatosLattine).HasColumnName("idContatosLattine");
@@ -63,7 +63,7 @@ namespace Projeto_Lattine_Group.Contexts
             modelBuilder.Entity<EnderecoIp>(entity =>
             {
                 entity.HasKey(e => e.IdEnderecoIp)
-                    .HasName("PK__endereco__C4CF02F8C98494E8");
+                    .HasName("PK__endereco__C4CF02F87CC87FDC");
 
                 entity.ToTable("enderecoIP");
 
@@ -86,7 +86,7 @@ namespace Projeto_Lattine_Group.Contexts
             modelBuilder.Entity<MaquinaVirtual>(entity =>
             {
                 entity.HasKey(e => e.IdMaquinaVirtual)
-                    .HasName("PK__maquinaV__3F823F3301C91560");
+                    .HasName("PK__maquinaV__3F823F33734C321F");
 
                 entity.ToTable("maquinaVirtual");
 
@@ -143,7 +143,7 @@ namespace Projeto_Lattine_Group.Contexts
             modelBuilder.Entity<RedeVirtual>(entity =>
             {
                 entity.HasKey(e => e.IdRedeVirtual)
-                    .HasName("PK__redeVirt__B3038BF68B094C37");
+                    .HasName("PK__redeVirt__B3038BF6ADC02C13");
 
                 entity.ToTable("redeVirtual");
 
@@ -190,7 +190,7 @@ namespace Projeto_Lattine_Group.Contexts
             modelBuilder.Entity<ServicoAplicacional>(entity =>
             {
                 entity.HasKey(e => e.IdServicoAplicacional)
-                    .HasName("PK__servicoA__632AB756E6645442");
+                    .HasName("PK__servicoA__632AB756DF0EE6EC");
 
                 entity.ToTable("servicoAplicacional");
 
@@ -229,7 +229,7 @@ namespace Projeto_Lattine_Group.Contexts
             modelBuilder.Entity<SubRede>(entity =>
             {
                 entity.HasKey(e => e.IdSubRede)
-                    .HasName("PK__subRede__12D6C82EAE82F1C5");
+                    .HasName("PK__subRede__12D6C82EB4EDF2EB");
 
                 entity.ToTable("subRede");
 
@@ -258,7 +258,7 @@ namespace Projeto_Lattine_Group.Contexts
             modelBuilder.Entity<Telefone>(entity =>
             {
                 entity.HasKey(e => e.IdTelefone)
-                    .HasName("PK__telefone__39C142D50B153D56");
+                    .HasName("PK__telefone__39C142D53C04F488");
 
                 entity.ToTable("telefone");
 
@@ -281,11 +281,11 @@ namespace Projeto_Lattine_Group.Contexts
             modelBuilder.Entity<TipoUsuario>(entity =>
             {
                 entity.HasKey(e => e.IdTipoUsuario)
-                    .HasName("PK__tipoUsua__03006BFF8D3F7057");
+                    .HasName("PK__tipoUsua__03006BFFBB25536B");
 
                 entity.ToTable("tipoUsuario");
 
-                entity.HasIndex(e => e.Titulo, "UQ__tipoUsua__38FA640FEBB02440")
+                entity.HasIndex(e => e.Titulo, "UQ__tipoUsua__38FA640F4D9B5896")
                     .IsUnique();
 
                 entity.Property(e => e.IdTipoUsuario).HasColumnName("idTipoUsuario");
@@ -300,14 +300,14 @@ namespace Projeto_Lattine_Group.Contexts
             modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.HasKey(e => e.IdUsuario)
-                    .HasName("PK__usuario__645723A6E82AB618");
+                    .HasName("PK__usuario__645723A60FFEA953");
 
                 entity.ToTable("usuario");
 
-                entity.HasIndex(e => e.Email, "UQ__usuario__AB6E6164BF95E2E2")
+                entity.HasIndex(e => e.Email, "UQ__usuario__AB6E616465E61B9D")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Senha, "UQ__usuario__D8D98E824BC11472")
+                entity.HasIndex(e => e.Senha, "UQ__usuario__D8D98E824B2A3498")
                     .IsUnique();
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
