@@ -615,13 +615,13 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 64px 0 64px 0;
+    margin: 64px 0 64px 15%;
 }
 
 .container-conteudo-edicao h1 {
     margin-bottom: 70px;
     font-family: Segoe UI;
-    font-size: 48px;
+    font-size: 2.5vw;
     font-weight: 350;
     text-align: left;
 }
@@ -629,7 +629,7 @@ input::placeholder {
 .container-conteudo-edicao div label {
     margin-bottom: 20px;
     font-family: Segoe UI;
-    font-size: 24px;
+    font-size: 1.4vw;
     font-weight: 600;
     text-align: left;
 }
@@ -654,12 +654,12 @@ input::placeholder {
     margin-bottom: 30px;
     background: none;
     border: 1px solid #AA9F9F;
-    height: 75px;
+    height: 9vh;
     width: 100%;
     padding-left: 30px;
     font-family: 'Segoe UI';
     font-weight: 350;
-    font-size: 24px;
+    font-size: 1.4vw;
 }
 
 .container-conteudo-edicao input::placeholder {
@@ -914,6 +914,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10vh;
 }
 
 .cadastre {

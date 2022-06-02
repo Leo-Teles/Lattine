@@ -124,7 +124,7 @@ export default class CadastroRedeVirtualCli extends Component {
             })
             .then(this.buscarredesVirtuais);
 
-        window.location.href = "redesvirtuaisusuariocli";
+        window.location.href = "/redesvirtuaisusuariocli";
     };
 
     render() {

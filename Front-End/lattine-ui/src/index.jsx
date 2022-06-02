@@ -13,6 +13,7 @@ import Cadastro from './pages/Cadastro/Cadastro'
 import NotFound from './pages/NotFound/NotFound';
 import UsuariosAdm from './pages/ListagemUsuarios/ListagemUsuariosAdm';
 import UsuariosFun from './pages/ListagemUsuarios/ListagemUsuariosFun';
+import EdicaoDadosDeUmUsuarioAdm from './pages/EdicaoDadosUsuario/EdicaoDadosDeUmUsuarioAdm'
 import EdicaoDadosUsuarioAdm from './pages/EdicaoDadosUsuario/EdicaoDadosUsuarioAdm'
 import EdicaoDadosUsuarioCli from './pages/EdicaoDadosUsuario/EdicaoDadosUsuarioCli'
 import EdicaoDadosUsuarioFun from './pages/EdicaoDadosUsuario/EdicaoDadosUsuarioFun'
@@ -123,6 +124,7 @@ const routing = (
         <Route path="/cadastro" component={Cadastro} />
 
         <PermissaoAdm path="/edicaodadosusuarioadm" component={EdicaoDadosUsuarioAdm} />
+        <Route path="/edicaodadosdeumusuario/:id" component={EdicaoDadosDeUmUsuarioAdm} />
         <PermissaoAdm path="/dadosusuarioadm" component={DadosUsuarioAdm} />
         <PermissaoAdm path="/maquinasvirtuaisadm" component={MaquinasVirtuaisAdm} />
         <PermissaoAdm path="/redesvirtuaisadm" component={RedesVirtuaisAdm} />

@@ -2,9 +2,10 @@ import { Component } from "react";
 import axios from "axios";
 import { parseJWT } from '../../services/auth';
 import '../../assets/css/style.css'
-import Sidebar from "../../components/Sidebar/SiderbarAdm/SidebarAdmConfig";
+import Sidebar from "../../components/Sidebar/SiderbarAdm/SidebarAdmUsuarios";
+import { useParams } from "react-router-dom";
 
-export default class EditarUsuario extends Component {
+export default class EditarDadosUsuario extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,7 +22,7 @@ export default class EditarUsuario extends Component {
     }
 
     buscarMeusDados = () => {
-        axios('http://localhost:5000/api/usuarios/meus', {
+        axios('http://localhost:5000/api/usuarios/um/', {
             headers: {
                 Authorization: 'Bearer ' + localStorage.getItem('usuario-login'),
             }
