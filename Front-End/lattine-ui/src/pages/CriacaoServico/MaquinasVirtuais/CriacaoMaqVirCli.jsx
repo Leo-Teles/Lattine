@@ -17,9 +17,10 @@ export default class CadastroMaqVirCli extends Component {
             origemChavePublicaSsh: '',
             dataCadastro: new Date(),
             idUsuario: 0,
+            username: '',
+            project_name: '',
 
             listaMaquinas: [],
-
             isLoading: false,
         };
     }
@@ -78,8 +79,14 @@ export default class CadastroMaqVirCli extends Component {
             })
             .then(this.buscarMaquinasVirtuais);
 
-            window.location.href = "maqvirusuariocli";
+        window.location.href = "maqvirusuariocli";
     };
+
+    Apply = (evento) => {
+        evento.preventDefault();
+        axios.post("http://127.0.0.1:8000/api/apply/")
+
+    }
 
     render() {
         return (
@@ -158,10 +165,14 @@ export default class CadastroMaqVirCli extends Component {
                             <option value="Utilizar chave existente">Utilizar chave existente</option>
                         </select>
 
-                        <div>
-                            <button className="botao-editar">Criar</button>
-                        </div>
+                        
+                            <div onSubmit={this.Apply}>
+                                <button className="botao-editar">Criar</button>
+                            </div>
+                        
+
                     </form>
+
                 </div>
             </div>
         );
