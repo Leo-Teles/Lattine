@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { parseJWT } from '../../services/auth';
 import axios from "axios";
 import Sidebar from "../../components/Sidebar/SidebarCli/SidebarCliConfig"
 import "../../assets/css/style.css"
@@ -41,6 +40,7 @@ export default function DadosUsuario() {
                                 <p>{usuario.senha}</p>
                                 <h2>Tipo de Usuário</h2>
                                 <p>Cliente</p>
+                                <a href="/edicaodadosusuariocli">Editar dados</a>
                             </div>
                         )
                         )

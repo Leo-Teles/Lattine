@@ -57,6 +57,11 @@ namespace Projeto_Lattine_Group.Repositories
             return ctx.ServicoAplicacionals.FirstOrDefault(c => c.IdServicoAplicacional == id);
         }
 
+        public ServicoAplicacional Listaridusuario(int id)
+        {
+            return ctx.ServicoAplicacionals.FirstOrDefault(c => c.IdUsuarioNavigation.IdUsuario == id);
+        }
+
         public List<ServicoAplicacional> ListarMeus(int id)
         {
             return ctx.ServicoAplicacionals
@@ -70,6 +75,14 @@ namespace Projeto_Lattine_Group.Repositories
             return ctx.ServicoAplicacionals
                 .Include(p => p.IdUsuarioNavigation)
                 .Where(p => p.IdServicoAplicacional == id)
+                .ToList();
+        }
+
+        public List<ServicoAplicacional> ListarPeloUsuario(int id)
+        {
+            return ctx.ServicoAplicacionals
+                .Include(p => p.IdUsuarioNavigation)
+                .Where(p => p.IdUsuarioNavigation.IdTipoUsuario == id)
                 .ToList();
         }
     }

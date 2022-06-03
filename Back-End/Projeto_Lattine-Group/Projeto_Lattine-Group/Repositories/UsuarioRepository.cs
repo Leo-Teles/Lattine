@@ -71,6 +71,7 @@ namespace Projeto_Lattine_Group.Repositories
         public List<Usuario> ListarUm(int id)
         {
             return ctx.Usuarios
+                .Include(p => p.IdTipoUsuarioNavigation)
                 .Where(p => p.IdUsuario == id)
                 .ToList();
         }

@@ -144,5 +144,25 @@ namespace Projeto_Lattine_Group.Controllers
                 });
             }
         }
+
+        [HttpGet("user/{id}")]
+        public IActionResult ListarPeloUsuario(int id)
+        {
+            try
+            {
+                ServicoAplicacional ServicoAplicacionalBuscado = _ServicoAplicacionalRepository.Listaridusuario(id);
+
+                return Ok(_ServicoAplicacionalRepository.ListarPeloUsuario(id));
+            }
+            catch (Exception error)
+            {
+                return BadRequest(new
+                {
+                    mensagem = "Não é possível mostrar os dados sem o id.",
+                    erro = error
+
+                });
+            }
+        }
     }
 }

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import Sidebar from "../../../components/Sidebar/SiderbarFun/SidebarFunServicos";
 
@@ -35,18 +36,23 @@ export default function ServicosAplicacionais() {
                         <input type="text" placeholder="Buscar" />
                     </div>
                     <div className="listagem">
-                        {
+                    {
                             listaServicos.map((servico) => (
                                 <div key={servico.IdServicoAplicacional} className="retangulo-usuario">
+                                    <a href={"dadosseraplifun/"+servico.idServicoAplicacional}>
                                     <h1>{servico.nomeServicoAplicacional}</h1>
                                     <h2>Data de Cadastro:</h2>
                                     <p>{Intl.DateTimeFormat({
                                         year: "numeric", month: "numeric", day: "numeric"
                                     }).format(new Date(servico.dataCadastro))}</p>
+                                    </a>
                                 </div>
                             )
                             )
                         }
+                    </div>
+                    <div className="proxima-pagina">
+                        <Link to="criacaoseraplifun"><a>+ Criar Máquina Virtual</a></Link>
                     </div>
                 </div>
             </div>

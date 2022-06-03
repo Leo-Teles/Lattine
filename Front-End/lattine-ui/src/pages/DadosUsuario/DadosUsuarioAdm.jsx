@@ -42,7 +42,7 @@ export default function DadosUsuario() {
                                 <p>{usuario.senha}</p>
                                 <h2>Tipo de Usuário</h2>
                                 <p>Administrador</p>
-                                <a href="edicaodadosusuarioadm">Editar informações</a>
+                                <a href="/edicaodadosusuarioadm">Editar dados</a>
                             </div>
                         )
                         )

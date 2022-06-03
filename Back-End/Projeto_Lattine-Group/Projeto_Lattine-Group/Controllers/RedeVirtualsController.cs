@@ -145,5 +145,25 @@ namespace Projeto_Lattine_Group.Controllers
                 });
             }
         }
+
+        [HttpGet("user/{id}")]
+        public IActionResult ListarPeloUsuario(int id)
+        {
+            try
+            {
+                RedeVirtual RedeVirtualBuscado = _RedeVirtualRepository.Listaridusuario(id);
+
+                return Ok(_RedeVirtualRepository.ListarPeloUsuario(id));
+            }
+            catch (Exception error)
+            {
+                return BadRequest(new
+                {
+                    mensagem = "Não é possível mostrar os dados sem o id.",
+                    erro = error
+
+                });
+            }
+        }
     }
 }

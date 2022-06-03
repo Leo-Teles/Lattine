@@ -67,7 +67,7 @@ export default function Cadastro() {
                     <p className="rapidofacil">É rápido e fácil.</p>
                 </div>
 
-                <img className="imgCadastro" src={imgCadastro} alt="Imagem Cadastro" />
+                <img className="imgLogin" src={imgCadastro} alt="Imagem Cadastro" />
             </div>
 
             <div className="testeCadastro">

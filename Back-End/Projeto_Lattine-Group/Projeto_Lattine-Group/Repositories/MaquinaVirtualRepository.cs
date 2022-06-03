@@ -60,6 +60,11 @@ namespace Projeto_Lattine_Group.Repositories
             return ctx.MaquinaVirtuals.FirstOrDefault(c => c.IdMaquinaVirtual == id);
         }
 
+        public MaquinaVirtual Listaridusuario(int id)
+        {
+            return ctx.MaquinaVirtuals.FirstOrDefault(c => c.IdUsuarioNavigation.IdUsuario == id);
+        }
+
         public List<MaquinaVirtual> ListarMinhas(int id)
         {
             return ctx.MaquinaVirtuals
@@ -73,6 +78,14 @@ namespace Projeto_Lattine_Group.Repositories
             return ctx.MaquinaVirtuals
                 .Include(p => p.IdUsuarioNavigation)
                 .Where(p => p.IdMaquinaVirtual == id)
+                .ToList();
+        }
+
+        public List<MaquinaVirtual> ListarPeloUsuario(int id)
+        {
+            return ctx.MaquinaVirtuals
+                .Include(p => p.IdUsuarioNavigation)
+                .Where(p => p.IdUsuarioNavigation.IdTipoUsuario == id)
                 .ToList();
         }
     }

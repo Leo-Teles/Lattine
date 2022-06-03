@@ -6,7 +6,7 @@ import Sidebar from "../../../components/Sidebar/SiderbarFun/SidebarFunServicos"
 import { Link } from "react-router-dom";
 
 
-export default class CadastroRedeVirtualCli extends Component {
+export default class CadastroRedeVirtualFun extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -22,11 +22,23 @@ export default class CadastroRedeVirtualCli extends Component {
             listaRedes: [],
             listaIp: [],
             listaSubRedes: [],
+            listaUsuarios: [],
 
             isLoading: false,
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
+
+    buscarUsuarios = () => {
+        axios('http://localhost:5000/api/usuarios')
+            .then((resposta) => {
+                if (resposta.status === 200) {
+                    this.setState({ listaUsuarios: resposta.data });
+                    console.log(this.state.listaUsuarios);
+                }
+            })
+            .catch((erro) => console.log(erro));
+    };
 
     handleInputChange(event) {
         const target = event.target;
@@ -89,6 +101,7 @@ export default class CadastroRedeVirtualCli extends Component {
         this.buscarSubRedes();
         this.buscarIps();
         this.buscarRedesVirtuais();
+        this.buscarUsuarios();
     }
 
     cadastrarRede = (event) => {
@@ -103,7 +116,7 @@ export default class CadastroRedeVirtualCli extends Component {
             protecaoDdoS: this.state.protecaoDdoS,
             fireWall: this.state.fireWall,
             dataCadastro: new Date(this.state.dataCadastro),
-            idUsuario: parseJWT().jti
+            idUsuario: this.state.idUsuario
         };
 
         axios
@@ -114,7 +127,7 @@ export default class CadastroRedeVirtualCli extends Component {
             })
             .then((resposta) => {
                 if (resposta.status === 201) {
-                    console.log('Máquina Virtual Cadastrada.');
+                    console.log('Rede Virtual Cadastrada.');
                     this.setState({ isLoading: false });
                 }
             })
@@ -124,7 +137,7 @@ export default class CadastroRedeVirtualCli extends Component {
             })
             .then(this.buscarredesVirtuais);
 
-        window.location.href = "redesvirtuaisusuariocli";
+        window.location.href = "redesvirtuaisfun";
     };
 
     render() {
@@ -136,6 +149,23 @@ export default class CadastroRedeVirtualCli extends Component {
                         <h1>Dados do Serviço</h1>
 
                         <h2>Detalhes da Instância</h2>
+                        <label htmlFor="idUsuario">Cliente dono do serviço</label>
+                        <select
+                            id="idUsuario"
+                            name="idUsuario"
+                            value={this.state.idUsuario}
+                            onChange={this.atualizaStateCampo}>
+                            <option value="0" hidden>Selecione</option>
+
+                            {this.state.listaUsuarios.map((usuario) => {
+                                return (
+                                    <option key={usuario.idUsuario} value={usuario.idUsuario}>
+                                        {usuario.nome + " " + usuario.sobrenome}
+                                    </option>
+                                );
+                            })}
+
+                        </select>
                         <label for="nomeredevir">Nome da Rede Virtual</label>
                         <input
                             type="text"
@@ -161,7 +191,7 @@ export default class CadastroRedeVirtualCli extends Component {
                                 );
                             })}
                         </select>
-                        <Link to="criacaoipcli"><a className="criarredeip">+ Criar Endereço IP</a></Link>
+                        <Link to="criacaoipFun"><a className="criarredeip">+ Criar Endereço IP</a></Link>
 
                         <h2>Sub-Rede</h2>
                         <label htmlFor="idSubRede">Sub-Rede</label>
@@ -179,7 +209,7 @@ export default class CadastroRedeVirtualCli extends Component {
                                 );
                             })}
                         </select>
-                        <Link to="criacaosubredecli"><a className="criarredeip">+ Criar Sub-Rede</a></Link>
+                        <Link to="criacaosubredeFun"><a className="criarredeip">+ Criar Sub-Rede</a></Link>
 
                         <h2>Segurança</h2>
                         <label for="bastionhost">BastionHost</label>

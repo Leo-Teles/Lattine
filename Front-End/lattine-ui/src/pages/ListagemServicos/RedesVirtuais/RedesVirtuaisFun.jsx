@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import Sidebar from "../../../components/Sidebar/SiderbarFun/SidebarFunServicos";
 
@@ -35,18 +36,23 @@ export default function RedesVirtuais() {
                         <input type="text" placeholder="Buscar" />
                     </div>
                     <div className="listagem">
-                        {
+                    {
                             listaRedes.map((rede) => (
                                 <div key={rede.IdRedeVirtual} className="retangulo-usuario">
+                                    <a href={"dadosredevirtualfun/"+rede.idRedeVirtual}>
                                     <h1>{rede.nomeRedeVirtual}</h1>
                                     <h2>Data de Cadastro:</h2>
                                     <p>{Intl.DateTimeFormat({
                                         year: "numeric", month: "numeric", day: "numeric"
                                     }).format(new Date(rede.dataCadastro))}</p>
+                                    </a>
                                 </div>
                             )
                             )
                         }
+                    </div>
+                    <div className="proxima-pagina">
+                        <Link to="criacaoredesvirtuaisfun"><a>+ Criar Máquina Virtual</a></Link>
                     </div>
                 </div>
             </div>
